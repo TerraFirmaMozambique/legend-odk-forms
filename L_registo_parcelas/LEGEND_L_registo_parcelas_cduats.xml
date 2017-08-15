@@ -1,0 +1,1034 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND L Registrar Parcelas CDUATs</h:title>
+    <model>
+      <instance>
+        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V1" version="201708091">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_name/>
+          <registo_data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <parcel_id/>
+          <parcel_id_check/>
+          <ocup/>
+          <ocup_outro/>
+          <z_excl/>
+          <part_excl/>
+          <tipo_excl/>
+          <conf/>
+          <tipo_conf/>
+          <desc_conf/>
+          <use_cat/>
+          <use_tipo/>
+          <use_prin/>
+          <use_other/>
+          <demarcator/>
+          <nome_demarcator/>
+          <party_type/>
+          <add_party_number/>
+          <party_menor/>
+          <Titulares_count/>
+          <Titulares jr:template="">
+            <searchtext/>
+            <found_party/>
+          </Titulares>
+          <searchtext_1/>
+          <found_rep_menor/>
+          <searchtext_2/>
+          <found_rep_ent/>
+          <Lg1>
+            <ent_nome/>
+            <ent_tipo/>
+          </Lg1>
+          <reg_party_yn/>
+          <reg_newparty_number/>
+          <Novas_pessoas_count/>
+          <Novas_pessoas jr:template="">
+            <Lg2>
+              <pessoa_app/>
+              <pessoa_nom/>
+              <pessoa_gen/>
+              <pessoa_civil/>
+            </Lg2>
+            <pessoa_prof/>
+            <pessoa_prof_other/>
+            <Lg3>
+              <pessoa_nacion>Moçambicana</pessoa_nacion>
+              <pessoa_natural/>
+            </Lg3>
+            <nasc_y_n/>
+            <pessoa_nasc/>
+            <pessoa_ida/>
+            <Lg4>
+              <pessoa_doc/>
+              <pessoa_id/>
+              <doc_local/>
+              <doc_emi/>
+              <doc_val/>
+              <doc_vital/>
+            </Lg4>
+            <pessoa_foto/>
+            <id_foto/>
+            <pessoa_assin/>
+            <contacto/>
+          </Novas_pessoas>
+          <testem_num/>
+          <Testemunhas_count/>
+          <Testemunhas jr:template="">
+            <Lg5>
+              <testem_nome/>
+              <testem_type/>
+            </Lg5>
+            <testem_assin/>
+          </Testemunhas>
+          <auto_gps/>
+          <limites_yn/>
+          <Pontos jr:template="">
+            <auto_gps_limit/>
+            <upn_gps_limit/>
+          </Pontos>
+          <endnote/>
+          <recibo_image/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_L_registo_parcelas_cduats>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_L_registo_parcelas_cduats/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de parcelas - CDUATs&quot;" nodeset="/LEGEND_L_registo_parcelas_cduats/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/registo_data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/prov_id" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/dist_id" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/posto_id" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/assoc_id" required="true()" type="string"/>
+      <bind constraint="regex(.,'[0-9]{6}')" nodeset="/LEGEND_L_registo_parcelas_cduats/parcel_id" required="true()" type="string"/>
+      <bind constraint=".= /LEGEND_L_registo_parcelas_cduats/parcel_id " jr:constraintMsg="O número do recibo que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/LEGEND_L_registo_parcelas_cduats/parcel_id_check" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/ocup" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" nodeset="/LEGEND_L_registo_parcelas_cduats/ocup_outro" relevant=" /LEGEND_L_registo_parcelas_cduats/ocup ='outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/z_excl" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/part_excl" relevant=" /LEGEND_L_registo_parcelas_cduats/z_excl ='sim'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/tipo_excl" relevant=" /LEGEND_L_registo_parcelas_cduats/z_excl ='sim'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/conf" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/tipo_conf" relevant=" /LEGEND_L_registo_parcelas_cduats/conf ='sim'" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_L_registo_parcelas_cduats/desc_conf" relevant=" /LEGEND_L_registo_parcelas_cduats/conf ='sim'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/use_cat" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/use_tipo" required="true()" type="select"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/use_prin" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_L_registo_parcelas_cduats/use_other" relevant="selected( /LEGEND_L_registo_parcelas_cduats/use_tipo , 'outro')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/demarcator" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_L_registo_parcelas_cduats/nome_demarcator" relevant=" /LEGEND_L_registo_parcelas_cduats/demarcator ='outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/party_type" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/LEGEND_L_registo_parcelas_cduats/add_party_number" type="int"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/party_menor" required="true()" type="select1"/>
+      <bind calculate=" /LEGEND_L_registo_parcelas_cduats/add_party_number " nodeset="/LEGEND_L_registo_parcelas_cduats/Titulares_count" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Titulares" relevant=" /LEGEND_L_registo_parcelas_cduats/party_type ='sing'"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Titulares/searchtext" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Titulares/found_party" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/searchtext_1" relevant=" /LEGEND_L_registo_parcelas_cduats/party_menor ='sim'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/found_rep_menor" relevant=" /LEGEND_L_registo_parcelas_cduats/party_menor ='sim'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/searchtext_2" relevant=" /LEGEND_L_registo_parcelas_cduats/party_type = 'entidade'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/found_rep_ent" relevant=" /LEGEND_L_registo_parcelas_cduats/party_type = 'entidade'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Lg1" relevant=" /LEGEND_L_registo_parcelas_cduats/party_type = 'entidade'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos aqui não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Lg1/ent_nome" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Lg1/ent_tipo" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/reg_party_yn" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/LEGEND_L_registo_parcelas_cduats/reg_newparty_number" relevant=" /LEGEND_L_registo_parcelas_cduats/reg_party_yn = 'sim'" type="int"/>
+      <bind calculate=" /LEGEND_L_registo_parcelas_cduats/reg_newparty_number " nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas_count" readonly="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de apelido, nome e profissão não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_app" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de apelido, nome e profissão não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_nom" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_gen" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_civil" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de apelido, nome e profissão não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_prof" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_prof_other" relevant=" /LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_prof  = 'outro'" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de nacionalidade ou naturalidade não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg3/pessoa_nacion" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de nacionalidade ou naturalidade não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg3/pessoa_natural" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/nasc_y_n" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_nasc" relevant=" /LEGEND_L_registo_parcelas_cduats/Novas_pessoas/nasc_y_n  = 'sim'" type="date"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_ida" relevant=" /LEGEND_L_registo_parcelas_cduats/Novas_pessoas/nasc_y_n  = 'nao'" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/pessoa_doc" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/pessoa_id" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_local" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_emi" type="date"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_val" type="date"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_vital" relevant=" /LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/pessoa_doc  = 'bi'" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_foto" type="binary"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/id_foto" type="binary"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_assin" required="true()" type="binary"/>
+      <bind constraint="regex(.,'[0-9]{9}')" jr:constraintMsg="O numero não está no formato correcto. Faça a favor de conferir" nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/contacto" type="string"/>
+      <bind constraint=".&gt;=1" jr:constraintMsg="Tem que ter pelos menos uma testamunha" nodeset="/LEGEND_L_registo_parcelas_cduats/testem_num" required="true()" type="int"/>
+      <bind calculate=" /LEGEND_L_registo_parcelas_cduats/testem_num " nodeset="/LEGEND_L_registo_parcelas_cduats/Testemunhas_count" readonly="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_L_registo_parcelas_cduats/Testemunhas/Lg5/testem_nome" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Testemunhas/Lg5/testem_type" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Testemunhas/testem_assin" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/auto_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/limites_yn" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Pontos" relevant=" /LEGEND_L_registo_parcelas_cduats/limites_yn = 'sim'"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Pontos/auto_gps_limit" type="geopoint"/>
+      <bind calculate="concat( /LEGEND_L_registo_parcelas_cduats/parcel_id ,'point')" nodeset="/LEGEND_L_registo_parcelas_cduats/Pontos/upn_gps_limit" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/endnote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/recibo_image" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_L_registo_parcelas_cduats/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_L_registo_parcelas_cduats/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('parcelas','_', /LEGEND_L_registo_parcelas_cduats/assoc_id ,'_', /LEGEND_L_registo_parcelas_cduats/parcel_id )" nodeset="/LEGEND_L_registo_parcelas_cduats/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_L_registo_parcelas_cduats/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para identificar as parcelas que serão certificadas pela associação. 
+
+O técnico pode usar o formulário para fazer registo da parcela no campo: a forma de obtenção, o uso, os limites e o(s) titular(es).
+
+O(s) nome(s) do(s) titular(es) podem ser selecionados duma lista de pessoas que já foram registados, e/ou os nomes de novas pessoas podem ser adicionados.
+
+Está permitido a demarcação/identificação das parcelas por pessoas que não são os proprietários, quando estes estão ausentes. Mas o formulário sempre exige a captura do(s) nome(s) dos próprios proprietários. 
+
+O formulário é usado junto com os mapas para identificar os limites de parcela. Os limites devem ser indicados no mapa, e o formulário também permite a gravação das coordenadas geográficas dos limites, quando necessário. 
+
+No fim do formulário, o técnico deve preencher um recibo, tirar uma imagem do recibo, e entregar lo ao titular. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/tec_name">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/LEGEND_L_registo_parcelas_cduats/registo_data">
+      <label>Data do registo de parcela:</label>
+    </input>
+    <select1 ref="/LEGEND_L_registo_parcelas_cduats/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input query="instance('districts')/root/item[prov_id= /LEGEND_L_registo_parcelas_cduats/prov_id ]" ref="/LEGEND_L_registo_parcelas_cduats/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input query="instance('postos')/root/item[dist_id= /LEGEND_L_registo_parcelas_cduats/dist_id ]" ref="/LEGEND_L_registo_parcelas_cduats/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input query="instance('assocs')/root/item[posto_id= /LEGEND_L_registo_parcelas_cduats/posto_id ]" ref="/LEGEND_L_registo_parcelas_cduats/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <input appearance="numbers" ref="/LEGEND_L_registo_parcelas_cduats/parcel_id">
+      <label>Qual é o numero do recibo?</label>
+    </input>
+    <input appearance="numbers" ref="/LEGEND_L_registo_parcelas_cduats/parcel_id_check">
+      <label>Por favor, re-digite o número do recibo como confirmação:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/ocup">
+      <label>Qual foi a forma de obtenção da parcela?</label>
+      <item>
+        <label>Ocupação de boa fé</label>
+        <value>boa</value>
+      </item>
+      <item>
+        <label>Normas e práticas costumeiras</label>
+        <value>norms</value>
+      </item>
+      <item>
+        <label>Doação</label>
+        <value>doa</value>
+      </item>
+      <item>
+        <label>Herança</label>
+        <value>hera</value>
+      </item>
+      <item>
+        <label>Reassentamento</label>
+        <value>reass</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/ocup_outro">
+      <label>Qual foi a outra forma de obtenção da parcela?</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/z_excl">
+      <label>A parcela está localizada numa zona de exclusão?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/part_excl">
+      <label>É apenas uma parte da parcela dentro da zona de exclusão ou toda a parcela?</label>
+      <item>
+        <label>parcialmente dentro</label>
+        <value>parc</value>
+      </item>
+      <item>
+        <label>totalmente dentro</label>
+        <value>tot</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/tipo_excl">
+      <label>Que tipo de zona de exclusão?</label>
+      <item>
+        <label>Protecção Parcial</label>
+        <value>parcial</value>
+      </item>
+      <item>
+        <label>Protecção Total</label>
+        <value>total</value>
+      </item>
+      <item>
+        <label>Zona de Inundação</label>
+        <value>inund</value>
+      </item>
+      <item>
+        <label>Zona de Erosão</label>
+        <value>eros</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/conf">
+      <label>Existe um conflito sobre a parcela?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/tipo_conf">
+      <label>Que tipo de conflito?</label>
+      <item>
+        <label>Trespasse</label>
+        <value>tres</value>
+      </item>
+      <item>
+        <label>Titularidade</label>
+        <value>titu</value>
+      </item>
+      <item>
+        <label>Limites</label>
+        <value>lim</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/desc_conf">
+      <label>Descrição de conflito:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/use_cat">
+      <label>Forma de uso</label>
+      <item>
+        <label>Exploração Familiar</label>
+        <value>expl_fam</value>
+      </item>
+      <item>
+        <label>Exploração Comercial</label>
+        <value>expl_com</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <select appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/use_tipo">
+      <label>Usos:</label>
+      <item>
+        <label>Agricultura</label>
+        <value>agric</value>
+      </item>
+      <item>
+        <label>Agropecuária</label>
+        <value>agro_pec</value>
+      </item>
+      <item>
+        <label>Comércio/Industria/Serviços</label>
+        <value>com_indus_serv</value>
+      </item>
+      <item>
+        <label>Culturas Permanentes</label>
+        <value>cult_perm</value>
+      </item>
+      <item>
+        <label>Fins Comunitários</label>
+        <value>fins_comun</value>
+      </item>
+      <item>
+        <label>Fins Sociais/Religiosos</label>
+        <value>soc_relig</value>
+      </item>
+      <item>
+        <label>Habitação Propria</label>
+        <value>habit</value>
+      </item>
+      <item>
+        <label>Habitação Veraneio</label>
+        <value>habit_ver</value>
+      </item>
+      <item>
+        <label>Habitação e Comercio</label>
+        <value>habit_com</value>
+      </item>
+      <item>
+        <label>Pecuária Gado Bovino</label>
+        <value>pec_outro</value>
+      </item>
+      <item>
+        <label>Pecuária Outro</label>
+        <value>pec_bovino</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/use_prin">
+      <label>Qual é o uso principal?</label>
+      <item>
+        <label>Agricultura</label>
+        <value>agric</value>
+      </item>
+      <item>
+        <label>Agropecuária</label>
+        <value>agro_pec</value>
+      </item>
+      <item>
+        <label>Comércio/Industria/Serviços</label>
+        <value>com_indus_serv</value>
+      </item>
+      <item>
+        <label>Culturas Permanentes</label>
+        <value>cult_perm</value>
+      </item>
+      <item>
+        <label>Fins Comunitários</label>
+        <value>fins_comun</value>
+      </item>
+      <item>
+        <label>Fins Sociais/Religiosos</label>
+        <value>soc_relig</value>
+      </item>
+      <item>
+        <label>Habitação Propria</label>
+        <value>habit</value>
+      </item>
+      <item>
+        <label>Habitação Veraneio</label>
+        <value>habit_ver</value>
+      </item>
+      <item>
+        <label>Habitação e Comercio</label>
+        <value>habit_com</value>
+      </item>
+      <item>
+        <label>Pecuária Gado Bovino</label>
+        <value>pec_outro</value>
+      </item>
+      <item>
+        <label>Pecuária Outro</label>
+        <value>pec_bovino</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/use_other">
+      <label>Qual é o outro uso?</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/demarcator">
+      <label>A pessoa que está a identificar a parcela é o proprio dono, ou está a fazer a identificação em nome de outra pessoa?</label>
+      <item>
+        <label>Proprietário(a) da parcela</label>
+        <value>prop</value>
+      </item>
+      <item>
+        <label>Outra pessoa</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/nome_demarcator">
+      <label>Qual é o nome da pessoa que está a identificar os limites em nome do dono?</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/party_type">
+      <label>Natureza do detentor (titular) do DUAT?</label>
+      <item>
+        <label>Pessoa singular</label>
+        <value>sing</value>
+      </item>
+      <item>
+        <label>Entidade legal</label>
+        <value>entidade</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/add_party_number">
+      <label>Quantos titulares são? Se for apenas uma pessoa ou se trata duma instituição, digite '1'</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/party_menor">
+      <label>Um dos titulares tem menos de 21 anos de idade?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <group ref="/LEGEND_L_registo_parcelas_cduats/Titulares">
+      <label>Titulares singulares</label>
+      <repeat jr:count=" /LEGEND_L_registo_parcelas_cduats/Titulares_count " nodeset="/LEGEND_L_registo_parcelas_cduats/Titulares">
+        <input ref="/LEGEND_L_registo_parcelas_cduats/Titulares/searchtext">
+          <label>Titulares - digite as primeiras letras do nome a ser pesquisada da lista das pessoas já registadas:</label>
+        </input>
+        <select1 appearance="search( /LEGEND_L_registo_parcelas_cduats/assoc_id , 'startswith', 'party_name',  /LEGEND_L_registo_parcelas_cduats/Titulares/searchtext )" ref="/LEGEND_L_registo_parcelas_cduats/Titulares/found_party">
+          <label>Selecionar o nome da pessoa</label>
+          <item>
+            <label>party_name</label>
+            <value>party_id_key</value>
+          </item>
+          <item>
+            <label>Outro nome (não está na lista)</label>
+            <value>1</value>
+          </item>
+        </select1>
+      </repeat>
+    </group>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/searchtext_1">
+      <label>Representante de pessoa menor - digite as primeiras letras do nome a ser pesquisada da lista das representantes já registadas:</label>
+    </input>
+    <select1 appearance="search( /LEGEND_L_registo_parcelas_cduats/assoc_id , 'startswith', 'party_name',  /LEGEND_L_registo_parcelas_cduats/searchtext_1 )" ref="/LEGEND_L_registo_parcelas_cduats/found_rep_menor">
+      <label>Selecionar o nome de representante de pessoa menor</label>
+      <item>
+        <label>party_name</label>
+        <value>party_id_key</value>
+      </item>
+      <item>
+        <label>Outro nome (não está na lista)</label>
+        <value>1</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/searchtext_2">
+      <label>Representante da entidade - digite as primeiras letras do nome a ser pesquisada da lista das representantes já registadas:</label>
+    </input>
+    <select1 appearance="search( /LEGEND_L_registo_parcelas_cduats/assoc_id , 'startswith', 'party_name',  /LEGEND_L_registo_parcelas_cduats/searchtext_2 )" ref="/LEGEND_L_registo_parcelas_cduats/found_rep_ent">
+      <label>Selecionar o nome de representante da entidade</label>
+      <item>
+        <label>party_name</label>
+        <value>party_id_key</value>
+      </item>
+      <item>
+        <label>Outro nome (não está na lista)</label>
+        <value>1</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/LEGEND_L_registo_parcelas_cduats/Lg1">
+      <label>Detalhes da entidade</label>
+      <input ref="/LEGEND_L_registo_parcelas_cduats/Lg1/ent_nome">
+        <label>Nome da instituição/entidade:</label>
+      </input>
+      <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Lg1/ent_tipo">
+        <label>Escolhe o tipo da entidade:</label>
+        <item>
+          <label>Escola</label>
+          <value>escola</value>
+        </item>
+        <item>
+          <label>Entidade Religiosa</label>
+          <value>igreja</value>
+        </item>
+        <item>
+          <label>Associação ou Cooperativa de produtores</label>
+          <value>assoc</value>
+        </item>
+        <item>
+          <label>Empresa Privada ou Publica</label>
+          <value>empresa</value>
+        </item>
+        <item>
+          <label>Instituição do Estado</label>
+          <value>estado</value>
+        </item>
+      </select1>
+    </group>
+    <select1 ref="/LEGEND_L_registo_parcelas_cduats/reg_party_yn">
+      <label>Quer fazer registo dum(a) titular da parcela cujo nome não apareceu na lista?</label>
+      <hint>Se não for encontrado nenhum dos nomes dos titulares, TEM QUE RESPONDER 'SIM', E FAZER O REGISTO DE PELO MENOS UM NOME AQUI!!</hint>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/reg_newparty_number">
+      <label>Quantos pessoas não registadas são? Se for apenas uma pessoa ou entidade, digite '1'</label>
+    </input>
+    <group ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas">
+      <label>Novas Pessoas</label>
+      <repeat jr:count=" /LEGEND_L_registo_parcelas_cduats/Novas_pessoas_count " nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas">
+        <group appearance="field-list" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2">
+          <label>Detalhes de pessoa não registada</label>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_app">
+            <label>Qual é o apelido da pessoa?</label>
+          </input>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_nom">
+            <label>Qual é o nome da pessoa?</label>
+          </input>
+          <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_gen">
+            <label>Escolhe o género da pessoa:</label>
+            <item>
+              <label>Masculino</label>
+              <value>mas</value>
+            </item>
+            <item>
+              <label>Feminino</label>
+              <value>fem</value>
+            </item>
+          </select1>
+          <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg2/pessoa_civil">
+            <label>Escolhe o estado civil da pessoa:</label>
+            <item>
+              <label>Solteiro (a)</label>
+              <value>solt</value>
+            </item>
+            <item>
+              <label>União de Facto</label>
+              <value>defacto</value>
+            </item>
+            <item>
+              <label>Casado (a)</label>
+              <value>casado</value>
+            </item>
+            <item>
+              <label>Divorciado (a)</label>
+              <value>div</value>
+            </item>
+            <item>
+              <label>Viúvo (a)</label>
+              <value>viu</value>
+            </item>
+          </select1>
+        </group>
+        <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_prof">
+          <label>Escolhe a profissão da pessoa:</label>
+          <item>
+            <label>Agricultor</label>
+            <value>agri</value>
+          </item>
+          <item>
+            <label>Camponese</label>
+            <value>camp</value>
+          </item>
+          <item>
+            <label>Carpinteiro(a)</label>
+            <value>carp</value>
+          </item>
+          <item>
+            <label>Comerciante</label>
+            <value>come</value>
+          </item>
+          <item>
+            <label>Curandeiro(a)</label>
+            <value>cura</value>
+          </item>
+          <item>
+            <label>Enfirmeiro(a)</label>
+            <value>enfi</value>
+          </item>
+          <item>
+            <label>Estudante</label>
+            <value>estu</value>
+          </item>
+          <item>
+            <label>Funcionario Publico</label>
+            <value>func</value>
+          </item>
+          <item>
+            <label>Motorista</label>
+            <value>moto</value>
+          </item>
+          <item>
+            <label>Parteira Tradicional</label>
+            <value>part</value>
+          </item>
+          <item>
+            <label>Pastor de Igreja</label>
+            <value>past</value>
+          </item>
+          <item>
+            <label>Pedreiro(a)</label>
+            <value>pedr</value>
+          </item>
+          <item>
+            <label>Produtor(a)</label>
+            <value>prod</value>
+          </item>
+          <item>
+            <label>Professor(a)</label>
+            <value>prof</value>
+          </item>
+          <item>
+            <label>Serrador(a)</label>
+            <value>serr</value>
+          </item>
+          <item>
+            <label>Transportador(a)</label>
+            <value>tran</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>outro</value>
+          </item>
+        </select1>
+        <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_prof_other">
+          <label>Qual é a outra profissão da pessoa?</label>
+        </input>
+        <group appearance="field-list" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg3">
+          <label>Detalhes de pessoa (cont)</label>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg3/pessoa_nacion">
+            <label>Qual é a nacionalidade da pessoa?</label>
+          </input>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg3/pessoa_natural">
+            <label>Qual é a naturalidade da pessoa?</label>
+          </input>
+        </group>
+        <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/nasc_y_n">
+          <label>A pessoa conhece a data de nascimento ou a data está disponível através do documento?</label>
+          <item>
+            <label>Sim</label>
+            <value>sim</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>nao</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_nasc">
+          <label>Data de nascimento</label>
+        </input>
+        <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_ida">
+          <label>Qual é a idade da pessoa?</label>
+          <item>
+            <label>Entre 18 - 30</label>
+            <value>jov</value>
+          </item>
+          <item>
+            <label>Entre 30 - 50</label>
+            <value>adu</value>
+          </item>
+          <item>
+            <label>50+</label>
+            <value>idos</value>
+          </item>
+        </select1>
+        <group appearance="field-list" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4">
+          <label>Detalhes de documentos</label>
+          <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/pessoa_doc">
+            <label>Tipo de documento de identificação</label>
+            <item>
+              <label>Bilhete de Identidade</label>
+              <value>bi</value>
+            </item>
+            <item>
+              <label>Talão do BI</label>
+              <value>talao</value>
+            </item>
+            <item>
+              <label>Cartão de Eleitor</label>
+              <value>c_eleit</value>
+            </item>
+            <item>
+              <label>Certidão de Nascimento</label>
+              <value>c_nasc</value>
+            </item>
+            <item>
+              <label>Cédula Pessoal</label>
+              <value>ced</value>
+            </item>
+            <item>
+              <label>Declaração</label>
+              <value>decl</value>
+            </item>
+            <item>
+              <label>Cartão de Desmobilização</label>
+              <value>c_desmob</value>
+            </item>
+            <item>
+              <label>Passaporte</label>
+              <value>p_port</value>
+            </item>
+            <item>
+              <label>Carta de Condução</label>
+              <value>c_cond</value>
+            </item>
+            <item>
+              <label>Cartão de pagamento de imposto</label>
+              <value>c_impost</value>
+            </item>
+            <item>
+              <label>NUIT</label>
+              <value>nuit</value>
+            </item>
+            <item>
+              <label>Bilhete de Identidade</label>
+              <value>bi</value>
+            </item>
+            <item>
+              <label>Talão do BI</label>
+              <value>talao</value>
+            </item>
+            <item>
+              <label>Cartão de Eleitor</label>
+              <value>c_eleit</value>
+            </item>
+            <item>
+              <label>Certidão de Nascimento</label>
+              <value>c_nasc</value>
+            </item>
+            <item>
+              <label>Cédula Pessoal</label>
+              <value>ced</value>
+            </item>
+            <item>
+              <label>Declaração</label>
+              <value>decl</value>
+            </item>
+            <item>
+              <label>Cartão de Desmobilização</label>
+              <value>c_desmob</value>
+            </item>
+            <item>
+              <label>Passaporte</label>
+              <value>p_port</value>
+            </item>
+            <item>
+              <label>Carta de Condução</label>
+              <value>c_cond</value>
+            </item>
+            <item>
+              <label>Cartão de pagamento de imposto</label>
+              <value>c_impost</value>
+            </item>
+            <item>
+              <label>NUIT</label>
+              <value>nuit</value>
+            </item>
+          </select1>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/pessoa_id">
+            <label>Numero de documento</label>
+            <hint>Se não tiver numero, deixa em branco</hint>
+          </input>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_local">
+            <label>Local de Emissão</label>
+          </input>
+          <input appearance="no-calendar" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_emi">
+            <label>Emissão</label>
+          </input>
+          <input appearance="no-calendar" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_val">
+            <label>Validade</label>
+          </input>
+          <select1 ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_vital">
+            <label>Será que o BI é vitalício</label>
+            <item>
+              <label>Sim</label>
+              <value>sim</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>nao</value>
+            </item>
+          </select1>
+        </group>
+        <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_foto">
+          <label>Tire uma fotografia da pessoa</label>
+        </upload>
+        <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/id_foto">
+          <label>Tire uma fotografia do documento de identificação</label>
+        </upload>
+        <upload appearance="signature" mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_assin">
+          <label>Assinatura da pessoa</label>
+        </upload>
+        <input appearance="numbers" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/contacto">
+          <label>Numero de telemóvel da pessoa</label>
+        </input>
+      </repeat>
+    </group>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/testem_num">
+      <label>Quantas testemunhas estão presentes?</label>
+    </input>
+    <group ref="/LEGEND_L_registo_parcelas_cduats/Testemunhas">
+      <label>Testemunhas</label>
+      <repeat jr:count=" /LEGEND_L_registo_parcelas_cduats/Testemunhas_count " nodeset="/LEGEND_L_registo_parcelas_cduats/Testemunhas">
+        <group appearance="field-list" ref="/LEGEND_L_registo_parcelas_cduats/Testemunhas/Lg5">
+          <label>Detalhes de testemunhas</label>
+          <input ref="/LEGEND_L_registo_parcelas_cduats/Testemunhas/Lg5/testem_nome">
+            <label>Nome completo da testemunha</label>
+          </input>
+          <select1 appearance="minimal" ref="/LEGEND_L_registo_parcelas_cduats/Testemunhas/Lg5/testem_type">
+            <label>Categoria da testemunha</label>
+            <item>
+              <label>Chefe da Zona ou Povoado</label>
+              <value>chefe</value>
+            </item>
+            <item>
+              <label>Representante da Associacao</label>
+              <value>representante</value>
+            </item>
+            <item>
+              <label>Vizinho directo</label>
+              <value>viz_d</value>
+            </item>
+            <item>
+              <label>Vizinho perto</label>
+              <value>viz_p</value>
+            </item>
+          </select1>
+        </group>
+        <upload appearance="signature" mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Testemunhas/testem_assin">
+          <label>Assinatura da testemunha</label>
+        </upload>
+      </repeat>
+    </group>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/auto_gps">
+      <label>É obrigatorio gravar um ponto dentro da parcela, no centro.</label>
+      <hint>GPS coordinates can only be collected when outside.</hint>
+    </input>
+    <select1 ref="/LEGEND_L_registo_parcelas_cduats/limites_yn">
+      <label>Será que é necessário gravar pontos de limites da parcela (porque não estão claros no mapa)?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <group ref="/LEGEND_L_registo_parcelas_cduats/Pontos">
+      <label>Pontos de limites</label>
+      <repeat nodeset="/LEGEND_L_registo_parcelas_cduats/Pontos">
+        <input ref="/LEGEND_L_registo_parcelas_cduats/Pontos/auto_gps_limit">
+          <label>Gravar um ponto</label>
+          <hint>Gravar um ponto a qualquer mudança de direcção, e pelo menos uma vez a cada dez metros. Lembrete: se a 'localização record' está levando algum tempo, por favor, verifique se a luz azul do seu Glo</hint>
+        </input>
+      </repeat>
+    </group>
+    <input ref="/LEGEND_L_registo_parcelas_cduats/endnote">
+      <label>Está quase no fim do formulário. 
+
+Agora pode preencher o recibo, tirar uma foto do recibo e entregar o original ao requerente. 
+
+A primeira copia do original vai para a Associação Comunitária.
+
+A segunda copia do original fica no livro de recibos.</label>
+    </input>
+    <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/recibo_image">
+      <label>Tire uma fotografia do recibo</label>
+    </upload>
+  </h:body>
+</h:html>

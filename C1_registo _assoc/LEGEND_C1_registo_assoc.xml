@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND C1 Registrar uma Associacao V3</h:title>
+    <model>
+      <instance>
+        <LEGEND_C1_registo_assoc id="LEGEND_C1_V3" version="201707021">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <registo_date/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_nome/>
+          <pov_ids/>
+          <add_pov/>
+          <Povoados_count/>
+          <Povoados jr:template="">
+            <sel_field/>
+            <sel_label/>
+            <pov_familias/>
+          </Povoados>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_C1_registo_assoc>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_C1_registo_assoc/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de Associação e identificação dos povoados que fazem parte dela&quot;" nodeset="/LEGEND_C1_registo_assoc/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_C1_registo_assoc/add_nome" relevant=" /LEGEND_C1_registo_assoc/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/registo_date" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/posto_id" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,100}$&quot;)" nodeset="/LEGEND_C1_registo_assoc/assoc_nome" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/pov_ids" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_C1_registo_assoc/add_pov" relevant="selected( /LEGEND_C1_registo_assoc/pov_ids , '1')" required="true()" type="string"/>
+      <bind calculate="count-selected( /LEGEND_C1_registo_assoc/pov_ids )" nodeset="/LEGEND_C1_registo_assoc/Povoados_count" readonly="true()" type="string"/>
+      <bind calculate="selected-at( /LEGEND_C1_registo_assoc/pov_ids ,position(..)-1)" nodeset="/LEGEND_C1_registo_assoc/Povoados/sel_field" type="string"/>
+      <bind calculate="pulldata( /LEGEND_C1_registo_assoc/dist_id ,'pov_name','pov_id_key', /LEGEND_C1_registo_assoc/Povoados/sel_field )" nodeset="/LEGEND_C1_registo_assoc/Povoados/sel_label" type="string"/>
+      <bind nodeset="/LEGEND_C1_registo_assoc/Povoados/pov_familias" required="true()" type="int"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_C1_registo_assoc/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_C1_registo_assoc/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('assoc_reg','_', /LEGEND_C1_registo_assoc/posto_id ,'_', /LEGEND_C1_registo_assoc/registo_date )" nodeset="/LEGEND_C1_registo_assoc/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_C1_registo_assoc/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_C1_registo_assoc/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para fazer o registo do nome duma associação comunitária e indicar os povoados que fazem parte desta associação.
+
+Um povoado sozinho podia optar para estabelecer uma associação, ou vários povoados podem se juntar.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C1_registo_assoc/tec_nome">
+      <label>Nome do(a) tecnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_C1_registo_assoc/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_C1_registo_assoc/registo_date">
+      <label>Data:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C1_registo_assoc/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_C1_registo_assoc/prov_id ]" ref="/LEGEND_C1_registo_assoc/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_C1_registo_assoc/dist_id ]" ref="/LEGEND_C1_registo_assoc/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input ref="/LEGEND_C1_registo_assoc/assoc_nome">
+      <label>Qual é o nome da Associação?</label>
+    </input>
+    <select appearance="search( /LEGEND_C1_registo_assoc/dist_id ,'matches','posto_id_key',  /LEGEND_C1_registo_assoc/posto_id )" ref="/LEGEND_C1_registo_assoc/pov_ids">
+      <label>Selecionar os nomes dos povoados que fazem parte da associação</label>
+      <item>
+        <label>pov_name</label>
+        <value>pov_id_key</value>
+      </item>
+      <item>
+        <label>Outro nome (povoado não está na lista)</label>
+        <value>1</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_C1_registo_assoc/add_pov">
+      <label>Escreve o nome do povoado se não apareceu na lista</label>
+    </input>
+    <group ref="/LEGEND_C1_registo_assoc/Povoados">
+      <label>Detalhes dos povoados integrados na associação</label>
+      <repeat jr:count=" /LEGEND_C1_registo_assoc/Povoados_count " nodeset="/LEGEND_C1_registo_assoc/Povoados">
+        <input ref="/LEGEND_C1_registo_assoc/Povoados/pov_familias">
+          <label>&lt;h1&gt;Quantas famílias sao residentes em&lt;/h&gt;&lt;br&gt;<output value=" /LEGEND_C1_registo_assoc/Povoados/sel_label "/>?</label>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>B Para recolha de dados iniciais</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/B_recolha_dados/sentido/mid:label">
+            <value form="image">jr://images/mid.jpg</value>
+          </text>
+          <text id="/B_recolha_dados/sentido/happy:label">
+            <value form="image">jr://images/happy.jpg</value>
+          </text>
+          <text id="/B_recolha_dados/sentido/sad:label">
+            <value form="image">jr://images/sad.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <B_recolha_dados id="B_Recolha_Dados" version="201705201">
+          <start/>
+          <intronote/>
+          <tec_nome/>
+          <data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <com_id/>
+          <pov_id/>
+          <add_pov_id/>
+          <B_g1>
+            <chief_level/>
+            <chief_app/>
+            <chief_nome/>
+            <chief_contact/>
+          </B_g1>
+          <conflict_yn/>
+          <conflict_cat/>
+          <conflict_origin/>
+          <sentido/>
+          <chief_foto/>
+          <coords_chief_house/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </B_recolha_dados>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/B_recolha_dados/start" type="dateTime"/>
+      <bind nodeset="/B_recolha_dados/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/B_recolha_dados/tec_nome" required="true()" type="select1"/>
+      <bind nodeset="/B_recolha_dados/data" required="true()" type="date"/>
+      <bind nodeset="/B_recolha_dados/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/B_recolha_dados/dist_id" required="true()" type="string"/>
+      <bind nodeset="/B_recolha_dados/posto_id" required="true()" type="string"/>
+      <bind nodeset="/B_recolha_dados/com_id" required="true()" type="string"/>
+      <bind nodeset="/B_recolha_dados/pov_id" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/add_pov_id" relevant=" /B_recolha_dados/pov_id =&quot;Outro&quot;" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/B_g1/chief_level" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/B_g1/chief_app" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/B_g1/chief_nome" required="true()" type="string"/>
+      <bind nodeset="/B_recolha_dados/B_g1/chief_contact" type="string"/>
+      <bind nodeset="/B_recolha_dados/conflict_yn" required="true()" type="select1"/>
+      <bind nodeset="/B_recolha_dados/conflict_cat" relevant=" /B_recolha_dados/conflict_yn =&quot;sim&quot;" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/conflict_origin" relevant=" /B_recolha_dados/conflict_yn =&quot;sim&quot;" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/sentido" required="true()" type="select1"/>
+      <bind nodeset="/B_recolha_dados/chief_foto" required="true()" type="binary"/>
+      <bind nodeset="/B_recolha_dados/coords_chief_house" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/B_recolha_dados/obs" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/B_recolha_dados/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/B_recolha_dados/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('Dados','_', /B_recolha_dados/com_id ,'_', /B_recolha_dados/pov_id )" nodeset="/B_recolha_dados/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/B_recolha_dados/intronote">
+      <label>Este formulário é utilizado para capturar ou confirmar informação sobre as comunidades e os povoados.
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/B_recolha_dados/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/B_recolha_dados/data">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/B_recolha_dados/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /B_recolha_dados/prov_id ]" ref="/B_recolha_dados/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /B_recolha_dados/dist_id ]" ref="/B_recolha_dados/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('comunidades')/root/item[posto_id= /B_recolha_dados/posto_id ]" ref="/B_recolha_dados/com_id">
+      <label>Selecionar a comunidade</label>
+    </input>
+    <input appearance="minimal" query="instance('povs')/root/item[com_id= /B_recolha_dados/com_id ]" ref="/B_recolha_dados/pov_id">
+      <label>Selecionar o povoado</label>
+    </input>
+    <input ref="/B_recolha_dados/add_pov_id">
+      <label>Escreve o nome do povoado que não constava na lista anterior</label>
+    </input>
+    <group ref="/B_recolha_dados/B_g1">
+      <label>Detalhes Povoado</label>
+      <input ref="/B_recolha_dados/B_g1/chief_level">
+        <label>Qual é o nível ou titulo do chefe deste povoado?</label>
+        <hint>Pode ser, por exemplo, 'Cabo de Terra', 'Sapanda', 'Reinha', 'Pyamwene', etc.)</hint>
+      </input>
+      <input ref="/B_recolha_dados/B_g1/chief_app">
+        <label>Qual é o apelido do chefe deste povoado?</label>
+      </input>
+      <input ref="/B_recolha_dados/B_g1/chief_nome">
+        <label>Qual é o nome do chefe deste povoado?</label>
+      </input>
+      <input appearance="numbers" ref="/B_recolha_dados/B_g1/chief_contact">
+        <label>Qual é o contacto do chefe deste povoado?</label>
+      </input>
+    </group>
+    <select1 appearance="minimal" ref="/B_recolha_dados/conflict_yn">
+      <label>Existem conflitos de terra nesta zona?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/B_recolha_dados/conflict_cat">
+      <label>Que tipo de conflitos de terra existem?</label>
+      <item>
+        <label>Entre membros da mesma família</label>
+        <value>con_fam</value>
+      </item>
+      <item>
+        <label>Entre famílias do mesmo povoado</label>
+        <value>con_pov</value>
+      </item>
+      <item>
+        <label>Entre famílias deste povoado e as famílias dos povoados vizinhos</label>
+        <value>con_viz</value>
+      </item>
+      <item>
+        <label>Entre famílias deste povoado e terceiros que não fazem parte da comunidade</label>
+        <value>con_terceiros</value>
+      </item>
+    </select1>
+    <input ref="/B_recolha_dados/conflict_origin">
+      <label>Descreve aqui a origem dos conflitos:</label>
+    </input>
+    <select1 appearance="compact" ref="/B_recolha_dados/sentido">
+      <label>Qual é o sentido geral em relação ao investimento de Portucel?</label>
+      <item>
+        <label ref="jr:itext('/B_recolha_dados/sentido/happy:label')"/>
+        <value>happy</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/B_recolha_dados/sentido/mid:label')"/>
+        <value>mid</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/B_recolha_dados/sentido/sad:label')"/>
+        <value>sad</value>
+      </item>
+    </select1>
+    <upload mediatype="image/*" ref="/B_recolha_dados/chief_foto">
+      <label>Tire uma fotografia do chefe</label>
+      <hint>Lembrete: A fotografia deve ser do rosto da pessoa e ser claramente visível. Não tire uma fotografia na sombra e certifique-se que a pessoa está bem iluminada.</hint>
+    </upload>
+    <input ref="/B_recolha_dados/coords_chief_house">
+      <label>Coordenadas GPS da casa do chefe</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/B_recolha_dados/obs">
+      <label>Observações sobre o encontro:</label>
+    </input>
+  </h:body>
+</h:html>

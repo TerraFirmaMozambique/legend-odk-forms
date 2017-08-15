@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND X Registo Horas</h:title>
+    <model>
+      <instance>
+        <LEGEND_X_registo_horas id="Legend_Horas_V1" version="201707081">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <data/>
+          <act/>
+          <start_time/>
+          <end_time/>
+          <forms/>
+          <forms_no/>
+          <auto_gps/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_X_registo_horas>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_X_registo_horas/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de actividades diárias&quot;" nodeset="/LEGEND_X_registo_horas/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_X_registo_horas/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_X_registo_horas/tec_nome" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_X_registo_horas/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_X_registo_horas/act" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_X_registo_horas/start_time" required="true()" type="time"/>
+      <bind nodeset="/LEGEND_X_registo_horas/end_time" required="true()" type="time"/>
+      <bind nodeset="/LEGEND_X_registo_horas/forms" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_X_registo_horas/forms_no" relevant=" /LEGEND_X_registo_horas/forms ='sim'" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_X_registo_horas/auto_gps" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_X_registo_horas/obs" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_X_registo_horas/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_X_registo_horas/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat( /LEGEND_X_registo_horas/data ,'_', /LEGEND_X_registo_horas/tec_nome )" nodeset="/LEGEND_X_registo_horas/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_X_registo_horas/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_X_registo_horas/my_form_name "/>&lt;/span&gt; &lt;br/&gt; Este formulário é utilizado para capturar informação sobre as actividades diárias dos enumeradores.
+
+O técnico pode usar o formulário para gravar informação sobre a data, tipo e duração de cada actividade. Quando se trata de mais do que uma actividade, deve ser submetido um formulário para cada actividade. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_X_registo_horas/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/LEGEND_X_registo_horas/data">
+      <label>Data da actividade:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_X_registo_horas/act">
+      <label>Tipo de actividade</label>
+      <item>
+        <label>Sensibilização, formação de associações, actividades de delimitação</label>
+        <value>sens</value>
+      </item>
+      <item>
+        <label>Registo de pessoas</label>
+        <value>reg_pessoas</value>
+      </item>
+      <item>
+        <label>Registo de parcelas</label>
+        <value>reg_parcelas</value>
+      </item>
+      <item>
+        <label>Encontros ou outras actividades internos</label>
+        <value>Interno</value>
+      </item>
+      <item>
+        <label>Outras</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_X_registo_horas/start_time">
+      <label>Hora do inicio da actividade</label>
+    </input>
+    <input ref="/LEGEND_X_registo_horas/end_time">
+      <label>Hora do fim da actividade</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_X_registo_horas/forms">
+      <label>Completou qualquer formulário do processo?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_X_registo_horas/forms_no">
+      <label>Quantos formulários foram completados?</label>
+    </input>
+    <input ref="/LEGEND_X_registo_horas/auto_gps">
+      <label>Captura das coordenadas GPS da actividade</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/LEGEND_X_registo_horas/obs">
+      <label>Observações sobre a actividade:</label>
+    </input>
+  </h:body>
+</h:html>

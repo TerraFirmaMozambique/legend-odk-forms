@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND Y Historias Interessantes</h:title>
+    <model>
+      <instance>
+        <LEGEND_Y_registo_historias_interessantes id="Legend_Hist_Interessantes_V1" version="201707081">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <data/>
+          <nome/>
+          <historia/>
+          <pessoa_image/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_Y_registo_historias_interessantes>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_Y_registo_historias_interessantes/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de histórias interessantes&quot;" nodeset="/LEGEND_Y_registo_historias_interessantes/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_Y_registo_historias_interessantes/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_Y_registo_historias_interessantes/tec_nome" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_Y_registo_historias_interessantes/data" required="true()" type="date"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,100}$&quot;)" nodeset="/LEGEND_Y_registo_historias_interessantes/nome" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,1000}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_Y_registo_historias_interessantes/historia" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_Y_registo_historias_interessantes/pessoa_image" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_Y_registo_historias_interessantes/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_Y_registo_historias_interessantes/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('historias_pessoais','_', /LEGEND_Y_registo_historias_interessantes/data ,'_', /LEGEND_Y_registo_historias_interessantes/tec_nome )" nodeset="/LEGEND_Y_registo_historias_interessantes/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_Y_registo_historias_interessantes/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_Y_registo_historias_interessantes/my_form_name "/>&lt;/span&gt; &lt;br/&gt; 
+
+Este formulário é utilizado para capturar informação sobre as histórias interessantes encontradas pelos enumeradores durante o curso do projecto.
+
+O técnico pode usar o formulário para gravar informação sobre a história duma pessoa ou família. Pode tirar uma fotografia e gravar os comentários. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_Y_registo_historias_interessantes/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/LEGEND_Y_registo_historias_interessantes/data">
+      <label>Data:</label>
+    </input>
+    <input ref="/LEGEND_Y_registo_historias_interessantes/nome">
+      <label>Nome completo da pessoa</label>
+    </input>
+    <input ref="/LEGEND_Y_registo_historias_interessantes/historia">
+      <label>Comentarios da pessoa:</label>
+    </input>
+    <upload mediatype="image/*" ref="/LEGEND_Y_registo_historias_interessantes/pessoa_image">
+      <label>Tire uma fotografia da pessoa</label>
+    </upload>
+  </h:body>
+</h:html>

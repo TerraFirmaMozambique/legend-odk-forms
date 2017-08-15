@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND M Objeccoes e Correcoes</h:title>
+    <model>
+      <instance>
+        <LEGEND_M_objeccoes_correcoes id="LEGEND_M_V1" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <found_pov/>
+          <parcel_id/>
+          <parcel_id_check/>
+          <issues/>
+          <pessoa_app_new/>
+          <pessoa_nom_new/>
+          <pessoa_gen_new/>
+          <pessoa_doc_new/>
+          <pessoa_id_new/>
+          <limites_new/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_M_objeccoes_correcoes>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_M_objeccoes_correcoes/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de Objecções e Correções&quot;" nodeset="/LEGEND_M_objeccoes_correcoes/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_M_objeccoes_correcoes/add_nome" relevant=" /LEGEND_M_objeccoes_correcoes/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/found_pov" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/parcel_id" required="true()" type="string"/>
+      <bind constraint=".= /LEGEND_M_objeccoes_correcoes/parcel_id " jr:constraintMsg="O número da parcela/registo que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/LEGEND_M_objeccoes_correcoes/parcel_id_check" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/issues" type="select"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_app_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'apelido')" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_nom_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'nome')" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_gen_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'genero')" type="select1"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_doc_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'doc_tipo')" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - O campo de numero do documento não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_id_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'doc_num')" required="true()" type="string"/>
+      <bind calculate=" /LEGEND_M_objeccoes_correcoes/parcel_id " nodeset="/LEGEND_M_objeccoes_correcoes/limites_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'reconfig')" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_M_objeccoes_correcoes/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_M_objeccoes_correcoes/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('OC','_', /LEGEND_M_objeccoes_correcoes/found_pov ,'_', /LEGEND_M_objeccoes_correcoes/parcel_id )" nodeset="/LEGEND_M_objeccoes_correcoes/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_M_objeccoes_correcoes/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_M_objeccoes_correcoes/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar os resultados de processo de Objecções e Correções.
+
+O técnico pode usar o formulário &lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;depois de conclusão da publicação do edital&lt;/span&gt;.
+
+O formulário é usado para reportar a necessidade de mudar ou a configuração das parcelas ou mudanças na informação relacionada sobre os titulares. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_M_objeccoes_correcoes/tec_nome">
+      <label>Nome do(a) tecnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_M_objeccoes_correcoes/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_M_objeccoes_correcoes/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_M_objeccoes_correcoes/prov_id ]" ref="/LEGEND_M_objeccoes_correcoes/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_M_objeccoes_correcoes/dist_id ]" ref="/LEGEND_M_objeccoes_correcoes/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_M_objeccoes_correcoes/posto_id ]" ref="/LEGEND_M_objeccoes_correcoes/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <select1 appearance="search('assoc_povo', 'matches', 'assoc_id_key',  /LEGEND_M_objeccoes_correcoes/assoc_id )" ref="/LEGEND_M_objeccoes_correcoes/found_pov">
+      <label>Selecionar o povoado</label>
+      <item>
+        <label>pov_name</label>
+        <value>pov_id_key</value>
+      </item>
+    </select1>
+    <input appearance="numbers" ref="/LEGEND_M_objeccoes_correcoes/parcel_id">
+      <label>Qual é o numero da parcela/registo?</label>
+    </input>
+    <input appearance="numbers" ref="/LEGEND_M_objeccoes_correcoes/parcel_id_check">
+      <label>Por favor, re-digite o número da parcela/registo como confirmação:</label>
+    </input>
+    <select ref="/LEGEND_M_objeccoes_correcoes/issues">
+      <label>Indique toda a informação que precisa ser alterada</label>
+      <item>
+        <label>Mudar o apelido da pessoa</label>
+        <value>apelido</value>
+      </item>
+      <item>
+        <label>Mudar o nome da pessoa</label>
+        <value>nome</value>
+      </item>
+      <item>
+        <label>Mudar o género da pessoa:</label>
+        <value>genero</value>
+      </item>
+      <item>
+        <label>Mudar o tipo de documento de identificação</label>
+        <value>doc_tipo</value>
+      </item>
+      <item>
+        <label>Mudar o numero de documento</label>
+        <value>doc_num</value>
+      </item>
+      <item>
+        <label>Reconfigurar os limites da parcela</label>
+        <value>reconfig</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_M_objeccoes_correcoes/pessoa_app_new">
+      <label>Novo apelido da pessoa</label>
+    </input>
+    <input ref="/LEGEND_M_objeccoes_correcoes/pessoa_nom_new">
+      <label>Novo nome da pessoa</label>
+    </input>
+    <select1 ref="/LEGEND_M_objeccoes_correcoes/pessoa_gen_new">
+      <label>Novo género da pessoa:</label>
+      <item>
+        <label>Masculino</label>
+        <value>mas</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>fem</value>
+      </item>
+    </select1>
+    <select1 ref="/LEGEND_M_objeccoes_correcoes/pessoa_doc_new">
+      <label>Mudar o tipo de documento de identificação</label>
+      <item>
+        <label>Bilhete de Identidade</label>
+        <value>bi</value>
+      </item>
+      <item>
+        <label>Talão do BI</label>
+        <value>talao</value>
+      </item>
+      <item>
+        <label>Cartão de Eleitor</label>
+        <value>c_eleit</value>
+      </item>
+      <item>
+        <label>Certidão de Nascimento</label>
+        <value>c_nasc</value>
+      </item>
+      <item>
+        <label>Cédula Pessoal</label>
+        <value>ced</value>
+      </item>
+      <item>
+        <label>Declaração</label>
+        <value>decl</value>
+      </item>
+      <item>
+        <label>Cartão de Desmobilização</label>
+        <value>c_desmob</value>
+      </item>
+      <item>
+        <label>Passaporte</label>
+        <value>p_port</value>
+      </item>
+      <item>
+        <label>Carta de Condução</label>
+        <value>c_cond</value>
+      </item>
+      <item>
+        <label>Cartão de pagamento de imposto</label>
+        <value>c_impost</value>
+      </item>
+      <item>
+        <label>NUIT</label>
+        <value>nuit</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_M_objeccoes_correcoes/pessoa_id_new">
+      <label>Novo numero de documento</label>
+    </input>
+  </h:body>
+</h:html>

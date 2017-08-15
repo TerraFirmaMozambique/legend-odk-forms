@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND C2 Registrar assinantes da Associacao V2</h:title>
+    <model>
+      <instance>
+        <LEGEND_C2_assinantes_assoc id="LEGEND_C2_V2" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <meet_date/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <ass_num/>
+          <Membros_count/>
+          <Membros jr:template="">
+            <C2g1>
+              <ass_app/>
+              <ass_nom/>
+              <ass_gen/>
+              <ass_ida/>
+            </C2g1>
+            <C2g2>
+              <ass_doc/>
+              <ass_id/>
+            </C2g2>
+            <cara_foto/>
+            <ass_assin/>
+          </Membros>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_C2_assinantes_assoc>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_C2_assinantes_assoc/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de membros fundadores da associação&quot;" nodeset="/LEGEND_C2_assinantes_assoc/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_C2_assinantes_assoc/add_nome" relevant=" /LEGEND_C2_assinantes_assoc/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/meet_date" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/ass_num" required="true()" type="int"/>
+      <bind calculate=" /LEGEND_C2_assinantes_assoc/ass_num " nodeset="/LEGEND_C2_assinantes_assoc/Membros_count" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_app" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_nom" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_gen" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_ida" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_doc" type="select1"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_id" type="string"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/cara_foto" type="binary"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/ass_assin" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_C2_assinantes_assoc/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_C2_assinantes_assoc/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('assoc_assinantes','_', /LEGEND_C2_assinantes_assoc/assoc_id )" nodeset="/LEGEND_C2_assinantes_assoc/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_C2_assinantes_assoc/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_C2_assinantes_assoc/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre as pessoas que são selecionadas para ser membros fundadores da associação comunitária. 
+
+Devem ser gravados os detalhes de pelo menos 10 representantes das povoados que fazem parte da associação. 
+
+Não fica necessário fazer o registo das 10 pessoas na mesma altura - o formulário pode ser preenchido varias vezes ate completar as 10 necessárias. 
+
+Quer dizer, pode fazer registo de qualquer numero de pessoas disponíveis na altura e voltar mais tarde para, mais uma vez, completar o formulário e fazer registo dos outros representantes. 
+
+O técnico pode usar o formulário para capturar informação sobre cada pessoa, incluindo a assinatura digital. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C2_assinantes_assoc/tec_nome">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_C2_assinantes_assoc/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_C2_assinantes_assoc/meet_date">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C2_assinantes_assoc/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_C2_assinantes_assoc/prov_id ]" ref="/LEGEND_C2_assinantes_assoc/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_C2_assinantes_assoc/dist_id ]" ref="/LEGEND_C2_assinantes_assoc/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_C2_assinantes_assoc/posto_id ]" ref="/LEGEND_C2_assinantes_assoc/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <input ref="/LEGEND_C2_assinantes_assoc/ass_num">
+      <label>Quantos representantes queria registrar agora?</label>
+    </input>
+    <group ref="/LEGEND_C2_assinantes_assoc/Membros">
+      <label>Membros fundadores</label>
+      <repeat jr:count=" /LEGEND_C2_assinantes_assoc/Membros_count " nodeset="/LEGEND_C2_assinantes_assoc/Membros">
+        <group ref="/LEGEND_C2_assinantes_assoc/Membros/C2g1">
+          <label>Detalhes de assinantes</label>
+          <input ref="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_app">
+            <label>Qual é o apelido da pessoa escolhida?</label>
+          </input>
+          <input ref="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_nom">
+            <label>Qual é o nome da pessoa escolhida?</label>
+          </input>
+          <select1 appearance="minimal" ref="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_gen">
+            <label>Qual é o género da pessoa escolhida?</label>
+            <item>
+              <label>Masculino</label>
+              <value>mas</value>
+            </item>
+            <item>
+              <label>Feminino</label>
+              <value>fem</value>
+            </item>
+          </select1>
+          <select1 appearance="minimal" ref="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_ida">
+            <label>Qual é a idade da pessoa escolhida?</label>
+            <item>
+              <label>Entre 18 - 30</label>
+              <value>jov</value>
+            </item>
+            <item>
+              <label>Entre 30 - 50</label>
+              <value>adu</value>
+            </item>
+            <item>
+              <label>50+</label>
+              <value>idos</value>
+            </item>
+          </select1>
+        </group>
+        <group appearance="field-list" ref="/LEGEND_C2_assinantes_assoc/Membros/C2g2">
+          <label>Detalhes de documentos</label>
+          <select1 appearance="minimal" ref="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_doc">
+            <label>Tipo de documento de identificação</label>
+            <item>
+              <label>Bilhete de Identidade</label>
+              <value>bi</value>
+            </item>
+            <item>
+              <label>Talão do BI</label>
+              <value>talao</value>
+            </item>
+            <item>
+              <label>Cartão de Eleitor</label>
+              <value>c_eleit</value>
+            </item>
+            <item>
+              <label>Cédula Pessoal</label>
+              <value>ced</value>
+            </item>
+            <item>
+              <label>Declaração</label>
+              <value>decl</value>
+            </item>
+            <item>
+              <label>Cartão de Desmobilização</label>
+              <value>c_desmob</value>
+            </item>
+            <item>
+              <label>Passaporte</label>
+              <value>p_port</value>
+            </item>
+            <item>
+              <label>Carta de Condução</label>
+              <value>c_cond</value>
+            </item>
+            <item>
+              <label>Cartão de pagamento de imposto</label>
+              <value>c_impost</value>
+            </item>
+            <item>
+              <label>NUIT</label>
+              <value>nuit</value>
+            </item>
+          </select1>
+          <input ref="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_id">
+            <label>Numero de documento</label>
+          </input>
+        </group>
+        <upload mediatype="image/*" ref="/LEGEND_C2_assinantes_assoc/Membros/cara_foto">
+          <label>Tire uma fotografia de assinante</label>
+        </upload>
+        <upload appearance="signature" mediatype="image/*" ref="/LEGEND_C2_assinantes_assoc/Membros/ass_assin">
+          <label>Assinatura da pessoa escolhida</label>
+        </upload>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>

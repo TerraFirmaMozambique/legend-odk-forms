@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND A2 Limites dos povoados</h:title>
+    <model>
+      <instance>
+        <LEGEND_A2_limites_povoados id="LEGEND_A2_V1" version="201707021">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <searchtext/>
+          <found_pov/>
+          <add_pov/>
+          <A2g1>
+            <part_m/>
+            <part_h/>
+          </A2g1>
+          <cam_foto/>
+          <auto_gps_ini/>
+          <pontos_pov jr:template="">
+            <auto_gps/>
+            <cam_geopon/>
+          </pontos_pov>
+          <map_foto/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_A2_limites_povoados>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_A2_limites_povoados/start" type="dateTime"/>
+      <bind calculate="&quot;Formulario A2 - Identificação e mapeamento dos limites dos povoados&quot;" nodeset="/LEGEND_A2_limites_povoados/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_A2_limites_povoados/add_nome" relevant=" /LEGEND_A2_limites_povoados/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/searchtext" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/found_pov" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_A2_limites_povoados/add_pov" relevant=" /LEGEND_A2_limites_povoados/found_pov ='1'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/A2g1/part_m" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/A2g1/part_h" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/cam_foto" type="binary"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/auto_gps_ini" required="true()" type="geopoint"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/pontos_pov/auto_gps" required="true()" type="geopoint"/>
+      <bind calculate="concat(  /LEGEND_A2_limites_povoados/tec_nome ,'_', /LEGEND_A2_limites_povoados/data )" nodeset="/LEGEND_A2_limites_povoados/pontos_pov/cam_geopon" type="string"/>
+      <bind nodeset="/LEGEND_A2_limites_povoados/map_foto" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_A2_limites_povoados/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_A2_limites_povoados/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('pov_limites','_', /LEGEND_A2_limites_povoados/found_pov )" nodeset="/LEGEND_A2_limites_povoados/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_A2_limites_povoados/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_A2_limites_povoados/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar os limites dos povoados, que mais tarde servirão como blocos cadastrais. 
+
+Um bloco cadastral sempre coincide com os limites dum povoado.
+
+O técnico pode usar o formulário para capturar pontos durante uma caminhada da delimitação dos limites de povoado. O formulário devia ser preenchido durante a caminhada, tirando pontos pelo menos cada 100 metros. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 ref="/LEGEND_A2_limites_povoados/tec_nome">
+      <label>&lt;h1&gt;Introduza o seu nome&lt;/h&gt;&lt;br&gt;&lt;br&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A2_limites_povoados/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_A2_limites_povoados/data">
+      <label>Data da caminhada:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_A2_limites_povoados/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_A2_limites_povoados/prov_id ]" ref="/LEGEND_A2_limites_povoados/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_A2_limites_povoados/dist_id ]" ref="/LEGEND_A2_limites_povoados/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input ref="/LEGEND_A2_limites_povoados/searchtext">
+      <label>Busca do povoado:&lt;br&gt;&lt;br&gt;&lt;span style='color:#0000ff'&gt;Instruções de uso: Digite as primeiras letras do povoado a ser pesquisada da lista dos povoados já registados neste posto administrativo, ou deixar em branco para ver a lista completa&lt;/span&gt;</label>
+    </input>
+    <select1 appearance="search( /LEGEND_A2_limites_povoados/dist_id , 'startswith', 'pov_name',  /LEGEND_A2_limites_povoados/searchtext , 'posto_id_key',  /LEGEND_A2_limites_povoados/posto_id )" ref="/LEGEND_A2_limites_povoados/found_pov">
+      <label>Selecionar o nome do povoado</label>
+      <item>
+        <label>pov_name</label>
+        <value>pov_id_key</value>
+      </item>
+      <item>
+        <label>Outro nome (povoado não está na lista)</label>
+        <value>1</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A2_limites_povoados/add_pov">
+      <label>Escreve o nome do povoado se não apareceu na lista</label>
+    </input>
+    <group ref="/LEGEND_A2_limites_povoados/A2g1">
+      <label>Detalhes da caminhada</label>
+      <input ref="/LEGEND_A2_limites_povoados/A2g1/part_m">
+        <label>Número de mulheres que participaram na caminhada:</label>
+      </input>
+      <input ref="/LEGEND_A2_limites_povoados/A2g1/part_h">
+        <label>Número de homens que participaram na caminhada:</label>
+      </input>
+    </group>
+    <upload mediatype="image/*" ref="/LEGEND_A2_limites_povoados/cam_foto">
+      <label>Tire uma fotografia do grupo que vai caminhar</label>
+    </upload>
+    <input ref="/LEGEND_A2_limites_povoados/auto_gps_ini">
+      <label>Capture das coordenadas GPS do ponto de partida da caminhada</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <group ref="/LEGEND_A2_limites_povoados/pontos_pov">
+      <label>Pontos na caminhada</label>
+      <repeat nodeset="/LEGEND_A2_limites_povoados/pontos_pov">
+        <input ref="/LEGEND_A2_limites_povoados/pontos_pov/auto_gps">
+          <label>Capture das coordenadas GPS do ponto de limite entre os povoados</label>
+          <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+        </input>
+      </repeat>
+    </group>
+    <upload mediatype="image/*" ref="/LEGEND_A2_limites_povoados/map_foto">
+      <label>Adicionar imagem do mapa com os limites marcados</label>
+      <hint>Os limites devem ser marcados em cor vermelha</hint>
+    </upload>
+  </h:body>
+</h:html>

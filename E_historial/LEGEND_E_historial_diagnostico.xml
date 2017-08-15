@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND E Perfil Historico</h:title>
+    <model>
+      <instance>
+        <LEGEND_E_historial_diagnostico id="LEGEND_E_V1" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <fam_pri/>
+          <ori_fam_pri/>
+          <raz_emi/>
+          <raz_fix/>
+          <Eg1>
+            <pr_n_com/>
+            <n_pri_lid/>
+            <n_act_lid/>
+          </Eg1>
+          <eventos_historial jr:template="">
+            <era/>
+            <even_ano/>
+            <even_des/>
+          </eventos_historial>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_E_historial_diagnostico>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_E_historial_diagnostico/start" type="dateTime"/>
+      <bind calculate="&quot;Historial da comunidade&quot;" nodeset="/LEGEND_E_historial_diagnostico/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_E_historial_diagnostico/add_nome" relevant=" /LEGEND_E_historial_diagnostico/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/fam_pri" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/ori_fam_pri" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/raz_emi" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/raz_fix" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/Eg1/pr_n_com" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/Eg1/n_pri_lid" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/Eg1/n_act_lid" type="string"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/eventos_historial/era" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/eventos_historial/even_ano" relevant=" /LEGEND_E_historial_diagnostico/eventos_historial/era  = 'ano'" type="date"/>
+      <bind nodeset="/LEGEND_E_historial_diagnostico/eventos_historial/even_des" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_E_historial_diagnostico/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_E_historial_diagnostico/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('historial','_', /LEGEND_E_historial_diagnostico/assoc_id )" nodeset="/LEGEND_E_historial_diagnostico/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_E_historial_diagnostico/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_E_historial_diagnostico/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para capturar informação sobre a historia da comunidade. 
+
+O técnico pode usar o formulário para gravar os resultados dos encontros que abordavam a historia da comunidade. O formulário devia ser preenchido depois ter toda a informação necessária para descrever a historia. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_E_historial_diagnostico/tec_nome">
+      <label>Nome do(a) tecnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_E_historial_diagnostico/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_E_historial_diagnostico/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_E_historial_diagnostico/prov_id ]" ref="/LEGEND_E_historial_diagnostico/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_E_historial_diagnostico/dist_id ]" ref="/LEGEND_E_historial_diagnostico/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_E_historial_diagnostico/posto_id ]" ref="/LEGEND_E_historial_diagnostico/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <input ref="/LEGEND_E_historial_diagnostico/fam_pri">
+      <label>Quais são as familias antigas ou principais da comunidade?</label>
+    </input>
+    <input ref="/LEGEND_E_historial_diagnostico/ori_fam_pri">
+      <label>Qual é a proveniência das primeiras famílias que chegaram na zona actual da comunidade?</label>
+    </input>
+    <input ref="/LEGEND_E_historial_diagnostico/raz_emi">
+      <label>Qual foi a razão da emigracão da zona de origem?</label>
+    </input>
+    <input ref="/LEGEND_E_historial_diagnostico/raz_fix">
+      <label>Qual foi a razão da escolha desta zona para a fixação?</label>
+    </input>
+    <group ref="/LEGEND_E_historial_diagnostico/Eg1">
+      <label>Nomes importantes</label>
+      <input ref="/LEGEND_E_historial_diagnostico/Eg1/pr_n_com">
+        <label>Qual é a proveniencia do nome da comunidade?</label>
+      </input>
+      <input ref="/LEGEND_E_historial_diagnostico/Eg1/n_pri_lid">
+        <label>Qual foi o nome do primeiro lider desta comunidade?</label>
+      </input>
+      <input ref="/LEGEND_E_historial_diagnostico/Eg1/n_act_lid">
+        <label>Qual é a proveniencia do nome do lider actual desta comunidade?</label>
+      </input>
+    </group>
+    <group ref="/LEGEND_E_historial_diagnostico/eventos_historial">
+      <label>Historial</label>
+      <repeat nodeset="/LEGEND_E_historial_diagnostico/eventos_historial">
+        <select1 appearance="minimal" ref="/LEGEND_E_historial_diagnostico/eventos_historial/era">
+          <label>Quando aconteceu este evento?</label>
+          <item>
+            <label>Antes do tempo colonial</label>
+            <value>era_1</value>
+          </item>
+          <item>
+            <label>Antes da Segunda Guerra Mundial</label>
+            <value>era_2</value>
+          </item>
+          <item>
+            <label>Durante a Guerra da Libertação</label>
+            <value>era_3</value>
+          </item>
+          <item>
+            <label>Depois da Independência</label>
+            <value>era_4</value>
+          </item>
+          <item>
+            <label>Durante a Guerra entre FRELIMO e RENAMO</label>
+            <value>era_5</value>
+          </item>
+          <item>
+            <label>Depois do Acordo de Paz em 1992</label>
+            <value>era_6</value>
+          </item>
+          <item>
+            <label>Ano exato</label>
+            <value>ano</value>
+          </item>
+        </select1>
+        <input appearance="year" ref="/LEGEND_E_historial_diagnostico/eventos_historial/even_ano">
+          <label>Ano do evento</label>
+        </input>
+        <input ref="/LEGEND_E_historial_diagnostico/eventos_historial/even_des">
+          <label>Descrição do evento</label>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>

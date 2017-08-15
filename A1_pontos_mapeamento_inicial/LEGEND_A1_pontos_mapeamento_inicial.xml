@@ -1,0 +1,670 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND A1 Gravar pontos de interesse e limites</h:title>
+    <model>
+      <instance>
+        <LEGEND_A1_pontos_mapeamento_inicial id="LEGEND_A1_V1" version="201706241">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <data/>
+          <auto_gps/>
+          <poi_tipo/>
+          <poi_disput/>
+          <disput/>
+          <poi_descriptor/>
+          <poi_alt/>
+          <rio_nome/>
+          <esc_nome/>
+          <igr_nome/>
+          <leader_name/>
+          <flo_nome/>
+          <mont_nome/>
+          <cem_nome/>
+          <duat_nome/>
+          <contr_ref/>
+          <poi_boundary/>
+          <des_area/>
+          <des_area_out/>
+          <uso_area/>
+          <cul/>
+          <cul_out/>
+          <casa/>
+          <Eg1>
+            <c_dis_agr/>
+            <casa_tipo/>
+          </Eg1>
+          <prob/>
+          <out_prob/>
+          <mud/>
+          <fut/>
+          <poi_picture/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_A1_pontos_mapeamento_inicial>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/start" type="dateTime"/>
+      <bind calculate="&quot;Formulario A1 - Mapeamento dos pontos de interesse e limites&quot;" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/add_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/auto_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/poi_tipo" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/poi_disput" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/disput" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_disput  = 'sim'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/poi_alt" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'outro'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/rio_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'rio'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/esc_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'escola'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/igr_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'igreja'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/leader_name" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'casa_chefe'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/flo_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'floresta_comun'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/mont_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'montanha'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/cem_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'cemiterio'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/duat_nome" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'duat'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/contr_ref" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'controle'" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/poi_boundary" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_tipo  = 'p_limite' or  /LEGEND_A1_pontos_mapeamento_inicial/poi_tipo  = 'p_ambos'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/des_area" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'zona'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/des_area_out" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'zona' and  /LEGEND_A1_pontos_mapeamento_inicial/des_area  = 'outra'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/uso_area" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'zona'" required="true()" type="select"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/cul" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'zona'" required="true()" type="select"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/cul_out" relevant="selected( /LEGEND_A1_pontos_mapeamento_inicial/cul , 'outra')" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/casa" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'zona'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/Eg1" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/casa  = 'sim'"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/Eg1/c_dis_agr" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/Eg1/casa_tipo" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/prob" type="select"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/out_prob" relevant="selected( /LEGEND_A1_pontos_mapeamento_inicial/prob , 'outra')" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/mud" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor  = 'zona'" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/fut" relevant=" /LEGEND_A1_pontos_mapeamento_inicial/mud  = 'sim'" type="string"/>
+      <bind nodeset="/LEGEND_A1_pontos_mapeamento_inicial/poi_picture" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('ponto','_', /LEGEND_A1_pontos_mapeamento_inicial/poi_tipo ,'_', /LEGEND_A1_pontos_mapeamento_inicial/data )" nodeset="/LEGEND_A1_pontos_mapeamento_inicial/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_A1_pontos_mapeamento_inicial/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para gravar informação sobre os pontos de interesse, pontos que tem recursos, infraestruras sociais (igrejas, cemiterios) ou ate limites das comunidades ou povoados com os seus vizinhos.
+
+O formulário pode ser utilizado a qualquer altura. Não fica necessária a identificação da localização do ponto em termos do nome da comunidade, povoação ou associação - um ponto pode ser tirado a qualquer momento, desde que esteja dentro da área do projecto. 
+
+O formulário devia ser preenchido cada vez que fica identificado um ponto de interesse, um limite ou um recurso. 
+
+O técnico pode usar o formulário para selecionar e gravar informação sobre estes pontos, incluindo as coordenadas da localização através de GPS. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/tec_nome">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_A1_pontos_mapeamento_inicial/data">
+      <label>Data de captura:</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/auto_gps">
+      <label>Coordenadas do GPS</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/poi_tipo">
+      <label>Este ponto é de marcação de um limite, um ponto de interesse/recurso, ou ambos?</label>
+      <item>
+        <label>Limite da comunidade</label>
+        <value>p_limite</value>
+      </item>
+      <item>
+        <label>Ponto de interesse</label>
+        <value>p_interesse</value>
+      </item>
+      <item>
+        <label>Ambos - Limite e ponto de interesse</label>
+        <value>p_ambos</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/poi_disput">
+      <label>Este ponto é ponto dum conflito ou disputa?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/disput">
+      <label>Por favor, descreva o conflito ou disputa que existe neste ponto:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/poi_descriptor">
+      <label>Por favor, selecione o melhor descritor para este ponto:</label>
+      <item>
+        <label>Árvore</label>
+        <value>arvore</value>
+      </item>
+      <item>
+        <label>Árvore com uma marca</label>
+        <value>arvore_marca</value>
+      </item>
+      <item>
+        <label>Associação - Ponto de encontro</label>
+        <value>assoc_meet</value>
+      </item>
+      <item>
+        <label>Campo de futebol</label>
+        <value>camp_futebol</value>
+      </item>
+      <item>
+        <label>Casa do regulo ou chefe</label>
+        <value>casa_chefe</value>
+      </item>
+      <item>
+        <label>Celular torre</label>
+        <value>cel_torre</value>
+      </item>
+      <item>
+        <label>Cemitério</label>
+        <value>cemiterio</value>
+      </item>
+      <item>
+        <label>Conflito</label>
+        <value>conflito</value>
+      </item>
+      <item>
+        <label>Ponto de controle</label>
+        <value>controle</value>
+      </item>
+      <item>
+        <label>DUAT privado</label>
+        <value>duat</value>
+      </item>
+      <item>
+        <label>Escola</label>
+        <value>escola</value>
+      </item>
+      <item>
+        <label>Estrada</label>
+        <value>estrada</value>
+      </item>
+      <item>
+        <label>Floresta comunal</label>
+        <value>floresta_comun</value>
+      </item>
+      <item>
+        <label>Furo de água</label>
+        <value>furo_agua</value>
+      </item>
+      <item>
+        <label>Igreja</label>
+        <value>igreja</value>
+      </item>
+      <item>
+        <label>Limite reconhecido entre comunidades</label>
+        <value>limite_reconh</value>
+      </item>
+      <item>
+        <label>Local sagrado</label>
+        <value>local_sagrado</value>
+      </item>
+      <item>
+        <label>Machamba</label>
+        <value>machamba</value>
+      </item>
+      <item>
+        <label>Montanha</label>
+        <value>montanha</value>
+      </item>
+      <item>
+        <label>Monumento de cimento</label>
+        <value>monum_cimento</value>
+      </item>
+      <item>
+        <label>Passeio</label>
+        <value>passeio</value>
+      </item>
+      <item>
+        <label>Poço de água</label>
+        <value>poco_agua</value>
+      </item>
+      <item>
+        <label>Posto de Saúde</label>
+        <value>posto_saude</value>
+      </item>
+      <item>
+        <label>Reserva do Estado</label>
+        <value>reserva_estado</value>
+      </item>
+      <item>
+        <label>Rio</label>
+        <value>rio</value>
+      </item>
+      <item>
+        <label>Zona de interesse para fins de mapeamento</label>
+        <value>zona</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/poi_alt">
+      <label>Por favor, descreva a outra descrição</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/rio_nome">
+      <label>Qual é o nome do rio?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/esc_nome">
+      <label>Qual é o nome da escola?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/igr_nome">
+      <label>Qual é o nome da igreja?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/leader_name">
+      <label>Qual é o nome do líder que vive aqui?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/flo_nome">
+      <label>Qual é o nome da floresta?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/mont_nome">
+      <label>Qual é o nome da montanha?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/cem_nome">
+      <label>Qual é o nome do cemitério?</label>
+    </input>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/duat_nome">
+      <label>Qual é o nome do dono de DUAT?</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/contr_ref">
+      <label>Qual é o numero deste ponto de controle</label>
+      <item>
+        <label>1</label>
+        <value>pc_1</value>
+      </item>
+      <item>
+        <label>2</label>
+        <value>pc_2</value>
+      </item>
+      <item>
+        <label>3</label>
+        <value>pc_3</value>
+      </item>
+      <item>
+        <label>4</label>
+        <value>pc_4</value>
+      </item>
+      <item>
+        <label>5</label>
+        <value>pc_5</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/poi_boundary">
+      <label>O que é o limite que faz este ponto? (Nome da comunidade vizinha)</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/des_area">
+      <label>Qual é a descrição melhor desta área?</label>
+      <item>
+        <label>Floresta aberta</label>
+        <value>fl_abe</value>
+      </item>
+      <item>
+        <label>Floresta densa</label>
+        <value>fl_den</value>
+      </item>
+      <item>
+        <label>Zona Habitacional</label>
+        <value>hab</value>
+      </item>
+      <item>
+        <label>Machambas de zonas alta</label>
+        <value>mac_alta</value>
+      </item>
+      <item>
+        <label>Machambas de zonas baixa</label>
+        <value>mac_bai</value>
+      </item>
+      <item>
+        <label>Matagal</label>
+        <value>mato</value>
+      </item>
+      <item>
+        <label>Zona Pantanosa</label>
+        <value>pan</value>
+      </item>
+      <item>
+        <label>Zona de pastagem</label>
+        <value>pas</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>outra</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/des_area_out">
+      <label>Se for outra, descreve aqui:</label>
+    </input>
+    <select appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/uso_area">
+      <label>Quais são os usos principais nesta área?</label>
+      <item>
+        <label>Áreas sagradas</label>
+        <value>a_sag</value>
+      </item>
+      <item>
+        <label>Agricultura</label>
+        <value>agr</value>
+      </item>
+      <item>
+        <label>Busca de mel</label>
+        <value>b_mel</value>
+      </item>
+      <item>
+        <label>Caça</label>
+        <value>caca</value>
+      </item>
+      <item>
+        <label>Carvão</label>
+        <value>car</value>
+      </item>
+      <item>
+        <label>Area de Conservação</label>
+        <value>con</value>
+      </item>
+      <item>
+        <label>Extração de barro</label>
+        <value>e_bar</value>
+      </item>
+      <item>
+        <label>Extração de capim</label>
+        <value>e_cap</value>
+      </item>
+      <item>
+        <label>Extração de madeira</label>
+        <value>e_mad</value>
+      </item>
+      <item>
+        <label>Estacas</label>
+        <value>est</value>
+      </item>
+      <item>
+        <label>Lenha</label>
+        <value>len</value>
+      </item>
+      <item>
+        <label>Medicamentos tradicionais</label>
+        <value>m_tra</value>
+      </item>
+      <item>
+        <label>Recursos minerais</label>
+        <value>r_min</value>
+      </item>
+      <item>
+        <label>Reflorestamento</label>
+        <value>refl</value>
+      </item>
+      <item>
+        <label>Residencial</label>
+        <value>res</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>outra</value>
+      </item>
+    </select>
+    <select appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/cul">
+      <label>O que se produz nesta área?</label>
+      <item>
+        <label>Algodão</label>
+        <value>alg</value>
+      </item>
+      <item>
+        <label>Alho</label>
+        <value>alho</value>
+      </item>
+      <item>
+        <label>Amendoim</label>
+        <value>ame</value>
+      </item>
+      <item>
+        <label>Arroz</label>
+        <value>arr</value>
+      </item>
+      <item>
+        <label>Banana</label>
+        <value>ban</value>
+      </item>
+      <item>
+        <label>Batata</label>
+        <value>bat</value>
+      </item>
+      <item>
+        <label>Cana de açucar</label>
+        <value>c_acu</value>
+      </item>
+      <item>
+        <label>Cebola</label>
+        <value>ceb</value>
+      </item>
+      <item>
+        <label>Feijão Boer</label>
+        <value>f_boer</value>
+      </item>
+      <item>
+        <label>Feijão Cute</label>
+        <value>f_cute</value>
+      </item>
+      <item>
+        <label>Feijão Holoco</label>
+        <value>f_holo</value>
+      </item>
+      <item>
+        <label>Feijão Jogo</label>
+        <value>f_jogo</value>
+      </item>
+      <item>
+        <label>Feijão Manteiga</label>
+        <value>f_mant</value>
+      </item>
+      <item>
+        <label>Feijão Nhemba</label>
+        <value>f_nhem</value>
+      </item>
+      <item>
+        <label>Gergelim</label>
+        <value>ger</value>
+      </item>
+      <item>
+        <label>Horticulturas</label>
+        <value>hor</value>
+      </item>
+      <item>
+        <label>Mandioca</label>
+        <value>man</value>
+      </item>
+      <item>
+        <label>Mapira</label>
+        <value>map</value>
+      </item>
+      <item>
+        <label>Mexoera</label>
+        <value>mex</value>
+      </item>
+      <item>
+        <label>Milho</label>
+        <value>mil</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>outra</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/cul_out">
+      <label>Se tem outra cultura, descreve aqui:</label>
+    </input>
+    <select1 ref="/LEGEND_A1_pontos_mapeamento_inicial/casa">
+      <label>Existem casas nesta área?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/LEGEND_A1_pontos_mapeamento_inicial/Eg1">
+      <label>Casas</label>
+      <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/Eg1/c_dis_agr">
+        <label>As casas nesta área estão dispersas ou agrupadas?</label>
+        <item>
+          <label>Dispersas</label>
+          <value>dis</value>
+        </item>
+        <item>
+          <label>Agrupadas</label>
+          <value>agr</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/Eg1/casa_tipo">
+        <label>Qual é o tipo das casas nesta área?</label>
+        <item>
+          <label>Permanente</label>
+          <value>per</value>
+        </item>
+        <item>
+          <label>Palhotas temporárias</label>
+          <value>p_tem</value>
+        </item>
+      </select1>
+    </group>
+    <select appearance="minimal" ref="/LEGEND_A1_pontos_mapeamento_inicial/prob">
+      <label>Quais são os problemas nesta área?</label>
+      <hint>Se não houver problemas podem deixar em branco</hint>
+      <item>
+        <label>Baixa fertilidade</label>
+        <value>b_fer</value>
+      </item>
+      <item>
+        <label>Desmatamento</label>
+        <value>des</value>
+      </item>
+      <item>
+        <label>Erosão</label>
+        <value>ero</value>
+      </item>
+      <item>
+        <label>Cheias</label>
+        <value>che</value>
+      </item>
+      <item>
+        <label>Invasão de gado</label>
+        <value>i_gado</value>
+      </item>
+      <item>
+        <label>Pragas</label>
+        <value>pra</value>
+      </item>
+      <item>
+        <label>Queimadas descontroladas</label>
+        <value>q_des</value>
+      </item>
+      <item>
+        <label>Seca</label>
+        <value>seca</value>
+      </item>
+      <item>
+        <label>Disputa de terra</label>
+        <value>dis</value>
+      </item>
+      <item>
+        <label>Conflito homen animal</label>
+        <value>c_hom_ani</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>outra</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/out_prob">
+      <label>Quais são os outros problemas nesta área?</label>
+    </input>
+    <select1 ref="/LEGEND_A1_pontos_mapeamento_inicial/mud">
+      <label>O grupo acha que a utilização desta área vai mudar dentro dos próximos 10 anos?</label>
+      <hint>Devia consultar as pessoas nesta área, se for possível</hint>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_A1_pontos_mapeamento_inicial/fut">
+      <label>Quais serão as mudanças?</label>
+    </input>
+    <upload mediatype="image/*" ref="/LEGEND_A1_pontos_mapeamento_inicial/poi_picture">
+      <label>Por favor, tire uma foto do ponto de interesse</label>
+    </upload>
+  </h:body>
+</h:html>

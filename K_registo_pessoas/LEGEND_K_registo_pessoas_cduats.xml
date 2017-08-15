@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND K Registrar Pessoas CDUATs</h:title>
+    <model>
+      <instance>
+        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V1" version="201708081">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_name/>
+          <registo_data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <party_role/>
+          <Kg1>
+            <pessoa_app/>
+            <pessoa_nom/>
+            <pessoa_gen/>
+            <pessoa_civil/>
+          </Kg1>
+          <pessoa_prof/>
+          <pessoa_prof_other/>
+          <Kg2>
+            <pessoa_nacion/>
+            <natnote/>
+            <pessoa_natural/>
+          </Kg2>
+          <nasc_y_n/>
+          <pessoa_nasc/>
+          <pessoa_ida/>
+          <Kg3>
+            <pessoa_doc/>
+            <pessoa_id/>
+            <doc_local/>
+            <doc_emi/>
+            <doc_val/>
+            <doc_vital/>
+          </Kg3>
+          <pessoa_foto/>
+          <id_foto/>
+          <pessoa_assin/>
+          <contacto/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_K_registo_pessoas_cduats>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_K_registo_pessoas_cduats/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de pessoas - CDUATs&quot;" nodeset="/LEGEND_K_registo_pessoas_cduats/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/registo_data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/party_role" required="true()" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de apelido, nome e profissão não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_app" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de apelido, nome e profissão não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_nom" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_gen" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_civil" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/pessoa_prof" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/pessoa_prof_other" relevant=" /LEGEND_K_registo_pessoas_cduats/pessoa_prof  = 'outro'" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg2/pessoa_nacion" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg2/natnote" readonly="true()" relevant=" /LEGEND_K_registo_pessoas_cduats/Kg2/pessoa_nacion  = 'outra'" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de nacionalidade ou naturalidade não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_K_registo_pessoas_cduats/Kg2/pessoa_natural" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/nasc_y_n" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/pessoa_nasc" relevant=" /LEGEND_K_registo_pessoas_cduats/nasc_y_n  = 'sim'" type="date"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/pessoa_ida" relevant=" /LEGEND_K_registo_pessoas_cduats/nasc_y_n  = 'nao'" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg3/pessoa_doc" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_K_registo_pessoas_cduats/Kg3/pessoa_id" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_local" type="string"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_emi" type="date"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_val" type="date"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_vital" type="select1"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/pessoa_foto" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/id_foto" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_K_registo_pessoas_cduats/pessoa_assin" required="true()" type="binary"/>
+      <bind constraint="regex(.,'[0-9]{9}')" nodeset="/LEGEND_K_registo_pessoas_cduats/contacto" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_K_registo_pessoas_cduats/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_K_registo_pessoas_cduats/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('cduats_pessoas','_', /LEGEND_K_registo_pessoas_cduats/assoc_id ,'_', /LEGEND_K_registo_pessoas_cduats/registo_data )" nodeset="/LEGEND_K_registo_pessoas_cduats/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_K_registo_pessoas_cduats/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_K_registo_pessoas_cduats/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre as pessoas que querem fazer registo da suas terras familiares ou individuais com a associação.
+
+Instituições podem também fazer registo, através dum(a) representante. Assim as igrejas, cooperativas, associações e ate instituições do estado podem fazer registo e pedir a emissão duma certidão pela a associação que representa a comunidade delimitada. 
+
+A associação, que foi estabelecida para representar a comunidade local como detentor do DUAT sobre a área delimitada, também devia fazer registo através deste formulário. Assim, as áreas sagradas, florestas e outras áreas de uso comum, podem ser identificadas como áreas registadas em nome da própria associação. 
+
+O técnico pode usar o formulário para capturar informação sobre cada pessoa, incluindo a foto e assinatura digital.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/tec_name">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/LEGEND_K_registo_pessoas_cduats/registo_data">
+      <label>Data do registo:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_K_registo_pessoas_cduats/prov_id ]" ref="/LEGEND_K_registo_pessoas_cduats/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_K_registo_pessoas_cduats/dist_id ]" ref="/LEGEND_K_registo_pessoas_cduats/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_K_registo_pessoas_cduats/posto_id ]" ref="/LEGEND_K_registo_pessoas_cduats/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <select appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/party_role">
+      <label>Quais são as tarefas desta pessoa (pode escolher mais do que uma opcão)?</label>
+      <item>
+        <label>Requerente do certificado C-DUAT</label>
+        <value>pessoa_sing</value>
+      </item>
+      <item>
+        <label>Representante duma instituição que é requerente do certificado C-DUAT (igreja, escola, associação, coop, etc.)</label>
+        <value>rep_entidade</value>
+      </item>
+      <item>
+        <label>Representante de menor</label>
+        <value>rep_menor</value>
+      </item>
+      <item>
+        <label>Membro fundador da associação</label>
+        <value>memb_assoc</value>
+      </item>
+    </select>
+    <group appearance="field-list" ref="/LEGEND_K_registo_pessoas_cduats/Kg1">
+      <label>Detalhes de pessoa</label>
+      <input ref="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_app">
+        <label>Qual é o apelido da pessoa?</label>
+      </input>
+      <input ref="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_nom">
+        <label>Qual é o nome da pessoa?</label>
+      </input>
+      <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_gen">
+        <label>Escolhe o género da pessoa:</label>
+        <item>
+          <label>Masculino</label>
+          <value>mas</value>
+        </item>
+        <item>
+          <label>Feminino</label>
+          <value>fem</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/Kg1/pessoa_civil">
+        <label>Escolhe o estado civil da pessoa:</label>
+        <item>
+          <label>Solteiro (a)</label>
+          <value>solt</value>
+        </item>
+        <item>
+          <label>União de Facto</label>
+          <value>defacto</value>
+        </item>
+        <item>
+          <label>Casado (a)</label>
+          <value>casado</value>
+        </item>
+        <item>
+          <label>Divorciado (a)</label>
+          <value>div</value>
+        </item>
+        <item>
+          <label>Viúvo (a)</label>
+          <value>viu</value>
+        </item>
+      </select1>
+    </group>
+    <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_prof">
+      <label>Escolhe a profissão da pessoa:</label>
+      <item>
+        <label>Agricultor</label>
+        <value>agri</value>
+      </item>
+      <item>
+        <label>Camponese</label>
+        <value>camp</value>
+      </item>
+      <item>
+        <label>Carpinteiro(a)</label>
+        <value>carp</value>
+      </item>
+      <item>
+        <label>Comerciante</label>
+        <value>come</value>
+      </item>
+      <item>
+        <label>Curandeiro(a)</label>
+        <value>cura</value>
+      </item>
+      <item>
+        <label>Enfirmeiro(a)</label>
+        <value>enfi</value>
+      </item>
+      <item>
+        <label>Estudante</label>
+        <value>estu</value>
+      </item>
+      <item>
+        <label>Funcionario Publico</label>
+        <value>func</value>
+      </item>
+      <item>
+        <label>Motorista</label>
+        <value>moto</value>
+      </item>
+      <item>
+        <label>Parteira Tradicional</label>
+        <value>part</value>
+      </item>
+      <item>
+        <label>Pastor de Igreja</label>
+        <value>past</value>
+      </item>
+      <item>
+        <label>Pedreiro(a)</label>
+        <value>pedr</value>
+      </item>
+      <item>
+        <label>Produtor(a)</label>
+        <value>prod</value>
+      </item>
+      <item>
+        <label>Professor(a)</label>
+        <value>prof</value>
+      </item>
+      <item>
+        <label>Serrador(a)</label>
+        <value>serr</value>
+      </item>
+      <item>
+        <label>Transportador(a)</label>
+        <value>tran</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_K_registo_pessoas_cduats/pessoa_prof_other">
+      <label>Qual é a outra profissão da pessoa?</label>
+    </input>
+    <group appearance="field-list" ref="/LEGEND_K_registo_pessoas_cduats/Kg2">
+      <label>Detalhes de pessoa (cont)</label>
+      <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/Kg2/pessoa_nacion">
+        <label>Qual é a nacionalidade da pessoa?</label>
+        <item>
+          <label>Moçambicana</label>
+          <value>moc</value>
+        </item>
+        <item>
+          <label>outra</label>
+          <value>outra</value>
+        </item>
+      </select1>
+      <input ref="/LEGEND_K_registo_pessoas_cduats/Kg2/natnote">
+        <label>Esta pessoa não pode adquirir um DUAT porque não e uma pessoa com nacionalidade Moçambicana</label>
+      </input>
+      <input ref="/LEGEND_K_registo_pessoas_cduats/Kg2/pessoa_natural">
+        <label>Qual é a naturalidade da pessoa?</label>
+      </input>
+    </group>
+    <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/nasc_y_n">
+      <label>A pessoa conhece a data de nascimento ou a data está disponível através do documento?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_nasc">
+      <label>Data de nascimento</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_ida">
+      <label>Qual é a idade da pessoa?</label>
+      <item>
+        <label>Entre 18 - 30</label>
+        <value>jov</value>
+      </item>
+      <item>
+        <label>Entre 30 - 50</label>
+        <value>adu</value>
+      </item>
+      <item>
+        <label>50+</label>
+        <value>idos</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/LEGEND_K_registo_pessoas_cduats/Kg3">
+      <label>Detalhes de documentos</label>
+      <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/Kg3/pessoa_doc">
+        <label>Tipo de documento de identificação</label>
+        <item>
+          <label>Bilhete de Identidade</label>
+          <value>bi</value>
+        </item>
+        <item>
+          <label>Talão do BI</label>
+          <value>talao</value>
+        </item>
+        <item>
+          <label>Cartão de Eleitor</label>
+          <value>c_eleit</value>
+        </item>
+        <item>
+          <label>Certidão de Nascimento</label>
+          <value>c_nasc</value>
+        </item>
+        <item>
+          <label>Cédula Pessoal</label>
+          <value>ced</value>
+        </item>
+        <item>
+          <label>Declaração</label>
+          <value>decl</value>
+        </item>
+        <item>
+          <label>Cartão de Desmobilização</label>
+          <value>c_desmob</value>
+        </item>
+        <item>
+          <label>Passaporte</label>
+          <value>p_port</value>
+        </item>
+        <item>
+          <label>Carta de Condução</label>
+          <value>c_cond</value>
+        </item>
+        <item>
+          <label>Cartão de pagamento de imposto</label>
+          <value>c_impost</value>
+        </item>
+        <item>
+          <label>NUIT</label>
+          <value>nuit</value>
+        </item>
+      </select1>
+      <input ref="/LEGEND_K_registo_pessoas_cduats/Kg3/pessoa_id">
+        <label>Numero de documento</label>
+      </input>
+      <input ref="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_local">
+        <label>Local de Emissão</label>
+      </input>
+      <input appearance="no-calendar" ref="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_emi">
+        <label>Emissão</label>
+      </input>
+      <input appearance="no-calendar" ref="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_val">
+        <label>Validade</label>
+      </input>
+      <select1 ref="/LEGEND_K_registo_pessoas_cduats/Kg3/doc_vital">
+        <label>Será que o BI é vitalício</label>
+        <item>
+          <label>Sim</label>
+          <value>sim</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>nao</value>
+        </item>
+      </select1>
+    </group>
+    <upload mediatype="image/*" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_foto">
+      <label>Tire uma fotografia da pessoa ou representante</label>
+    </upload>
+    <upload mediatype="image/*" ref="/LEGEND_K_registo_pessoas_cduats/id_foto">
+      <label>Tire uma fotografia do documento de identificação</label>
+    </upload>
+    <upload appearance="signature" mediatype="image/*" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_assin">
+      <label>Assinatura da pessoa ou representante</label>
+    </upload>
+    <input appearance="numbers" ref="/LEGEND_K_registo_pessoas_cduats/contacto">
+      <label>Numero de telemóvel da pessoa</label>
+    </input>
+  </h:body>
+</h:html>

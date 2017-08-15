@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND F Organizacao Social</h:title>
+    <model>
+      <instance>
+        <LEGEND_F_org_social id="LEGEND_F_V1" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <lid_nome/>
+          <ling_fal/>
+          <pov_n/>
+          <Povoados_count/>
+          <Povoados jr:template="">
+            <Fg1>
+              <n_pov/>
+              <pov_tipo/>
+              <c_lid_pov/>
+              <n_lid_pov/>
+            </Fg1>
+          </Povoados>
+          <conf_com/>
+          <conf_inv/>
+          <num_com_viz/>
+          <Vizinhas_count/>
+          <Vizinhas jr:template="">
+            <n_com_viz/>
+          </Vizinhas>
+          <diag_foto/>
+          <dia_rel_foto/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_F_org_social>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_F_org_social/start" type="dateTime"/>
+      <bind calculate="&quot;Organização social da comunidade&quot;" nodeset="/LEGEND_F_org_social/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_F_org_social/add_nome" relevant=" /LEGEND_F_org_social/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_F_org_social/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/lid_nome" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/ling_fal" type="string"/>
+      <bind constraint=".&gt;=1" nodeset="/LEGEND_F_org_social/pov_n" required="true()" type="int"/>
+      <bind calculate=" /LEGEND_F_org_social/pov_n " nodeset="/LEGEND_F_org_social/Povoados_count" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/Povoados/Fg1/n_pov" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/Povoados/Fg1/pov_tipo" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/Povoados/Fg1/c_lid_pov" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/Povoados/Fg1/n_lid_pov" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/conf_com" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/conf_inv" type="string"/>
+      <bind constraint=".&gt;=1" nodeset="/LEGEND_F_org_social/num_com_viz" required="true()" type="int"/>
+      <bind calculate=" /LEGEND_F_org_social/num_com_viz " nodeset="/LEGEND_F_org_social/Vizinhas_count" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/Vizinhas/n_com_viz" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_F_org_social/diag_foto" type="binary"/>
+      <bind nodeset="/LEGEND_F_org_social/dia_rel_foto" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_F_org_social/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_F_org_social/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('org_social','_', /LEGEND_F_org_social/assoc_id )" nodeset="/LEGEND_F_org_social/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_F_org_social/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_F_org_social/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre a organização social da comunidade. 
+
+O técnico pode usar o formulário para gravar os resultados dos encontros que abordavam a organização social duma comunidade. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_F_org_social/tec_nome">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_F_org_social/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_F_org_social/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_F_org_social/prov_id ]" ref="/LEGEND_F_org_social/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_F_org_social/dist_id ]" ref="/LEGEND_F_org_social/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_F_org_social/posto_id ]" ref="/LEGEND_F_org_social/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <input ref="/LEGEND_F_org_social/lid_nome">
+      <label>Nome do líder tradicional da comunidade</label>
+    </input>
+    <input ref="/LEGEND_F_org_social/ling_fal">
+      <label>Quais são as principais linguas faladas nesta comunidade?</label>
+    </input>
+    <input ref="/LEGEND_F_org_social/pov_n">
+      <label>Quantas povoações ou áreas existem na comunidade?</label>
+    </input>
+    <group ref="/LEGEND_F_org_social/Povoados">
+      <label>Povoações ou outras áreas administrativas</label>
+      <repeat jr:count=" /LEGEND_F_org_social/Povoados_count " nodeset="/LEGEND_F_org_social/Povoados">
+        <group appearance="field-list" ref="/LEGEND_F_org_social/Povoados/Fg1">
+          <label>Detalhas da povoação ou área</label>
+          <input ref="/LEGEND_F_org_social/Povoados/Fg1/n_pov">
+            <label>Nome de povoação ou área dentro da comunidade:</label>
+          </input>
+          <input ref="/LEGEND_F_org_social/Povoados/Fg1/pov_tipo">
+            <label>Qual é designação da área (por exemplo, quarteirão, bairro ou povoação, etc.)?</label>
+          </input>
+          <input ref="/LEGEND_F_org_social/Povoados/Fg1/c_lid_pov">
+            <label>Cargo do líder desta área (por exemplo, Cabo de Terra, Sapanda, Reinha, Pyamwene?)</label>
+          </input>
+          <input ref="/LEGEND_F_org_social/Povoados/Fg1/n_lid_pov">
+            <label>Nome do líder deste área:</label>
+          </input>
+        </group>
+      </repeat>
+    </group>
+    <input ref="/LEGEND_F_org_social/conf_com">
+      <label>Quem é responsável para a resolução de conflitos de terra entre ou dentro da comunidade? (Pode ser instituição ou pessoa)</label>
+    </input>
+    <input ref="/LEGEND_F_org_social/conf_inv">
+      <label>Quem é responsável para a resolução de conflitos de terra entre a comunidade e investidores? (Pode ser instituição ou pessoa)</label>
+    </input>
+    <input ref="/LEGEND_F_org_social/num_com_viz">
+      <label>Quantas comunidades vizinhas existem?</label>
+      <hint>São aquelas comunidades que fazem fronteira com esta comunidade</hint>
+    </input>
+    <group ref="/LEGEND_F_org_social/Vizinhas">
+      <label>Comunidades vizinhas</label>
+      <repeat jr:count=" /LEGEND_F_org_social/Vizinhas_count " nodeset="/LEGEND_F_org_social/Vizinhas">
+        <input ref="/LEGEND_F_org_social/Vizinhas/n_com_viz">
+          <label>Nome da comunidade vizinha:</label>
+        </input>
+      </repeat>
+    </group>
+    <upload mediatype="image/*" ref="/LEGEND_F_org_social/diag_foto">
+      <label>Tire uma fotografia do diagrama da estrutura e hierárquica tradicional da comunidade</label>
+    </upload>
+    <upload mediatype="image/*" ref="/LEGEND_F_org_social/dia_rel_foto">
+      <label>Tire uma fotografia do diagrama das relações com as comunidades vizinhas e outras instituições (diagrama de Venn)</label>
+    </upload>
+  </h:body>
+</h:html>

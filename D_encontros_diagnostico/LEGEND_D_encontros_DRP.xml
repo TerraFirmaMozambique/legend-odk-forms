@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND D Encontros de DRP</h:title>
+    <model>
+      <instance>
+        <LEGEND_D_encontros_DRP id="LEGEND_D_V1" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <Dg1>
+            <num_m/>
+            <num_h/>
+          </Dg1>
+          <gov_p/>
+          <gov_n/>
+          <gov_o/>
+          <object/>
+          <object_alt/>
+          <Dg2>
+            <part_h/>
+            <part_m/>
+            <part_j/>
+            <lid_apoio/>
+          </Dg2>
+          <encont_foto/>
+          <auto_gps/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_D_encontros_DRP>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_D_encontros_DRP/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de Encontros durante o Diagnostico&quot;" nodeset="/LEGEND_D_encontros_DRP/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_D_encontros_DRP/add_nome" relevant=" /LEGEND_D_encontros_DRP/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/Dg1/num_m" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/Dg1/num_h" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/gov_p" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/gov_n" relevant=" /LEGEND_D_encontros_DRP/gov_p  = 'sim'" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_D_encontros_DRP/gov_o" relevant="selected( /LEGEND_D_encontros_DRP/gov_n , 'outra')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/object" required="true()" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_D_encontros_DRP/object_alt" relevant="selected( /LEGEND_D_encontros_DRP/object , 'outro')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/Dg2/part_h" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/Dg2/part_m" type="select1"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/Dg2/part_j" type="select1"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/Dg2/lid_apoio" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/encont_foto" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_D_encontros_DRP/auto_gps" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_D_encontros_DRP/obs" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_D_encontros_DRP/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_D_encontros_DRP/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('Encontros_DRP','_', /LEGEND_D_encontros_DRP/assoc_id )" nodeset="/LEGEND_D_encontros_DRP/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_D_encontros_DRP/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_D_encontros_DRP/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para capturar informação sobre os encontros com as comunidades e os povoados durante a fase do DRP.
+
+Estes encontros podem ser com a comunidade em geral, com a liderança, ou com povoados dentro da comunidade. 
+
+O formulário deve ser preenchido cada vez que haja um encontro. 
+
+Os encontros podem envolver actividades de:
+
+- colheita da informação sobre a historial da comunidade
+- colheita da informação sobre a organização social da comunidade
+- encontros para fazer o mapeamento participativo
+- encontros para fazer o cartograma
+- encontros para formar membros da associação no registo de pessoas para RDUATs
+
+O técnico pode usar o formulário para gravar informação sobre a data e lugar do encontro, o numero de participantes e os temas abordados.
+
+Cada actividade será registada em nome da associação que a comunidade estabeleceu na fase anterior. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_D_encontros_DRP/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_D_encontros_DRP/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_D_encontros_DRP/data">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_D_encontros_DRP/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_D_encontros_DRP/prov_id ]" ref="/LEGEND_D_encontros_DRP/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_D_encontros_DRP/dist_id ]" ref="/LEGEND_D_encontros_DRP/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_D_encontros_DRP/posto_id ]" ref="/LEGEND_D_encontros_DRP/assoc_id">
+      <label>Selecionar a associação (o nome do povoado 'sede' aparece em parênteses)</label>
+    </input>
+    <group appearance="field-list" ref="/LEGEND_D_encontros_DRP/Dg1">
+      <label>Detalhes Participantes</label>
+      <input ref="/LEGEND_D_encontros_DRP/Dg1/num_m">
+        <label>Número de mulheres:</label>
+      </input>
+      <input ref="/LEGEND_D_encontros_DRP/Dg1/num_h">
+        <label>Número de homens:</label>
+      </input>
+    </group>
+    <select1 ref="/LEGEND_D_encontros_DRP/gov_p">
+      <label>Participaram representantes do governo?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select appearance="minimal" ref="/LEGEND_D_encontros_DRP/gov_n">
+      <label>Instituição do governo representada:</label>
+      <item>
+        <label>Administração Distrital</label>
+        <value>admin_dist</value>
+      </item>
+      <item>
+        <label>Autoridade Comunitária</label>
+        <value>aut_com</value>
+      </item>
+      <item>
+        <label>Chefe do Posto</label>
+        <value>chefe_posto</value>
+      </item>
+      <item>
+        <label>Presidente da Localidade</label>
+        <value>pres_local</value>
+      </item>
+      <item>
+        <label>SDAE</label>
+        <value>sdae</value>
+      </item>
+      <item>
+        <label>SDPI</label>
+        <value>sdpi</value>
+      </item>
+      <item>
+        <label>Secretario do Bairro</label>
+        <value>sec_bairro</value>
+      </item>
+      <item>
+        <label>SPFFB</label>
+        <value>spffb</value>
+      </item>
+      <item>
+        <label>SPGC</label>
+        <value>spgc</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>outra</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_D_encontros_DRP/gov_o">
+      <label>Qual é a outra instituição do governo?</label>
+    </input>
+    <select appearance="minimal" ref="/LEGEND_D_encontros_DRP/object">
+      <label>Assuntos abordados durante o encontro?</label>
+      <item>
+        <label>Compilação do cartograma</label>
+        <value>cart</value>
+      </item>
+      <item>
+        <label>Discussão do Projecto LEGEND e programa das actividades</label>
+        <value>disc</value>
+      </item>
+      <item>
+        <label>Formação no registo de pessoas ou parcelas</label>
+        <value>form</value>
+      </item>
+      <item>
+        <label>Historial da comunidade</label>
+        <value>hist</value>
+      </item>
+      <item>
+        <label>Identificação de pontos de interesse ou limites</label>
+        <value>pontos</value>
+      </item>
+      <item>
+        <label>Mapeamento participativo</label>
+        <value>map</value>
+      </item>
+      <item>
+        <label>Organização social da comunidade</label>
+        <value>orgsoc</value>
+      </item>
+      <item>
+        <label>Recolha ou confirmação de dados da comunidade/povoado</label>
+        <value>recolha</value>
+      </item>
+      <item>
+        <label>Outro(s) temas</label>
+        <value>outro</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_D_encontros_DRP/object_alt">
+      <label>Outro(s) assunto(s) abordados?</label>
+    </input>
+    <group appearance="field-list" ref="/LEGEND_D_encontros_DRP/Dg2">
+      <label>Participação</label>
+      <select1 appearance="minimal" ref="/LEGEND_D_encontros_DRP/Dg2/part_h">
+        <label>Como caracteriza o nível da participação pelos homens?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_D_encontros_DRP/Dg2/part_m">
+        <label>Como caracteriza o nível da participação pelas mulheres?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_D_encontros_DRP/Dg2/part_j">
+        <label>Como caracteriza o nível da participação pelos jovens?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_D_encontros_DRP/Dg2/lid_apoio">
+        <label>Como caracteriza o nível do apoio do líder?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+    </group>
+    <upload mediatype="image/*" ref="/LEGEND_D_encontros_DRP/encont_foto">
+      <label>Tire uma fotografia do encontro</label>
+    </upload>
+    <input ref="/LEGEND_D_encontros_DRP/auto_gps">
+      <label>Capture das coordenadas GPS do encontro</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/LEGEND_D_encontros_DRP/obs">
+      <label>Observações sobre o encontro:</label>
+    </input>
+  </h:body>
+</h:html>

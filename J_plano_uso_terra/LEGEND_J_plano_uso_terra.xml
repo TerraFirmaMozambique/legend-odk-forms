@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND J Planos Uso Terra</h:title>
+    <model>
+      <instance>
+        <LEGEND_J_plano_uso_terra id="LEGEND_J_V1" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <Lg1>
+            <part_m/>
+            <part_h/>
+          </Lg1>
+          <gov_p/>
+          <gov_n/>
+          <gov_o/>
+          <map_image/>
+          <aerial/>
+          <document_rules/>
+          <why_no_documentation/>
+          <third_party_use/>
+          <remarks/>
+          <auto_gps/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_J_plano_uso_terra>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_J_plano_uso_terra/start" type="dateTime"/>
+      <bind calculate="&quot;Registo e envio dos planos de uso&quot;" nodeset="/LEGEND_J_plano_uso_terra/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_J_plano_uso_terra/add_nome" relevant=" /LEGEND_J_plano_uso_terra/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/Lg1/part_m" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/Lg1/part_h" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/gov_p" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/gov_n" relevant=" /LEGEND_J_plano_uso_terra/gov_p  = 'sim'" required="true()" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/LEGEND_J_plano_uso_terra/gov_o" relevant="selected( /LEGEND_J_plano_uso_terra/gov_n , 'outro')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/map_image" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/aerial" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/document_rules" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/LEGEND_J_plano_uso_terra/why_no_documentation" relevant=" /LEGEND_J_plano_uso_terra/document_rules  = 'nao'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/third_party_use" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/LEGEND_J_plano_uso_terra/remarks" type="string"/>
+      <bind nodeset="/LEGEND_J_plano_uso_terra/auto_gps" required="true()" type="geopoint"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_J_plano_uso_terra/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_J_plano_uso_terra/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('plan_uso','_', /LEGEND_J_plano_uso_terra/assoc_id )" nodeset="/LEGEND_J_plano_uso_terra/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_J_plano_uso_terra/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_J_plano_uso_terra/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre os planos de uso de terra.
+
+O técnico pode usar o formulário para capturar informação sobre o processo e uma imagem do plano.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_J_plano_uso_terra/tec_nome">
+      <label>Nome do(a) tecnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_J_plano_uso_terra/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_J_plano_uso_terra/data">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_J_plano_uso_terra/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_J_plano_uso_terra/prov_id ]" ref="/LEGEND_J_plano_uso_terra/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_J_plano_uso_terra/dist_id ]" ref="/LEGEND_J_plano_uso_terra/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_J_plano_uso_terra/posto_id ]" ref="/LEGEND_J_plano_uso_terra/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <group appearance="field-list" ref="/LEGEND_J_plano_uso_terra/Lg1">
+      <label>Detalhes Participantes</label>
+      <input ref="/LEGEND_J_plano_uso_terra/Lg1/part_m">
+        <label>Número de mulheres</label>
+      </input>
+      <input ref="/LEGEND_J_plano_uso_terra/Lg1/part_h">
+        <label>Número de homens</label>
+      </input>
+    </group>
+    <select1 appearance="minimal" ref="/LEGEND_J_plano_uso_terra/gov_p">
+      <label>Participaram representantes do governo?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select appearance="minimal" ref="/LEGEND_J_plano_uso_terra/gov_n">
+      <label>Instituição do governo representada:</label>
+      <item>
+        <label>Administração Distrital</label>
+        <value>admin_dist</value>
+      </item>
+      <item>
+        <label>Autoridade Comunitária</label>
+        <value>aut_com</value>
+      </item>
+      <item>
+        <label>Chefe do Posto</label>
+        <value>chefe_posto</value>
+      </item>
+      <item>
+        <label>Presidente da Localidade</label>
+        <value>pres_local</value>
+      </item>
+      <item>
+        <label>SDAE</label>
+        <value>sdae</value>
+      </item>
+      <item>
+        <label>SDPI</label>
+        <value>sdpi</value>
+      </item>
+      <item>
+        <label>Secretario do Bairro</label>
+        <value>sec_bairro</value>
+      </item>
+      <item>
+        <label>SPFFB</label>
+        <value>spffb</value>
+      </item>
+      <item>
+        <label>SPGC</label>
+        <value>spgc</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>outra</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_J_plano_uso_terra/gov_o">
+      <label>Qual é a outra instituicao do governo?</label>
+    </input>
+    <upload mediatype="image/*" ref="/LEGEND_J_plano_uso_terra/map_image">
+      <label>Tire uma fotografia do plano/mapa de uso de terra</label>
+    </upload>
+    <select1 ref="/LEGEND_J_plano_uso_terra/aerial">
+      <label>Utilizou a imagem aérea?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select1 ref="/LEGEND_J_plano_uso_terra/document_rules">
+      <label>Será que o encontro serviu para identificar os regras e regulamentos de acesso á terra na comunidade?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_J_plano_uso_terra/why_no_documentation">
+      <label>Por favor, indica porque não foram documentados os regras e regulamentos</label>
+    </input>
+    <select1 ref="/LEGEND_J_plano_uso_terra/third_party_use">
+      <label>Nesta comunidade, existe utilização de terra ou recursos naturais pelos terceiros? Por exemplo, madereiros, pessoas que fazem carvão, caça, etc?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_J_plano_uso_terra/remarks">
+      <label>Por favor, indique quaisquer observações adicionais:</label>
+    </input>
+    <input ref="/LEGEND_J_plano_uso_terra/auto_gps">
+      <label>Capture das coordenadas GPS do encontro</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+  </h:body>
+</h:html>

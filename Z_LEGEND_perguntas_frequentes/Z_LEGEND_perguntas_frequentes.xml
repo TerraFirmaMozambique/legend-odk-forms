@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND Z Perguntas Frequentes</h:title>
+    <model>
+      <instance>
+        <Z_LEGEND_perguntas_frequentes id="Legend_Peguntas_Frequentes_V1" version="201708091">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <data/>
+          <capitulo/>
+          <pergunta/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </Z_LEGEND_perguntas_frequentes>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Z_LEGEND_perguntas_frequentes/start" type="dateTime"/>
+      <bind calculate="&quot;Proposta para Perguntas Frequentes&quot;" nodeset="/Z_LEGEND_perguntas_frequentes/my_form_name" type="string"/>
+      <bind nodeset="/Z_LEGEND_perguntas_frequentes/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/Z_LEGEND_perguntas_frequentes/tec_nome" required="true()" type="select1"/>
+      <bind nodeset="/Z_LEGEND_perguntas_frequentes/data" required="true()" type="date"/>
+      <bind nodeset="/Z_LEGEND_perguntas_frequentes/capitulo" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâêô]{1,1000}$&quot;)" nodeset="/Z_LEGEND_perguntas_frequentes/pergunta" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Z_LEGEND_perguntas_frequentes/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Z_LEGEND_perguntas_frequentes/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('peguntas_freq','_', /Z_LEGEND_perguntas_frequentes/data ,'_', /Z_LEGEND_perguntas_frequentes/tec_nome )" nodeset="/Z_LEGEND_perguntas_frequentes/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Z_LEGEND_perguntas_frequentes/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /Z_LEGEND_perguntas_frequentes/my_form_name "/>&lt;/span&gt; &lt;br/&gt; 
+
+Este formulário é utilizado para propor uma pergunta que deve ser incluída no Manual Operacional.
+
+A equipa responsável para o Manual vai analisar, incluir a pergunta no manual e juntar uma resposta/clarificação.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/Z_LEGEND_perguntas_frequentes/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/Z_LEGEND_perguntas_frequentes/data">
+      <label>Data:</label>
+    </input>
+    <select1 ref="/Z_LEGEND_perguntas_frequentes/capitulo">
+      <label>Para qual modúlo é a pergunta?</label>
+      <item>
+        <label>Sensibilização</label>
+        <value>sens</value>
+      </item>
+      <item>
+        <label>Associação</label>
+        <value>assoc</value>
+      </item>
+      <item>
+        <label>Plano de Uso</label>
+        <value>plano</value>
+      </item>
+      <item>
+        <label>Delimitação Comunitário</label>
+        <value>delim_com</value>
+      </item>
+      <item>
+        <label>Delimitação Familiar</label>
+        <value>delim_fam</value>
+      </item>
+    </select1>
+    <input ref="/Z_LEGEND_perguntas_frequentes/pergunta">
+      <label>Qual é a pergunta?</label>
+    </input>
+  </h:body>
+</h:html>

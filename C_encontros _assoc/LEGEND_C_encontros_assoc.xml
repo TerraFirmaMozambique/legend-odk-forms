@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND C Registrar encontros assoc V2</h:title>
+    <model>
+      <instance>
+        <LEGEND_C_encontros_assoc id="LEGEND_C_V2" version="201707021">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <data/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <pov_num/>
+          <pov_ids/>
+          <add_pov/>
+          <Cg1>
+            <num_m/>
+            <num_h/>
+          </Cg1>
+          <gov_p/>
+          <gov_n/>
+          <gov_o/>
+          <encont/>
+          <act_alt/>
+          <tema/>
+          <tema_alt/>
+          <Cg2>
+            <part_h/>
+            <part_m/>
+            <part_j/>
+            <lid_apoio/>
+          </Cg2>
+          <encont_foto/>
+          <auto_gps/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_C_encontros_assoc>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_C_encontros_assoc/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de Encontros de criação da associação&quot;" nodeset="/LEGEND_C_encontros_assoc/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_C_encontros_assoc/add_nome" relevant=" /LEGEND_C_encontros_assoc/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/pov_num" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/pov_ids" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_C_encontros_assoc/add_pov" relevant="selected( /LEGEND_C_encontros_assoc/pov_ids , '1')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/Cg1/num_m" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/Cg1/num_h" required="true()" type="int"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/gov_p" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/gov_n" relevant=" /LEGEND_C_encontros_assoc/gov_p  = 'sim'" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_C_encontros_assoc/gov_o" relevant="selected( /LEGEND_C_encontros_assoc/gov_n , 'outra')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/encont" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_C_encontros_assoc/act_alt" relevant=" /LEGEND_C_encontros_assoc/encont  = 'outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/tema" required="true()" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_C_encontros_assoc/tema_alt" relevant="selected( /LEGEND_C_encontros_assoc/tema , 'outro')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/Cg2/part_h" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/Cg2/part_m" type="select1"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/Cg2/part_j" type="select1"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/Cg2/lid_apoio" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/encont_foto" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_C_encontros_assoc/auto_gps" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_C_encontros_assoc/obs" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_C_encontros_assoc/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_C_encontros_assoc/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('Encontros_Assoc','_', /LEGEND_C_encontros_assoc/data )" nodeset="/LEGEND_C_encontros_assoc/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_C_encontros_assoc/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_C_encontros_assoc/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para capturar informação dos encontros sobre a criacão da associação comunitária.
+
+Estes encontros podem ser com vários povoados, com a liderança, ou com apenas um povoado particular. 
+
+O formulário deve ser preenchido cada vez que haja um encontro. 
+
+O formulário pode ser usado para gravar informação sobre a data e lugar do encontro, o numero de participantes e os temas abordados.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_C_encontros_assoc/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <input appearance="no-calendar" ref="/LEGEND_C_encontros_assoc/data">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_C_encontros_assoc/prov_id ]" ref="/LEGEND_C_encontros_assoc/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_C_encontros_assoc/dist_id ]" ref="/LEGEND_C_encontros_assoc/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input ref="/LEGEND_C_encontros_assoc/pov_num">
+      <label>Quantos povoados foram representados no encontro?</label>
+    </input>
+    <select appearance="search( /LEGEND_C_encontros_assoc/dist_id ,'matches','posto_id_key',  /LEGEND_C_encontros_assoc/posto_id )" ref="/LEGEND_C_encontros_assoc/pov_ids">
+      <label>Selecionar os nomes dos povoados representados</label>
+      <item>
+        <label>pov_name</label>
+        <value>pov_id_key</value>
+      </item>
+      <item>
+        <label>Outro nome (povoado não está na lista)</label>
+        <value>1</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_C_encontros_assoc/add_pov">
+      <label>Escreve o nome do povoado se não apareceu na lista</label>
+    </input>
+    <group appearance="field-list" ref="/LEGEND_C_encontros_assoc/Cg1">
+      <label>Detalhes Participantes</label>
+      <input ref="/LEGEND_C_encontros_assoc/Cg1/num_m">
+        <label>Número de mulheres:</label>
+      </input>
+      <input ref="/LEGEND_C_encontros_assoc/Cg1/num_h">
+        <label>Número de homens:</label>
+      </input>
+    </group>
+    <select1 ref="/LEGEND_C_encontros_assoc/gov_p">
+      <label>Participaram representantes do governo?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>nao</value>
+      </item>
+    </select1>
+    <select appearance="minimal" ref="/LEGEND_C_encontros_assoc/gov_n">
+      <label>Instituição do governo representada:</label>
+      <item>
+        <label>Administração Distrital</label>
+        <value>admin_dist</value>
+      </item>
+      <item>
+        <label>Autoridade Comunitária</label>
+        <value>aut_com</value>
+      </item>
+      <item>
+        <label>Chefe do Posto</label>
+        <value>chefe_posto</value>
+      </item>
+      <item>
+        <label>Presidente da Localidade</label>
+        <value>pres_local</value>
+      </item>
+      <item>
+        <label>SDAE</label>
+        <value>sdae</value>
+      </item>
+      <item>
+        <label>SDPI</label>
+        <value>sdpi</value>
+      </item>
+      <item>
+        <label>Secretario do Bairro</label>
+        <value>sec_bairro</value>
+      </item>
+      <item>
+        <label>SPFFB</label>
+        <value>spffb</value>
+      </item>
+      <item>
+        <label>SPGC</label>
+        <value>spgc</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>outra</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_C_encontros_assoc/gov_o">
+      <label>Qual é a outra instituição do governo?</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/encont">
+      <label>Que tipo de encontro?</label>
+      <item>
+        <label>Encontro com liderança</label>
+        <value>encon_lid</value>
+      </item>
+      <item>
+        <label>Encontro comunitária</label>
+        <value>encon_com</value>
+      </item>
+      <item>
+        <label>Encontro com um povoado particular</label>
+        <value>encon_pov</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_C_encontros_assoc/act_alt">
+      <label>Outro tipo de encontro?</label>
+    </input>
+    <select appearance="minimal" ref="/LEGEND_C_encontros_assoc/tema">
+      <label>Tema(s) ou assunto(s) abordado(s)?</label>
+      <item>
+        <label>Sensibilização da liderança</label>
+        <value>sens_lid</value>
+      </item>
+      <item>
+        <label>Sensibilização sobre a lei, objectivos e processo de estabelecer uma associação</label>
+        <value>sens</value>
+      </item>
+      <item>
+        <label>Discussões sobre conteúdo dos estatutos</label>
+        <value>cont_estat</value>
+      </item>
+      <item>
+        <label>Regulamentos internos</label>
+        <value>regs</value>
+      </item>
+      <item>
+        <label>Seleção e/ou registo dos membros</label>
+        <value>reg_mem</value>
+      </item>
+      <item>
+        <label>Adopção dos estatutos</label>
+        <value>adop_esta</value>
+      </item>
+      <item>
+        <label>Acta da constituição</label>
+        <value>contstit</value>
+      </item>
+      <item>
+        <label>Outro(s) temas</label>
+        <value>outro</value>
+      </item>
+    </select>
+    <input ref="/LEGEND_C_encontros_assoc/tema_alt">
+      <label>Outro(s) tema(s) ou assunto(s) abordados?</label>
+    </input>
+    <group appearance="field-list" ref="/LEGEND_C_encontros_assoc/Cg2">
+      <label>Participação</label>
+      <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/Cg2/part_h">
+        <label>Como caracteriza o nível da participação pelos homens?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/Cg2/part_m">
+        <label>Como caracteriza o nível da participação pelas mulheres?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/Cg2/part_j">
+        <label>Como caracteriza o nível da participação pelos jovens?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/LEGEND_C_encontros_assoc/Cg2/lid_apoio">
+        <label>Como caracteriza o nível do apoio do líder?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>m_alto</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>alto</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medio</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>fraca</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>m_fraca</value>
+        </item>
+      </select1>
+    </group>
+    <upload mediatype="image/*" ref="/LEGEND_C_encontros_assoc/encont_foto">
+      <label>Tire uma fotografia do encontro</label>
+    </upload>
+    <input ref="/LEGEND_C_encontros_assoc/auto_gps">
+      <label>Capture das coordenadas GPS do encontro</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/LEGEND_C_encontros_assoc/obs">
+      <label>Observações sobre o encontro:</label>
+    </input>
+  </h:body>
+</h:html>

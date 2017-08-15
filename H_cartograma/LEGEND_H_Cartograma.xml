@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND H Cartograma da comunidade</h:title>
+    <model>
+      <instance>
+        <LEGEND_H_Cartograma id="LEGEND_H_V1" version="201706291">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <add_nome/>
+          <prov_id/>
+          <dist_id/>
+          <posto_id/>
+          <assoc_id/>
+          <car_foto/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_H_Cartograma>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_H_Cartograma/start" type="dateTime"/>
+      <bind calculate="&quot;Registo e envio do cartograma&quot;" nodeset="/LEGEND_H_Cartograma/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_H_Cartograma/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_H_Cartograma/tec_nome" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_H_Cartograma/add_nome" relevant=" /LEGEND_H_Cartograma/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_H_Cartograma/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_H_Cartograma/dist_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_H_Cartograma/posto_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_H_Cartograma/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_H_Cartograma/car_foto" required="true()" type="binary"/>
+      <bind nodeset="/LEGEND_H_Cartograma/obs" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_H_Cartograma/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_H_Cartograma/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('cartograma','_', /LEGEND_H_Cartograma/assoc_id )" nodeset="/LEGEND_H_Cartograma/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_H_Cartograma/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_H_Cartograma/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para enviar a imagem do cartograma dos limites da comunidade. 
+
+O técnico pode usar o formulário para tirar um foto do cartograma. O formulário devia ser preenchido depois de adoptar o cartograma. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_H_Cartograma/tec_nome">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input ref="/LEGEND_H_Cartograma/add_nome">
+      <label>Escreve o nome se não apareceu na lista</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_H_Cartograma/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /LEGEND_H_Cartograma/prov_id ]" ref="/LEGEND_H_Cartograma/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('postos')/root/item[dist_id= /LEGEND_H_Cartograma/dist_id ]" ref="/LEGEND_H_Cartograma/posto_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[posto_id= /LEGEND_H_Cartograma/posto_id ]" ref="/LEGEND_H_Cartograma/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <upload mediatype="image/*" ref="/LEGEND_H_Cartograma/car_foto">
+      <label>Tire uma fotografia do cartograma</label>
+    </upload>
+    <input ref="/LEGEND_H_Cartograma/obs">
+      <label>Por favor, indique quaisquer observações importantes sobre o cartograma:</label>
+    </input>
+  </h:body>
+</h:html>
