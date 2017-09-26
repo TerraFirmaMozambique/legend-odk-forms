@@ -4,7 +4,7 @@
     <h:title>LEGEND M Objeccoes e Correcoes</h:title>
     <model>
       <instance>
-        <LEGEND_M_objeccoes_correcoes id="LEGEND_M_V2" version="201709251">
+        <LEGEND_M_objeccoes_correcoes id="LEGEND_M_V2" version="201709261">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -69,9 +69,19 @@
 
 O técnico pode usar o formulário &lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;depois de conclusão da publicação do edital&lt;/span&gt;.
 
-O formulário é usado para reportar a necessidade de mudar ou a configuração das parcelas ou mudanças na informação relacionada sobre os titulares. 
+O formulário é usado para reportar:
 
-&lt;span style=&quot;color:#FF0000&quot;&gt;Se os detalhes de mais de um titular dos co-titulares precisam de ser alterados, o formulário deve ser preenchido uma vez para cada titular&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+- a necessidade de mudar a configuração dos limites de parcelas
+
+ou
+
+- mudanças na informação publicada no edital, relacionada aos titulares
+
+ou
+
+- para confirmar a informação publicada no edital, relacionada aos titulares
+
+&lt;span style=&quot;color:#FF0000&quot;&gt;Se houver mais de um titular para uma parcela, o formulário deve ser preenchido uma vez para cada titular&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
 
 Por favor deslizar para a frente para continuar.</label>
     </input>
