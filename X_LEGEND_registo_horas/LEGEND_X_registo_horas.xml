@@ -4,7 +4,7 @@
     <h:title>LEGEND X Registo Horas</h:title>
     <model>
       <instance>
-        <LEGEND_X_registo_horas id="Legend_Horas_V1" version="201707081">
+        <LEGEND_X_registo_horas id="Legend_Horas_V1" version="201710181">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -110,8 +110,28 @@ Por favor deslizar para a frente para continuar.</label>
     <select1 appearance="minimal" ref="/LEGEND_X_registo_horas/act">
       <label>Tipo de actividade</label>
       <item>
-        <label>Sensibilização, formação de associações, actividades de delimitação</label>
+        <label>Sensibilização</label>
         <value>sens</value>
+      </item>
+      <item>
+        <label>Actividades de associativismo</label>
+        <value>assoc</value>
+      </item>
+      <item>
+        <label>Identificação de limites de povoados</label>
+        <value>limites_pov</value>
+      </item>
+      <item>
+        <label>Actividades de DRP (delimitação comunitária)</label>
+        <value>drp</value>
+      </item>
+      <item>
+        <label>Actividades de georeferenciamento e/ou devolução</label>
+        <value>geo_dev</value>
+      </item>
+      <item>
+        <label>Plano de Uso de Terra</label>
+        <value>put</value>
       </item>
       <item>
         <label>Registo de pessoas</label>
@@ -120,6 +140,10 @@ Por favor deslizar para a frente para continuar.</label>
       <item>
         <label>Registo de parcelas</label>
         <value>reg_parcelas</value>
+      </item>
+      <item>
+        <label>Objecções e Correções</label>
+        <value>obj_corr</value>
       </item>
       <item>
         <label>Encontros ou outras actividades internos</label>

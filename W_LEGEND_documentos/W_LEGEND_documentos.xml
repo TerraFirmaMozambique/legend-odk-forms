@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND W Documentos</h:title>
+    <model>
+      <instance>
+        <W_LEGEND_documentos id="Legend_Documentos_V1" version="201710191">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <data/>
+          <aut_n/>
+          <aut_o/>
+          <doc_n/>
+          <doc_o/>
+          <doc_foto/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </W_LEGEND_documentos>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/W_LEGEND_documentos/start" type="dateTime"/>
+      <bind calculate="&quot;Registo de Documentos Administrativos&quot;" nodeset="/W_LEGEND_documentos/my_form_name" type="string"/>
+      <bind nodeset="/W_LEGEND_documentos/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/W_LEGEND_documentos/tec_nome" required="true()" type="select1"/>
+      <bind nodeset="/W_LEGEND_documentos/data" required="true()" type="date"/>
+      <bind nodeset="/W_LEGEND_documentos/aut_n" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/W_LEGEND_documentos/aut_o" relevant="selected( /W_LEGEND_documentos/aut_n , 'other')" required="true()" type="string"/>
+      <bind nodeset="/W_LEGEND_documentos/doc_n" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/W_LEGEND_documentos/doc_o" relevant="selected( /W_LEGEND_documentos/doc_n , 'other')" required="true()" type="string"/>
+      <bind nodeset="/W_LEGEND_documentos/doc_foto" required="true()" type="binary"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,1000}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/W_LEGEND_documentos/obs" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/W_LEGEND_documentos/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/W_LEGEND_documentos/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('documentos','_', /W_LEGEND_documentos/data ,'_', /W_LEGEND_documentos/aut_n )" nodeset="/W_LEGEND_documentos/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/W_LEGEND_documentos/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /W_LEGEND_documentos/my_form_name "/>&lt;/span&gt; &lt;br/&gt; 
+
+Este formulário é usado para registrar um documento que é entregue às autoridades.
+
+Registra a data de entrega, uma descrição do documento, a quem foi entregue e inclui uma cópia do documento carimbado como tendo sido recebido.
+
+O formulário deve ser usado para registrar todos os documentos relevantes entregues à administração local, aos serviços cadastrais provinciais, ou quaisquer outros órgãos oficiais.
+
+Os documentos importantes incluem:
+
+- copias dos estatutos das associações, dispensados para aprovação
+- cópias de qualquer dos Formulários do Anexo Técnico, relativos à delimitação da terra da comunidade
+- cartas anexadas a qualquer dado entregue à administração</label>
+    </input>
+    <select1 appearance="minimal" ref="/W_LEGEND_documentos/tec_nome">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Cobre</label>
+        <value>Andre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Celestino Machaia</label>
+        <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Eugenio Sabonete</label>
+        <value>Eugenio_Sabonete</value>
+      </item>
+      <item>
+        <label>Eulália Pedro Candua</label>
+        <value>Eulalia_Candua</value>
+      </item>
+      <item>
+        <label>Leonardo Chico Geraldo</label>
+        <value>Leonardo_Geraldo</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo</label>
+        <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Rito Roaneque</label>
+        <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Sadraque Francisco</label>
+        <value>Sadraque_Francisco</value>
+      </item>
+      <item>
+        <label>Sama Tripalonga Vicente</label>
+        <value>Sama_Vicente</value>
+      </item>
+      <item>
+        <label>Vasco Mateus</label>
+        <value>Vasco_Mateus</value>
+      </item>
+      <item>
+        <label>Veronica Williamo Humbane</label>
+        <value>Veronica_Humbane</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>Outro</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/W_LEGEND_documentos/data">
+      <label>Data de entrega:</label>
+    </input>
+    <select1 appearance="minimal" ref="/W_LEGEND_documentos/aut_n">
+      <label>A quem foi entregue?</label>
+      <item>
+        <label>Administração Distrital</label>
+        <value>adm_dist</value>
+      </item>
+      <item>
+        <label>Associação Comunitária</label>
+        <value>assoc_com</value>
+      </item>
+      <item>
+        <label>Autoridade Comunitária (Regulo ou chefe tradicional)</label>
+        <value>aut_com</value>
+      </item>
+      <item>
+        <label>Chefe do Posto</label>
+        <value>chefe_posto</value>
+      </item>
+      <item>
+        <label>Direcção Nacional de Terras</label>
+        <value>dinat</value>
+      </item>
+      <item>
+        <label>Direcção Provincial de Terras, Ambiente e Desenvolvimento Rural</label>
+        <value>dptadr</value>
+      </item>
+      <item>
+        <label>Imprensa Nacional</label>
+        <value>imp_nac</value>
+      </item>
+      <item>
+        <label>SDAE</label>
+        <value>sdae</value>
+      </item>
+      <item>
+        <label>SDPI</label>
+        <value>sdpi</value>
+      </item>
+      <item>
+        <label>Serviços Provinciais de Geografia e Cadastro</label>
+        <value>spgc</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/W_LEGEND_documentos/aut_o">
+      <label>Qual é a outra instituição que recebeu o documento?</label>
+    </input>
+    <select1 appearance="minimal" ref="/W_LEGEND_documentos/doc_n">
+      <label>Que tipo de documento?</label>
+      <item>
+        <label>Certificados de DUATs</label>
+        <value>certificados</value>
+      </item>
+      <item>
+        <label>Dados e/ou mapas de DUATs familiares</label>
+        <value>duats</value>
+      </item>
+      <item>
+        <label>Estatutos de Associação Comunitária</label>
+        <value>estatutos</value>
+      </item>
+      <item>
+        <label>Formulário 2 do Anexo Técnico</label>
+        <value>form_2</value>
+      </item>
+      <item>
+        <label>Formulário 5 do Anexo Técnico (devolução)</label>
+        <value>form_5</value>
+      </item>
+      <item>
+        <label>Mapas de área comunitária (delimitada)</label>
+        <value>mapa_delim</value>
+      </item>
+      <item>
+        <label>Mapas de uso da terra</label>
+        <value>mapa_put</value>
+      </item>
+      <item>
+        <label>Pedido de encontro</label>
+        <value>emcontro</value>
+      </item>
+      <item>
+        <label>Pedido de serviços de Georeferenciamento</label>
+        <value>servicos_geo</value>
+      </item>
+      <item>
+        <label>Títulos de DUATs</label>
+        <value>titulos</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/W_LEGEND_documentos/doc_o">
+      <label>Qual é o outro tipo de documento?</label>
+    </input>
+    <upload mediatype="image/*" ref="/W_LEGEND_documentos/doc_foto">
+      <label>Tire uma fotografia da copia do documento carimbado</label>
+    </upload>
+    <input ref="/W_LEGEND_documentos/obs">
+      <label>Observações:</label>
+    </input>
+  </h:body>
+</h:html>
