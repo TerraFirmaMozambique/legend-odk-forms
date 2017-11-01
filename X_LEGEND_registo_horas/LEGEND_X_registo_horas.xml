@@ -4,7 +4,7 @@
     <h:title>LEGEND X Registo Horas</h:title>
     <model>
       <instance>
-        <LEGEND_X_registo_horas id="Legend_Horas_V1" version="201710181">
+        <LEGEND_X_registo_horas id="Legend_Horas_V1" version="201710241">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -35,7 +35,7 @@
       <bind nodeset="/LEGEND_X_registo_horas/forms" required="true()" type="select1"/>
       <bind nodeset="/LEGEND_X_registo_horas/forms_no" relevant=" /LEGEND_X_registo_horas/forms ='sim'" required="true()" type="int"/>
       <bind nodeset="/LEGEND_X_registo_horas/auto_gps" required="true()" type="geopoint"/>
-      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_X_registo_horas/obs" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,510}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/LEGEND_X_registo_horas/obs" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_X_registo_horas/end" type="dateTime"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_X_registo_horas/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat( /LEGEND_X_registo_horas/data ,'_', /LEGEND_X_registo_horas/tec_nome )" nodeset="/LEGEND_X_registo_horas/meta/instanceName" type="string"/>
