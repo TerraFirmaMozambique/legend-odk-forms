@@ -4,7 +4,7 @@
     <h:title>LEGEND W Documentos</h:title>
     <model>
       <instance>
-        <W_LEGEND_documentos id="Legend_Documentos_V1" version="201710191">
+        <W_LEGEND_documentos id="Legend_Documentos_V1" version="201711011">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -128,7 +128,7 @@ Os documentos importantes incluem:
         <value>aut_com</value>
       </item>
       <item>
-        <label>Chefe do Posto</label>
+        <label>Posto Administrativo</label>
         <value>chefe_posto</value>
       </item>
       <item>
@@ -174,7 +174,7 @@ Os documentos importantes incluem:
         <value>duats</value>
       </item>
       <item>
-        <label>Estatutos de Associação Comunitária</label>
+        <label>Processo de Legalização da Associação</label>
         <value>estatutos</value>
       </item>
       <item>
