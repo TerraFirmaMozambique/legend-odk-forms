@@ -4,7 +4,7 @@
     <h:title>LEGEND M Objeccoes e Correcoes</h:title>
     <model>
       <instance>
-        <LEGEND_M_objeccoes_correcoes id="LEGEND_M_V1" version="201708221">
+        <LEGEND_M_objeccoes_correcoes id="LEGEND_M_V3" version="201711011">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -17,17 +17,19 @@
           <found_pov/>
           <parcel_id/>
           <parcel_id_check/>
-          <resultado/>
+          <outcome/>
+          <party_id/>
+          <party_id_check/>
           <issues/>
+          <parcel_id_new/>
           <pessoa_app_new/>
           <pessoa_nom_new/>
           <pessoa_gen_new/>
+          <data_new/>
           <pessoa_doc_new/>
           <pessoa_id_new/>
-          <pessoa_dob_new/>
-          <pessoa_idval_new/>
-          <limites_foto/>
           <limites_new/>
+          <limites_new_image/>
           <end/>
           <meta>
             <instanceID/>
@@ -39,7 +41,7 @@
       <bind calculate="&quot;Registo de Objecções e Correções&quot;" nodeset="/LEGEND_M_objeccoes_correcoes/my_form_name" type="string"/>
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/intronote" readonly="true()" type="string"/>
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/tec_nome" required="true()" type="select1"/>
-      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/LEGEND_M_objeccoes_correcoes/add_nome" relevant=" /LEGEND_M_objeccoes_correcoes/tec_nome ='Outro'" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - O campo do nome não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_M_objeccoes_correcoes/add_nome" relevant=" /LEGEND_M_objeccoes_correcoes/tec_nome ='Outro'" required="true()" type="string"/>
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/prov_id" required="true()" type="select1"/>
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/dist_id" required="true()" type="string"/>
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/posto_id" required="true()" type="string"/>
@@ -47,20 +49,22 @@
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/found_pov" required="true()" type="select1"/>
       <bind nodeset="/LEGEND_M_objeccoes_correcoes/parcel_id" required="true()" type="string"/>
       <bind constraint=".= /LEGEND_M_objeccoes_correcoes/parcel_id " jr:constraintMsg="O número da parcela/registo que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/LEGEND_M_objeccoes_correcoes/parcel_id_check" required="true()" type="string"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/resultado" required="true()" type="select1"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/issues" relevant=" /LEGEND_M_objeccoes_correcoes/resultado ='conf_mudar'" type="select"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_app_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'apelido')" type="string"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_nom_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'nome')" type="string"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_gen_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'genero')" type="select1"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_doc_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'doc_tipo')" type="select1"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/outcome" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/party_id" required="true()" type="string"/>
+      <bind constraint=".= /LEGEND_M_objeccoes_correcoes/party_id " jr:constraintMsg="O número do titular que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/LEGEND_M_objeccoes_correcoes/party_id_check" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/issues" relevant=" /LEGEND_M_objeccoes_correcoes/outcome ='change'" required="true()" type="select"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/parcel_id_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'parcela')" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - O campo do nome não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_app_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'apelido')" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - O campo do nome não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_nom_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'nome')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_gen_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'genero')" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/data_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'nasc')" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_doc_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'doc_tipo')" required="true()" type="select1"/>
       <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - O campo de numero do documento não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_id_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'doc_num')" required="true()" type="string"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_dob_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'nasc')" type="date"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/pessoa_idval_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'val')" type="date"/>
-      <bind nodeset="/LEGEND_M_objeccoes_correcoes/limites_foto" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'reconfig')" required="true()" type="binary"/>
-      <bind calculate=" /LEGEND_M_objeccoes_correcoes/parcel_id " nodeset="/LEGEND_M_objeccoes_correcoes/limites_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'reconfig')" type="string"/>
+      <bind calculate=" /LEGEND_M_objeccoes_correcoes/parcel_id " nodeset="/LEGEND_M_objeccoes_correcoes/limites_new" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'reconfig')" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_M_objeccoes_correcoes/limites_new_image" relevant="selected( /LEGEND_M_objeccoes_correcoes/issues , 'reconfig')" required="true()" type="binary"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_M_objeccoes_correcoes/end" type="dateTime"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_M_objeccoes_correcoes/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat('COC','_', /LEGEND_M_objeccoes_correcoes/found_pov ,'_', /LEGEND_M_objeccoes_correcoes/parcel_id )" nodeset="/LEGEND_M_objeccoes_correcoes/meta/instanceName" type="string"/>
+      <bind calculate="concat('OC','_', /LEGEND_M_objeccoes_correcoes/parcel_id )" nodeset="/LEGEND_M_objeccoes_correcoes/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -69,7 +73,19 @@
 
 O técnico pode usar o formulário &lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;depois de conclusão da publicação do edital&lt;/span&gt;.
 
-O formulário é usado para reportar a necessidade de mudar algo, seja a configuração das parcelas ou seja mudanças na informação relacionada com os titulares. Também é necessário para fazer registo de confirmação do titular - assim, o formulário é preenchido uma vez para cada parcela que foi publicada.
+O formulário é usado para reportar:
+
+- a necessidade de mudar a configuração dos limites de parcelas
+
+ou
+
+- mudanças na informação publicada no edital, relacionada aos titulares
+
+ou
+
+- para confirmar a informação publicada no edital, relacionada aos titulares
+
+&lt;span style=&quot;color:#FF0000&quot;&gt;Se houver mais de um titular para uma parcela, o formulário deve ser preenchido uma vez para cada titular&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
 
 Por favor deslizar para a frente para continuar.</label>
     </input>
@@ -196,27 +212,37 @@ Por favor deslizar para a frente para continuar.</label>
     <input appearance="numbers" ref="/LEGEND_M_objeccoes_correcoes/parcel_id_check">
       <label>Por favor, re-digite o número da parcela/registo como confirmação:</label>
     </input>
-    <select1 appearance="minimal" ref="/LEGEND_M_objeccoes_correcoes/resultado">
-      <label>Selecionar o resultado do processo de Confirmações, Objecções e Correções</label>
+    <select1 ref="/LEGEND_M_objeccoes_correcoes/outcome">
+      <label>Por favor, selecione o resultado para esta parcela</label>
       <item>
-        <label>Confirmado pelo requerente, sem mudanças</label>
-        <value>conf</value>
+        <label>Todos os detalhes estão corretos e confirmados</label>
+        <value>certify</value>
       </item>
       <item>
-        <label>Confirmado pelo requerente, com mudanças</label>
-        <value>conf_mudar</value>
+        <label>Foi feita uma alteração aos detalhes do(s) (co-)titular(es) ou as limites da parcela</label>
+        <value>change</value>
       </item>
       <item>
-        <label>Disputado, não pode ser certificado agora</label>
-        <value>disp</value>
+        <label>Foi feita uma objecção que necessita uma resolução ainda</label>
+        <value>disputed</value>
       </item>
       <item>
-        <label>Não confirmado pelo requerente, mas sem objecções</label>
-        <value>no_conf</value>
+        <label>O titular não confirmou os seus detalhes durante o período de O &amp; C</label>
+        <value>unconfirmed</value>
       </item>
     </select1>
+    <input appearance="numbers" ref="/LEGEND_M_objeccoes_correcoes/party_id">
+      <label>Qual é o numero do (co-)titular?</label>
+    </input>
+    <input appearance="numbers" ref="/LEGEND_M_objeccoes_correcoes/party_id_check">
+      <label>Por favor, re-digite o número do (co-)titular como confirmação:</label>
+    </input>
     <select ref="/LEGEND_M_objeccoes_correcoes/issues">
       <label>Indique toda a informação que precisa ser alterada</label>
+      <item>
+        <label>Mudar o numero da parcela</label>
+        <value>parcela</value>
+      </item>
       <item>
         <label>Mudar o apelido da pessoa</label>
         <value>apelido</value>
@@ -230,34 +256,33 @@ Por favor deslizar para a frente para continuar.</label>
         <value>genero</value>
       </item>
       <item>
-        <label>Mudar a data de nascimento:</label>
-        <value>nasc</value>
-      </item>
-      <item>
-        <label>Mudar o tipo de documento de identificação:</label>
+        <label>Mudar o tipo de documento de identificação</label>
         <value>doc_tipo</value>
       </item>
       <item>
-        <label>Mudar o numero de documento:</label>
+        <label>Mudar o numero de documento</label>
         <value>doc_num</value>
       </item>
       <item>
-        <label>Mudar a validade de documento de identificação:</label>
-        <value>val</value>
+        <label>Mudar o data de nascimento</label>
+        <value>nasc</value>
       </item>
       <item>
         <label>Reconfigurar os limites da parcela</label>
         <value>reconfig</value>
       </item>
     </select>
+    <input appearance="numbers" ref="/LEGEND_M_objeccoes_correcoes/parcel_id_new">
+      <label>Mudar numero da parcela/registo para:</label>
+    </input>
     <input ref="/LEGEND_M_objeccoes_correcoes/pessoa_app_new">
-      <label>Novo apelido da pessoa:</label>
+      <label>Mudar apelido da pessoa para:</label>
     </input>
     <input ref="/LEGEND_M_objeccoes_correcoes/pessoa_nom_new">
-      <label>Novo nome da pessoa:</label>
+      <label>Mudar nome da pessoa para:</label>
     </input>
-    <select1 ref="/LEGEND_M_objeccoes_correcoes/pessoa_gen_new">
-      <label>Novo género da pessoa:</label>
+    <select1 appearance="minimal" ref="/LEGEND_M_objeccoes_correcoes/pessoa_gen_new">
+      <label>Mudar género da pessoa para:</label>
       <item>
         <label>Masculino</label>
         <value>mas</value>
@@ -267,7 +292,10 @@ Por favor deslizar para a frente para continuar.</label>
         <value>fem</value>
       </item>
     </select1>
-    <select1 ref="/LEGEND_M_objeccoes_correcoes/pessoa_doc_new">
+    <input appearance="no-calendar" ref="/LEGEND_M_objeccoes_correcoes/data_new">
+      <label>Mudar data de nascimento da pessoa para:</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_M_objeccoes_correcoes/pessoa_doc_new">
       <label>Mudar o tipo de documento de identificação:</label>
       <item>
         <label>Bilhete de Identidade</label>
@@ -315,16 +343,10 @@ Por favor deslizar para a frente para continuar.</label>
       </item>
     </select1>
     <input ref="/LEGEND_M_objeccoes_correcoes/pessoa_id_new">
-      <label>Novo numero de documento</label>
+      <label>Mudar o numero de documento para:</label>
     </input>
-    <input appearance="no-calendar" ref="/LEGEND_M_objeccoes_correcoes/pessoa_dob_new">
-      <label>Novo data de nascimento</label>
-    </input>
-    <input appearance="no-calendar" ref="/LEGEND_M_objeccoes_correcoes/pessoa_idval_new">
-      <label>Novo data de validade de documento</label>
-    </input>
-    <upload mediatype="image/*" ref="/LEGEND_M_objeccoes_correcoes/limites_foto">
-      <label>Tire uma fotografia do mapa, mostrando a mudanca dos limites da parcela</label>
+    <upload mediatype="image/*" ref="/LEGEND_M_objeccoes_correcoes/limites_new_image">
+      <label>Tire uma fotografia da parcela no mapa, mostrando claramente a mudança nas limites</label>
     </upload>
   </h:body>
 </h:html>

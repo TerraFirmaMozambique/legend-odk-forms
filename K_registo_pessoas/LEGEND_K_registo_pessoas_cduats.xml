@@ -4,7 +4,7 @@
     <h:title>LEGEND K Registrar Pessoas CDUATs</h:title>
     <model>
       <instance>
-        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V1" version="201708081">
+        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V2" version="201710011">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -89,7 +89,9 @@
   </h:head>
   <h:body>
     <input ref="/LEGEND_K_registo_pessoas_cduats/intronote">
-      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_K_registo_pessoas_cduats/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre as pessoas que querem fazer registo da suas terras familiares ou individuais com a associação.
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_K_registo_pessoas_cduats/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre as pessoas que querem fazer registo da suas terras familiares ou individuais, com a associação e com as autoridades cadastrais.
+
+&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O enumerador deve avisar as pessoas que a sua informação pessoal será apenas utilizada para estes fins e que existem políticas que regulam o comportamento dos colaboradores em relação a confidencialidade e a segurança de toda informação das pessoas&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;.
 
 Instituições podem também fazer registo, através dum(a) representante. Assim as igrejas, cooperativas, associações e ate instituições do estado podem fazer registo e pedir a emissão duma certidão pela a associação que representa a comunidade delimitada. 
 
@@ -212,20 +214,20 @@ Por favor deslizar para a frente para continuar.</label>
     <select appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/party_role">
       <label>Quais são as tarefas desta pessoa (pode escolher mais do que uma opcão)?</label>
       <item>
-        <label>Requerente do certificado C-DUAT</label>
-        <value>pessoa_sing</value>
+        <label>Titular</label>
+        <value>titular</value>
       </item>
       <item>
-        <label>Representante duma instituição que é requerente do certificado C-DUAT (igreja, escola, associação, coop, etc.)</label>
-        <value>rep_entidade</value>
+        <label>Representante duma entidade</label>
+        <value>rep_ent</value>
       </item>
       <item>
-        <label>Representante de menor</label>
+        <label>Representante duma pessoa menor</label>
         <value>rep_menor</value>
       </item>
       <item>
-        <label>Membro fundador da associação</label>
-        <value>memb_assoc</value>
+        <label>Testemunha</label>
+        <value>testem</value>
       </item>
     </select>
     <group appearance="field-list" ref="/LEGEND_K_registo_pessoas_cduats/Kg1">
@@ -468,13 +470,13 @@ Por favor deslizar para a frente para continuar.</label>
       </select1>
     </group>
     <upload mediatype="image/*" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_foto">
-      <label>Tire uma fotografia da pessoa ou representante</label>
+      <label>Tire uma fotografia da pessoa</label>
     </upload>
     <upload mediatype="image/*" ref="/LEGEND_K_registo_pessoas_cduats/id_foto">
       <label>Tire uma fotografia do documento de identificação</label>
     </upload>
     <upload appearance="signature" mediatype="image/*" ref="/LEGEND_K_registo_pessoas_cduats/pessoa_assin">
-      <label>Assinatura da pessoa ou representante</label>
+      <label>Assinatura da pessoa</label>
     </upload>
     <input appearance="numbers" ref="/LEGEND_K_registo_pessoas_cduats/contacto">
       <label>Numero de telemóvel da pessoa</label>
