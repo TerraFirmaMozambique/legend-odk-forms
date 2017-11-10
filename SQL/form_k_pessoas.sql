@@ -1,4 +1,4 @@
-﻿
+
 
 CREATE TABLE public.update_form_k_pessoas
 (
