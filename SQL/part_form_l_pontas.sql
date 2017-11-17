@@ -1,4 +1,4 @@
--- Legend update points in L
+﻿-- Legend update points in L
 
 
 CREATE TABLE public.update_form_l_pontos
@@ -27,19 +27,19 @@ WHERE a.ctid <> (SELECT min(b.ctid)
                  WHERE  a.key = b.key);
 	
 	DELETE FROM public.update_form_l_pontos
-WHERE EXISTS (SELECT 1 FROM public.form_l_pontos 
+WHERE EXISTS (SELECT 1 FROM public.form_l_registrar_pontos 
 WHERE key = public.update_form_l_pontos.key );
 
-SELECT UpdateGeometrySRID('form_l_pontos','geom',0);
+SELECT UpdateGeometrySRID('form_l_registrar_pontos','geom',0);
 
-INSERT INTO public.form_l_pontos(
-            geom, latitude, longitude, altitude, accuracy, limits, parent_key, 
+INSERT INTO public.form_l_registrar_pontos(
+            geom, latitude, longitude, altitude, accuracy, upngpslimit, parentuid, 
             key)
 SELECT geom, latitude, longitude, altitude, accuracy, limits, parent_key, 
        key
   FROM public.update_form_l_pontos;
   
-SELECT UpdateGeometrySRID('form_l_pontos','geom',4326);
+SELECT UpdateGeometrySRID('form_l_registrar_pontos','geom',4326);
 
 
-DROP TABLE public.form_l_pontos;
+DROP TABLE public.update_form_l_pontos;
