@@ -25,6 +25,7 @@ GRANT ALL ON TABLE public.update_form_l_registrar_pontos TO public;
 
 DELETE FROM public.update_form_l_registrar_pontos a
 WHERE a.ctid <> (SELECT min(b.ctid)
+                 FROM   public.update_form_l_registrar_pontos b
                  WHERE  a.key = b.key);
 	
 <<<<<<< HEAD
