@@ -4,7 +4,7 @@
     <h:title>LEGEND L Registrar Parcelas CDUATs</h:title>
     <model>
       <instance>
-        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201711141">
+        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201711211">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -194,7 +194,7 @@
       <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_val" type="date"/>
       <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/doc_vital" relevant=" /LEGEND_L_registo_parcelas_cduats/Novas_pessoas/Lg4/pessoa_doc  = 'bi'" type="select1"/>
       <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_foto" required="true()" type="binary"/>
-      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/id_foto" type="binary"/>
+      <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/id_foto" required="true()" type="binary"/>
       <bind nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_assin" required="true()" type="binary"/>
       <bind constraint="regex(.,'[0-9]{9}')" jr:constraintMsg="O numero não está no formato correcto. Faça a favor de conferir" nodeset="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/contacto" type="string"/>
       <bind constraint=".&gt;=1" jr:constraintMsg="Tem que ter pelos menos uma testamunha" nodeset="/LEGEND_L_registo_parcelas_cduats/testem_num" required="true()" type="int"/>
@@ -947,6 +947,10 @@ Por favor deslizar para a frente para continuar.</label>
               <value>nuit</value>
             </item>
             <item>
+              <label>Pessoa confirmada por testemunha</label>
+              <value>conf</value>
+            </item>
+            <item>
               <label>Bilhete de Identidade</label>
               <value>bi</value>
             </item>
@@ -1018,9 +1022,11 @@ Por favor deslizar para a frente para continuar.</label>
         </group>
         <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_foto">
           <label>Tire uma fotografia da pessoa</label>
+          <hint>Se a pessoa não estiver presente, escolha a imagem do dispositivo que mostra um rosto com uma cruz vermelha</hint>
         </upload>
         <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/id_foto">
           <label>Tire uma fotografia do documento de identificação</label>
+          <hint>Se a pessoa não tiver identificação com eles, escolha a imagem do dispositivo que mostra o cartão de identificação com uma cruz vermelha</hint>
         </upload>
         <upload appearance="signature" mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas/pessoa_assin">
           <label>Assinatura da pessoa</label>
@@ -1293,6 +1299,10 @@ Por favor deslizar para a frente para continuar.</label>
               <value>nuit</value>
             </item>
             <item>
+              <label>Pessoa confirmada por testemunha</label>
+              <value>conf</value>
+            </item>
+            <item>
               <label>Bilhete de Identidade</label>
               <value>bi</value>
             </item>
@@ -1364,9 +1374,11 @@ Por favor deslizar para a frente para continuar.</label>
         </group>
         <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas1/testem_foto">
           <label>Tire uma fotografia da pessoa</label>
+          <hint>Se a pessoa não estiver presente, não pode testemunhar</hint>
         </upload>
         <upload mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas1/testem_id_foto">
           <label>Tire uma fotografia do documento de identificação</label>
+          <hint>Se a pessoa não tiver identificação com eles, escolha a imagem do dispositivo que mostra o cartão de identificação com uma cruz vermelha</hint>
         </upload>
         <upload appearance="signature" mediatype="image/*" ref="/LEGEND_L_registo_parcelas_cduats/Novas_pessoas1/testem_assin">
           <label>Assinatura da pessoa</label>
@@ -1376,7 +1388,7 @@ Por favor deslizar para a frente para continuar.</label>
         </input>
       </repeat>
     </group>
-    <input ref="/LEGEND_L_registo_parcelas_cduats/auto_gps">
+    <input appearance="maps" ref="/LEGEND_L_registo_parcelas_cduats/auto_gps">
       <label>É obrigatorio gravar um ponto dentro da parcela, no centro.</label>
       <hint>GPS coordinates can only be collected when outside.</hint>
     </input>
@@ -1394,7 +1406,7 @@ Por favor deslizar para a frente para continuar.</label>
     <group ref="/LEGEND_L_registo_parcelas_cduats/Pontos">
       <label>Pontos de limites</label>
       <repeat nodeset="/LEGEND_L_registo_parcelas_cduats/Pontos">
-        <input ref="/LEGEND_L_registo_parcelas_cduats/Pontos/auto_gps_limit">
+        <input appearance="maps" ref="/LEGEND_L_registo_parcelas_cduats/Pontos/auto_gps_limit">
           <label>Gravar um ponto</label>
           <hint>Gravar um ponto a qualquer mudança de direcção, e pelo menos uma vez a cada dez metros. Lembrete: se a 'localização record' está levando algum tempo, por favor, verifique se a luz azul do seu Glo</hint>
         </input>
