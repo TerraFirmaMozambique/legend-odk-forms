@@ -4,7 +4,7 @@
     <h:title>LEGEND L Registrar Parcelas CDUATs</h:title>
     <model>
       <instance>
-        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201711251">
+        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201711271">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -1376,7 +1376,7 @@ Por favor deslizar para a frente para continuar.</label>
         </input>
       </repeat>
     </group>
-    <input ref="/LEGEND_L_registo_parcelas_cduats/auto_gps">
+    <input appearance="maps" ref="/LEGEND_L_registo_parcelas_cduats/auto_gps">
       <label>É obrigatorio gravar um ponto dentro da parcela, no centro.</label>
     </input>
     <select1 ref="/LEGEND_L_registo_parcelas_cduats/limites_yn">
@@ -1393,7 +1393,7 @@ Por favor deslizar para a frente para continuar.</label>
     <group ref="/LEGEND_L_registo_parcelas_cduats/Pontos">
       <label>Pontos de limites</label>
       <repeat nodeset="/LEGEND_L_registo_parcelas_cduats/Pontos">
-        <input ref="/LEGEND_L_registo_parcelas_cduats/Pontos/auto_gps_limit">
+        <input appearance="maps" ref="/LEGEND_L_registo_parcelas_cduats/Pontos/auto_gps_limit">
           <label>Gravar um ponto</label>
           <hint>Gravar um ponto a qualquer mudança de direcção, e pelo menos uma vez a cada dez metros. Lembrete: se a 'localização record' está levando algum tempo, por favor, verifique se a luz azul do seu Glo</hint>
         </input>
