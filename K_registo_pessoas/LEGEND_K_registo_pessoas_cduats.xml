@@ -4,7 +4,7 @@
     <h:title>LEGEND K Registrar Pessoas CDUATs</h:title>
     <model>
       <instance>
-        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V2" version="201710011">
+        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V2" version="201712191">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -104,6 +104,10 @@ Por favor deslizar para a frente para continuar.</label>
     <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/tec_name">
       <label>Nome do(a) técnico(a):</label>
       <item>
+        <label>Abrão Saraiva Namuire</label>
+        <value>Abrão_Namuire</value>
+      </item>
+      <item>
         <label>André Cobre</label>
         <value>Andre_Cobre</value>
       </item>
@@ -128,8 +132,16 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Leonardo_Geraldo</value>
       </item>
       <item>
+        <label>Leonardo Pedro Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
         <label>Liliete Arlindo</label>
         <value>Liliete_Arlindo</value>
+      </item>
+      <item>
+        <label>Luis Jacinto Botomane</label>
+        <value>Luis_Botomane</value>
       </item>
       <item>
         <label>Rito Roaneque</label>

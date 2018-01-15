@@ -4,11 +4,7 @@
     <h:title>LEGEND L Registrar Parcelas CDUATs</h:title>
     <model>
       <instance>
-<<<<<<< HEAD
-        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201711211">
-=======
-        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201711251">
->>>>>>> 67730c378527a96fc1e12d2cd6b39d8fc87cd236
+        <LEGEND_L_registo_parcelas_cduats id="LEGEND_L_V2" version="201801121">
           <start/>
           <my_form_name/>
           <intronote/>
