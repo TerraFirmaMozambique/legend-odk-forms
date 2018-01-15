@@ -1,0 +1,60 @@
+CREATE TABLE public.update_validar_novas_pessoas
+(
+pessoa_app character varying,
+pessoa_nom character varying,
+role character varying,
+pessoa_gen character varying,
+pessoa_civil character varying,
+pessoa_prof character varying,
+pessoa_prof_other character varying,
+pessoa_nacion character varying,
+pessoa_natural character varying,
+nasc_y_n character varying,
+pessoa_nasc date,
+pessoa_ida character varying,
+pessoa_doc character varying,
+pessoa_id character varying,
+doc_local character varying,
+doc_emi date,
+doc_val date,
+doc_vital character varying,
+pessoa_foto character varying,
+id_foto character varying,
+pessoa_assin character varying,
+contacto integer,
+parent_uid character varying,
+party_name character varying,
+party_name_key character varying,
+confirmado character varying NOT NULL DEFAULT 'não confirmado'::character varying,
+parcel_id integer
+)
+WITH (
+    OIDS = TRUE
+);
+
+ALTER TABLE public.update_validar_novas_pessoas  OWNER to postgres;
+GRANT ALL ON TABLE public.update_validar_novas_pessoas TO postgres;
+
+ALTER TABLE public.update_validar_novas_pessoas ADD COLUMN id serial;
+
+ALTER TABLE public.update_validar_novas_pessoas ADD CONSTRAINT pkey_update_novas_pessoas PRIMARY KEY (id);
+
+-- upload the ODK output
+COPY public.update_validar_novas_pessoas FROM '/var/lib/share/projects/legend/dbupdate/form_l_validar_novas_pessoas.csv'  USING DELIMITERS ',' WITH NULL AS '' CSV HEADER ENCODING 'latin1';
+
+/* redusce to one occurance  */
+DELETE FROM public.update_validar_novas_pessoas a
+WHERE a.ctid <> (SELECT min(b.ctid)
+                 FROM   public.update_validar_novas_pessoas b
+                 WHERE  a.key = b.key);
+
+ /* remove the ones already rejected */	
+	DELETE FROM public.update_validar_novas_pessoas
+WHERE EXISTS (SELECT 1 FROM public.rejectado_novas_pessoas 
+WHERE key = public.update_validar_novas_pessoas.key );
+
+
+
+
+
+
