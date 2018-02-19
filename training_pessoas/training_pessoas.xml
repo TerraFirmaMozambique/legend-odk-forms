@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Teste Captura Dados</h:title>
+    <model>
+      <instance>
+        <training_pessoas id="Teste_Captura_Dados" version="201802161">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_name/>
+          <registo_data/>
+          <Pessoas jr:template="">
+            <pulldata_key/>
+            <found_nome/>
+            <found_apelido/>
+            <found_ID_tipo/>
+            <found_ID_numero/>
+            <Testeg1>
+              <entered_nome/>
+              <entered_apelido/>
+              <entered_ID_tipo/>
+              <entered_ID_numero/>
+            </Testeg1>
+            <pessoa_foto/>
+            <id_foto/>
+            <result_nome/>
+            <result_apelido/>
+            <result_ID_tipo/>
+            <result_ID_numero/>
+          </Pessoas>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </training_pessoas>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/training_pessoas/start" type="dateTime"/>
+      <bind calculate="&quot;Teste - Registo de pessoas - D-DUATs&quot;" nodeset="/training_pessoas/my_form_name" type="string"/>
+      <bind nodeset="/training_pessoas/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/training_pessoas/tec_name" required="true()" type="string"/>
+      <bind nodeset="/training_pessoas/registo_data" required="true()" type="date"/>
+      <bind nodeset="/training_pessoas/Pessoas/pulldata_key" required="true()" type="string"/>
+      <bind calculate="pulldata('teste', 'party_name', 'party_id_key',  /training_pessoas/Pessoas/pulldata_key )" nodeset="/training_pessoas/Pessoas/found_nome" type="string"/>
+      <bind calculate="pulldata('teste', 'party_apelido', 'party_id_key',  /training_pessoas/Pessoas/pulldata_key )" nodeset="/training_pessoas/Pessoas/found_apelido" type="string"/>
+      <bind calculate="pulldata('teste', 'party_id_tipo', 'party_id_key',  /training_pessoas/Pessoas/pulldata_key )" nodeset="/training_pessoas/Pessoas/found_ID_tipo" type="string"/>
+      <bind calculate="pulldata('teste', 'party_id_numero', 'party_id_key',  /training_pessoas/Pessoas/pulldata_key )" nodeset="/training_pessoas/Pessoas/found_ID_numero" type="string"/>
+      <bind nodeset="/training_pessoas/Pessoas/Testeg1/entered_nome" required="true()" type="string"/>
+      <bind nodeset="/training_pessoas/Pessoas/Testeg1/entered_apelido" required="true()" type="string"/>
+      <bind nodeset="/training_pessoas/Pessoas/Testeg1/entered_ID_tipo" required="true()" type="select1"/>
+      <bind nodeset="/training_pessoas/Pessoas/Testeg1/entered_ID_numero" required="true()" type="string"/>
+      <bind nodeset="/training_pessoas/Pessoas/pessoa_foto" required="true()" type="binary"/>
+      <bind nodeset="/training_pessoas/Pessoas/id_foto" required="true()" type="binary"/>
+      <bind calculate="if( /training_pessoas/Pessoas/found_nome = /training_pessoas/Pessoas/Testeg1/entered_nome ,1,2)" nodeset="/training_pessoas/Pessoas/result_nome" type="string"/>
+      <bind calculate="if( /training_pessoas/Pessoas/found_apelido = /training_pessoas/Pessoas/Testeg1/entered_apelido ,1,2)" nodeset="/training_pessoas/Pessoas/result_apelido" type="string"/>
+      <bind calculate="if( /training_pessoas/Pessoas/found_ID_tipo = /training_pessoas/Pessoas/Testeg1/entered_ID_tipo ,1,2)" nodeset="/training_pessoas/Pessoas/result_ID_tipo" type="string"/>
+      <bind calculate="if( /training_pessoas/Pessoas/found_ID_numero = /training_pessoas/Pessoas/Testeg1/entered_ID_numero ,1,2)" nodeset="/training_pessoas/Pessoas/result_ID_numero" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/training_pessoas/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/training_pessoas/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('teste','_', /training_pessoas/tec_name )" nodeset="/training_pessoas/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/training_pessoas/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /training_pessoas/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para gravar informação sobre as pessoas que querem fazer registo da suas terras familiares ou individuais, com a associação e com as autoridades cadastrais.
+
+&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O enumerador deve avisar as pessoas que a sua informação pessoal será apenas utilizada para estes fins e que existem políticas que regulam o comportamento dos colaboradores em relação a confidencialidade e a segurança de toda a informação das pessoas&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;.
+
+Alem de pessoas individuais, as instituições podem também fazer registo, através dum(a) representante. Assim as igrejas, cooperativas, associações e ate instituições do estado podem fazer registo e pedir a emissão duma certidão pela a associação que representa a comunidade delimitada. 
+
+A associação, que foi estabelecida para representar a comunidade local como detentor do DUAT sobre a área delimitada, também devia fazer registo através deste formulário. Assim, as áreas sagradas, florestas e outras áreas de uso comum, podem ser identificadas como áreas registadas em nome da própria associação. 
+
+O técnico pode usar o formulário para capturar informação sobre cada pessoa, incluindo a foto e assinatura digital.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <input ref="/training_pessoas/tec_name">
+      <label>Escreve o sue nome:</label>
+    </input>
+    <input appearance="no-calendar" ref="/training_pessoas/registo_data">
+      <label>Data do registo:</label>
+    </input>
+    <group ref="/training_pessoas/Pessoas">
+      <label>Registo de pessoas</label>
+      <repeat nodeset="/training_pessoas/Pessoas">
+        <input ref="/training_pessoas/Pessoas/pulldata_key">
+          <label>Pessoa Numero - digite a referencia do nome que vai registrar. Esta referencia aparece no papel.</label>
+        </input>
+        <group appearance="field-list" ref="/training_pessoas/Pessoas/Testeg1">
+          <label>Detalhes de pessoa</label>
+          <input ref="/training_pessoas/Pessoas/Testeg1/entered_nome">
+            <label>Qual é o nome da pessoa?</label>
+          </input>
+          <input ref="/training_pessoas/Pessoas/Testeg1/entered_apelido">
+            <label>Qual é o apelido da pessoa?</label>
+          </input>
+          <select1 appearance="minimal" ref="/training_pessoas/Pessoas/Testeg1/entered_ID_tipo">
+            <label>Tipo de documento de identificação</label>
+            <item>
+              <label>Bilhete de Identidade</label>
+              <value>bi</value>
+            </item>
+            <item>
+              <label>Talão do BI</label>
+              <value>talao</value>
+            </item>
+            <item>
+              <label>Cartão de Eleitor</label>
+              <value>c_eleit</value>
+            </item>
+            <item>
+              <label>Certidão de Nascimento</label>
+              <value>c_nasc</value>
+            </item>
+            <item>
+              <label>Cédula Pessoal</label>
+              <value>ced</value>
+            </item>
+            <item>
+              <label>Declaração</label>
+              <value>decl</value>
+            </item>
+            <item>
+              <label>Cartão de Desmobilização</label>
+              <value>c_desmob</value>
+            </item>
+            <item>
+              <label>Passaporte</label>
+              <value>p_port</value>
+            </item>
+            <item>
+              <label>Carta de Condução</label>
+              <value>c_cond</value>
+            </item>
+            <item>
+              <label>Cartão de pagamento de imposto</label>
+              <value>c_impost</value>
+            </item>
+            <item>
+              <label>NUIT</label>
+              <value>nuit</value>
+            </item>
+          </select1>
+          <input ref="/training_pessoas/Pessoas/Testeg1/entered_ID_numero">
+            <label>Numero de documento</label>
+          </input>
+        </group>
+        <upload mediatype="image/*" ref="/training_pessoas/Pessoas/pessoa_foto">
+          <label>Tire uma fotografia da pessoa</label>
+        </upload>
+        <upload mediatype="image/*" ref="/training_pessoas/Pessoas/id_foto">
+          <label>Tire uma fotografia do documento de identificação</label>
+        </upload>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
