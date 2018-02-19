@@ -1,4 +1,4 @@
-
+﻿
 
 CREATE TABLE public.update_form_m_occ
 (
@@ -50,10 +50,10 @@ WHERE a.ctid <> (SELECT min(b.ctid)
 				 
 
 DELETE from public.update_form_m_occ
-WHERE EXISTS (SELECT 1 FROM public.form_m_occ
+WHERE EXISTS (SELECT 1 FROM public.update_form_m_occ
 WHERE key = public.update_form_m_occ.key );
 
-INSERT INTO public.form_m_occ(
+INSERT INTO public.update_form_m_occ(
             sub_date, start, formname, intronote, tecnome, addnome, provid, 
             distid, postoid, associd, foundpov, parcelid, parcelidcheck, 
             outcome, partyid, partyidcheck, issues, parcelidnew, pessoaappnew, 
