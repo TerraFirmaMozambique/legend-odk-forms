@@ -83,6 +83,9 @@ DELETE from public.update_form_l_registrar_parcela
 WHERE EXISTS (SELECT 1 FROM public.form_l_registrar_parcela 
 WHERE key = public.update_form_l_registrar_parcela.key);
 
+UPDATE public.update_form_l_registrar_parcela 
+SET recibo_image = '<img src="'||recibo_image||'" style="width:256px;height:256px;">';
+
 SELECT UpdateGeometrySRID('form_l_registrar_parcela','geom',0);
 
 
@@ -188,7 +191,7 @@ party_name character varying,
 part_name_key character varying,
 key_test character varying,
 confirmardo character varying,
-parcel_id character varying
+parcel_id integer
 
 )
 WITH (
@@ -215,7 +218,7 @@ WHERE key_test = public.update_form_l_novas_pessoas.key_test);
 
 INSERT INTO public.form_l_novas_pessoas(
             app, nom, role, gen, civil, prof, prof_o, nacion, naturalidade, 
-            nascyn, nasc, aida, doc, id, localidade, emi, val, vital, foto, 
+            nascyn, nasc, aida, doc, doc_id, localidade, emi, val, vital, foto, 
             idfoto, assin, contacto, parentuid, party_name, part_name_key, 
             key_test, confirmardo, parcel_id)
 SELECT app, nom, role, gen, civil, prof, prof_o, nacion, naturalidade, 
