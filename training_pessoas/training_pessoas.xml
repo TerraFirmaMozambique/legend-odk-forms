@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Teste Captura Dados</h:title>
+    <h:title>Teste Captura Dados V2</h:title>
     <model>
       <instance>
-        <training_pessoas id="Teste_Captura_Dados" version="201802161">
+        <training_pessoas id="Teste_Captura_Dados_V2" version="201804241">
           <start/>
           <my_form_name/>
           <intronote/>
           <tec_name/>
           <registo_data/>
           <Pessoas jr:template="">
+            <tec_name_pull/>
             <pulldata_key/>
             <found_nome/>
             <found_apelido/>
@@ -41,6 +42,7 @@
       <bind nodeset="/training_pessoas/intronote" readonly="true()" type="string"/>
       <bind nodeset="/training_pessoas/tec_name" required="true()" type="string"/>
       <bind nodeset="/training_pessoas/registo_data" required="true()" type="date"/>
+      <bind calculate=" /training_pessoas/tec_name " nodeset="/training_pessoas/Pessoas/tec_name_pull" type="string"/>
       <bind nodeset="/training_pessoas/Pessoas/pulldata_key" required="true()" type="string"/>
       <bind calculate="pulldata('teste', 'party_name', 'party_id_key',  /training_pessoas/Pessoas/pulldata_key )" nodeset="/training_pessoas/Pessoas/found_nome" type="string"/>
       <bind calculate="pulldata('teste', 'party_apelido', 'party_id_key',  /training_pessoas/Pessoas/pulldata_key )" nodeset="/training_pessoas/Pessoas/found_apelido" type="string"/>

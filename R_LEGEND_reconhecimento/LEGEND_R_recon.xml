@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>LEGEND R Reconhecimento</h:title>
+    <model>
+      <instance>
+        <LEGEND_R_recon id="LEGEND_R_V1" version="20180502">
+          <start/>
+          <my_form_name/>
+          <intronote/>
+          <tec_nome/>
+          <data/>
+          <auto_gps/>
+          <povoado/>
+          <povoado_viz/>
+          <poi_picture/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </LEGEND_R_recon>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_R_recon/start" type="dateTime"/>
+      <bind calculate="&quot;Formulario R - Reconhecimento Rapido de Limites&quot;" nodeset="/LEGEND_R_recon/my_form_name" type="string"/>
+      <bind nodeset="/LEGEND_R_recon/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/LEGEND_R_recon/tec_nome" required="true()" type="select1"/>
+      <bind nodeset="/LEGEND_R_recon/data" required="true()" type="date"/>
+      <bind nodeset="/LEGEND_R_recon/auto_gps" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/LEGEND_R_recon/povoado" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/LEGEND_R_recon/povoado_viz" required="true()" type="string"/>
+      <bind nodeset="/LEGEND_R_recon/poi_picture" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/LEGEND_R_recon/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/LEGEND_R_recon/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('ponto','_', /LEGEND_R_recon/povoado ,'_', /LEGEND_R_recon/data )" nodeset="/LEGEND_R_recon/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/LEGEND_R_recon/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /LEGEND_R_recon/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para gravar informação inicial sobre os limites das comunidades ou povoados com os seus vizinhos.
+
+O técnico pode usar o formulário para selecionar e gravar informação sobre os pontos, incluindo as coordenadas da localização através de GPS. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/LEGEND_R_recon/tec_nome">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/LEGEND_R_recon/data">
+      <label>Data de captura:</label>
+    </input>
+    <input ref="/LEGEND_R_recon/auto_gps">
+      <label>Coordenadas do GPS</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/LEGEND_R_recon/povoado">
+      <label>Nome do povoado:</label>
+    </input>
+    <input ref="/LEGEND_R_recon/povoado_viz">
+      <label>Nome do povoado vizinho:</label>
+    </input>
+    <upload mediatype="image/*" ref="/LEGEND_R_recon/poi_picture">
+      <label>Por favor, tire uma foto do ponto de limite</label>
+    </upload>
+  </h:body>
+</h:html>
