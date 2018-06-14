@@ -80,7 +80,7 @@ party3651,Celestina Correia c_eleit 656
 party3652,Felizardo Fernando Lopes ced 783299
 party3653,Isac Luís Sousa c_eleit 7154918
 party3654,Luísa Agostinho c_eleit 4904492
-party3655,Carolina Armando c_nasc 97
+party3655,Carolina Armando c_nasc 8340
 party3656,Ricardo Fernando Ropa c_eleit 7920952
 party3657,Alexandre Muaruelane Nipotogorre talao 43560460
 party3658,Rui Silva António bi 040100120065A
@@ -93,7 +93,7 @@ party3664,Angelina Maruanha c_nasc 9746643
 party3665,Victória Agostinho c_eleit 5077102
 party3666,Elias Araus Muqueleouara c_eleit 7637360
 party3702,Joana Nunes Ricardo ced 2563964
-party3703,Enriques Januário decl 0
+party3703,Enriques Januário decl 
 party3704,António Aniva Francisco bi 040604473854B
 party3705,Olga Pedro Papaseco ced 422476
 party3706,Virgínia Pedro Papasseco c_eleit 10115739
@@ -124,7 +124,7 @@ party3751,Eduardo Lucas Vare talao 43559333
 party3752,Felomena Mário c_eleit 7920726
 party3753,Regina Armando Casaco c_eleit 7920826
 party3754,Lurdes Frank Alexandre c_eleit 10115933
-party3755,Osuala Ovila Jaquissone decl 0
+party3755,Osuala Ovila Jaquissone decl 
 party3756,Verônica Daniel Santos c_eleit 7706397
 party3757,Bernardo Munacauana Munac c_eleit 9919929
 party3758,Carlos António Galo talao 43560116
@@ -166,13 +166,13 @@ party4593,Lucia Nihatxequela c_eleit 7920945
 party4610,Angelina Jaquissone Mutuela c_eleit 7921555
 party4618, Melita Manuel João ced 2185063
 party4619, Gelito José António ced 1715618
-party4620, Alchandre Alfândega Júlio ced 24534
+party4620, Alchandre Alfândega Júlio c_nasc 24534
 party4667,Nolo Rui Antonio ced 511770
 party4706, Lídia Gomes Dos Santos ced 767797
 party4707, Fátima Gomes Dos Santos ced 767798
 party4708, Gonçalves Gomes Dos Santos ced 767718
 party4709, Albertina Matias c_eleit 0406A845340817 0676
-party4710, Rosário Gomes Santos bi 04010430529N
+party4710, Rosário Gomes Santos bi 040104300529N
 party4840,Rui Joao Nima bi 040606549074I
 party4844,Carlitos Jone Antonio c_eleit 5077241
 party4846,Hilario Felizardo Felizardo c_eleit 9846445
@@ -187,15 +187,15 @@ party5017,Jose Paulino Nicola c_eleit 10115785
 party5018,Remigio Puessiua Puessiua c_eleit 0406A4553250320653
 party5032,Anita Lucas Muiquicalevo c_eleit 9489130
 party5033,Fatima Chibante Horeia c_eleit 03D217990674
-party5034,Maria Jone Jone c_eleit 4904125
+party5034,Maria Jone c_eleit 4904125
 party5035,Alberto Nahivinrevo Antonio bi 040601291727S
 party5036,Francisco Raul Nacoma c_eleit 13314174
 party5037,Alexandre A. Mavalane Mavalane c_eleit 1289977
 party5184, Bonifácio Domingos Mulevele bi 040102334115F
-party5185, Cristina Fernando decl 0
-party5186, Pinto João decl 0
+party5185, Cristina Fernando decl 
+party5186, Pinto João decl 
 party5187, Fátima Sábado c_eleit 5077058
-party5188, Maria Sábado decl 0
+party5188, Maria Sábado decl 
 party5189, Rosita António Natraca c_eleit 4904448
 party5190, Julieta Paulo c_eleit 4689579
 party5323, Catarina Armando ced 934453
@@ -213,15 +213,15 @@ party5613, Claudina Silvestre Gige c_eleit 8919083
 party5614, Silvestre Giz Solupa c_eleit 10215905
 party5615, Carlota Nalica Victor c_eleit 111832018
 party5616, Ajudante Mucalaia Ribeiro c_eleit 0406A325508011
-party5775, Tavares Horacio c_eleit 5230060
-party5776, Tavaris Horacio c_eleit 5230060
+party5775, Tavares Horácio c_eleit 5230060
+party5776, Tavares Horácio c_eleit 5230060
 party5777, Alexandre Alberto Mavalane c_eleit 1289977
 party5778, Beatriz Gonçalves Niale c_eleit 0406A775319511 0646
 party5779, Lucas Ernesto c_eleit 4873110
-party6344, Flomina Agostinho Pedro ced 90
+party6344, Filomina Agostinho Pedro ced 157
 party6362, Angelina Sorte Moloua c_nasc 18
-party6363, Ambrósio Lourenço Vasco ced 45
-party6364, Sónia Lourenço Vasco ced 46
+party6363, Ambrósio Lourenço Vasco ced 232973
+party6364, Sónia Lourenço Vasco ced 403093
 party6365, Albertina Halela c_eleit 47
 party6366, Isabel Xavier Sábado c_nasc 48
 party6367, Virgílio Daniel Santos c_eleit 61
@@ -233,7 +233,7 @@ party6426, Cecília Francisco c_eleit 131
 party6427, Cacilda Gomes Francisco c_eleit 133
 party6428, António Alexandre Aniva ced 132
 party6429, Genita Augusto conf 134
-party6455, Cecília Gonçalves Inlico ced 153
+party6455, Cecília Gonçalves Inleco ced 90167
 party6567, Filomina Agostinho Pedro ced 157
 party6574, Maria Ricardo Sambora c_eleit 177
 party6575, Celestino jose Antonio ced 178
@@ -254,7 +254,7 @@ party6740, Agostinho Quicohe ced 237
 party6741, Ermelinda António Muramo ced 236
 party6742, Cecília Impilissa c_eleit 238
 party6743, Lídia Inácio Nicurro ced 239
-party6744, Angelina Menthaletxo c_eleit 274
+party6744, Angelina Menthaletxo c_eleit 285
 party6756, Adelia Ernesto Inataro c_eleit 219
 party6757, Paulo Rupia talao 220
 party6758, Miguel Mulupiaua Nihapale c_eleit 221
@@ -296,20 +296,20 @@ party6814, Luisa  Francisco Raul c_eleit 312
 party6815, Madalena Inacio Mucomua c_eleit 313
 party6828, Daniel Wateleuene c_impost 327
 party6831, Lidia muananpuine Muananpuine c_eleit 328
-party6832, Noemia samuel Fernando Antonio ced 329
+party6832, Noemia Samuel Fernando António ced 931884
 party6844, Otília Gemusse Muatulossa ced 347
 party6845, Francisco Ribeiro Muiraek c_eleit 348
 party6846, Dionísia José Manuel ced 349
 party6874, Teresa Samuel Barosso ced 379
-party6875, Telma Fernando Ovirauene ced 382
-party6876, Joana Fernando Ovirauene ced 381
+party6875, Telma Fernando Ovirauene ced 792610
+party6876, Joana Fernando Ovirauene ced 918166
 party6877, Fernando Ovirauene bi 380
 party6878, Esmenia Gemusse Gemusse c_eleit 383
 party6879, Elias António Jaquissone ced 384
-party6880, Belita Elias António ced 385
+party6880, Belita Elias António ced 36007
 party6890, Virgínia Alfredo Monteiro ced 390
-party6891, Gildo Aurélio Dos Santos ced 392
-party6892, Lenia Aurélio Dos Santos ced 391
+party6891, Gildo Aurélio Dos Santos ced 783299
+party6892, Lenia Aurélio Dos Santos ced 977149
 party6893, Lídia Fernando Fernando c_eleit 393
 party6912, Geraldo Ernesto Atiane bi 416
 party6913, Felismina Wilson Wakela c_eleit 417
@@ -317,7 +317,7 @@ party6914, Ernesto Atiana bi 418
 party6915, Fátima Atiana Macuro c_eleit 420
 party6916, Augusto Mutxaramuali talao 419
 party6917, Enjurda Augusto Mutxaramuali ced 422
-party6920, Isabel sozinho Sozinho c_eleit 426
+party6920, Isabel Sozinho Sozinho c_eleit 426
 party6921, Laura Impuine Impuine c_eleit 424
 party6929, Regina Eduardo Hirule c_eleit 435
 party6930, Azevedo Muanacotxa Houela bi 436
@@ -337,3 +337,4 @@ party7228, Aissa Francisco Eduardo ced 1080
 party7229, Armando Alberto Muahatxe c_eleit 1081
 party7238, Fátima Alberto Matari c_eleit 1170
 party7239, Anabela Almeida Ionquela ced 1171
+party7765, Justina Munoneia Munoneia c_eleit 1976

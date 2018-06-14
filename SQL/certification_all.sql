@@ -139,10 +139,12 @@ GRANT ALL ON TABLE public.party TO postgres;
 
 ----
 
+/*
 INSERT INTO public.party
 SELECT party_id, parcel_id, app, nom, genero, estado_civil, prof, prof_o, nacion, naturalidade, nascyn, nasc, aida, documento, id, localidade, emi, val, vital,foto, idfoto, assin, contacto, key FROM 
 (SELECT form_l_novas_pessoas.oid as party_id,form_l_novas_pessoas.parcel_id, form_l_novas_pessoas.app, form_l_novas_pessoas.nom, table_genero_pessoa.genero, table_estado_civil.estado_civil, form_l_novas_pessoas.prof, form_l_novas_pessoas.prof_o, form_l_novas_pessoas.nacion, form_l_novas_pessoas.naturalidade, form_l_novas_pessoas.nascyn, form_l_novas_pessoas.nasc, form_l_novas_pessoas.aida, table_doc_identificacao.documento, form_l_novas_pessoas.id, form_l_novas_pessoas.localidade, form_l_novas_pessoas.emi, form_l_novas_pessoas.val, form_l_novas_pessoas.vital, form_l_novas_pessoas.foto, form_l_novas_pessoas.idfoto, form_l_novas_pessoas.assin, form_l_novas_pessoas.contacto, form_l_novas_pessoas.oid::text||form_l_novas_pessoas.parcel_id::text as key FROM  public.table_genero_pessoa AS table_genero_pessoa RIGHT OUTER JOIN public.table_doc_identificacao AS table_doc_identificacao RIGHT OUTER JOIN public.table_estado_civil AS table_estado_civil RIGHT OUTER JOIN public.form_l_novas_pessoas AS form_l_novas_pessoas ON table_estado_civil.code = form_l_novas_pessoas.civil ON table_doc_identificacao.code = form_l_novas_pessoas.doc ON table_genero_pessoa.code = form_l_novas_pessoas.gen) AS a
 WHERE a.key NOT IN (SELECT key FROM party);
+*/
 
 INSERT INTO public.party
 SELECT id_party, upn, pessoa_app, pessoa_nom, genero, estado_civil, pessoa_prof, prof_other, pessoa_nacion, pessoa_natural, nasc_y_n, pessoa_nasc, pessoa_ida, documento, pessoa_id, doc_local, doc_emi, doc_val, doc_vital, pessoa_foto, pessoa_id_photo, pessoa_assin, contacto, key FROM
@@ -188,7 +190,7 @@ GRANT ALL ON TABLE public.udcertification TO postgres;
 
 INSERT INTO public.udcertification(
             geom, upn, province, district, posto_admin, assoc, assoc_id, povoado, povoado_id, party_type, area, x_min, x_max, y_min, y_max)
-SELECT geom, upn, province, district, posto_admin, assoc, assoc_id, povoado, povoado_id, party_type, area, x_min, x_max, y_min, y_max FROM (SELECT 
+SELECT geom, upn, province, district, posto_admin, assoc, assoc_id, initcap(povoado) AS povoado, povoado_id, party_type, area, x_min, x_max, y_min, y_max FROM (SELECT 
   ST_Transform(digitisations.geom,32737) AS geom,
   digitisations.upn, 
   geo_table_moz_provincias.label AS province,

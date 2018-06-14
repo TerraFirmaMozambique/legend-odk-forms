@@ -1,4 +1,4 @@
-CREATE TABLE public.update_form_l_registrar_parcela
+﻿CREATE TABLE public.update_form_l_registrar_parcela
 (
   geom geometry(Point,0),
   sub_date timestamp without time zone,
@@ -181,7 +181,7 @@ assin character varying,
 contacto character varying,
 parentuid character varying,
 party_name character varying,
-part_name_key character varying,
+party_name_key character varying,
 key_test character varying,
 confirmardo character varying,
 parcel_id integer
@@ -195,35 +195,41 @@ TABLESPACE pg_default;
 ALTER TABLE public.update_form_l_novas_pessoas  OWNER to postgres;
 GRANT ALL ON TABLE public.update_form_l_novas_pessoas TO postgres;
 
-COPY public.update_form_l_novas_pessoas FROM '/var/lib/share/projects/legend/dbupdate/form_l_novas_pessoas.csv'  USING DELIMITERS ',' NULL AS '' CSV HEADER ENCODING 'latin1';
 
+COPY public.update_form_l_novas_pessoas FROM '/var/lib/share/projects/legend/dbupdate/form_l_novas_pessoas.csv'  USING DELIMITERS ',' NULL AS '' CSV HEADER ENCODING 'latin1';
 
 DELETE FROM public.update_form_l_novas_pessoas a
 WHERE a.ctid <> (SELECT min(b.ctid)
                  FROM   public.update_form_l_novas_pessoas b
-                 WHERE  a.part_name_key = b.part_name_key);
+                 WHERE  a.party_name_key = b.party_name_key);
 				 
 DELETE from public.update_form_l_novas_pessoas
 WHERE EXISTS (SELECT 1 FROM public.form_l_novas_pessoas 
-WHERE part_name_key = public.update_form_l_novas_pessoas.part_name_key);
+WHERE party_name_key = public.update_form_l_novas_pessoas.party_name_key);
 
+UPDATE update_form_l_novas_pessoas
+SET foto = '<img src="'||foto||'" style="width:1024px;height:1024px;" />';
+UPDATE update_form_l_novas_pessoas
+SET idfoto = '<img src="'||idfoto||'" style="width:1024px;height:1024px;" />';
+UPDATE update_form_l_novas_pessoas
+SET assin = '<img src="'||assin||'" style="width:1024px;height:1024px;" />';
 
 
 INSERT INTO public.form_l_novas_pessoas(
             app, nom, role, gen, civil, prof, prof_o, nacion, naturalidade, 
             nascyn, nasc, aida, doc, doc_id, localidade, emi, val, vital, foto, 
-            idfoto, assin, contacto, parentuid, party_name, part_name_key, 
+            idfoto, assin, contacto, parentuid, party_name, party_name_key, 
             key_test, confirmardo, parcel_id)
 SELECT app, nom, role, gen, civil, prof, prof_o, nacion, naturalidade, 
        nascyn, nasc, aida, doc, id, localidade, emi, val, vital, foto, 
-       idfoto, assin, contacto, parentuid, party_name, part_name_key, 
+       idfoto, assin, contacto, parentuid, party_name, party_name_key, 
        key_test, confirmardo, parcel_id
   FROM public.update_form_l_novas_pessoas;		
   
 DROP TABLE public.update_form_l_novas_pessoas;  
 
 -------------------------------------------------------
-CREATE TABLE public.update_form_l_registrar_pontos
+/*CREATE TABLE public.update_form_l_registrar_pontos
 (
     geom geometry(Point, 0),
     latitude double precision,
@@ -232,8 +238,9 @@ CREATE TABLE public.update_form_l_registrar_pontos
     accuracy double precision,
     upngpslimit character varying COLLATE pg_catalog."default",
     parentuid character varying COLLATE pg_catalog."default" NOT NULL,
-    key character varying COLLATE pg_catalog."default"
-)
+    key character varying COLLATE pg_catalog."default",
+    assocsid character varying
+	)
 WITH (
   OIDS=TRUE
 );
@@ -249,15 +256,13 @@ UPDATE update_form_l_registrar_pontos SET geom = ST_SetSRID(ST_MakePoint(longitu
 
 
 INSERT INTO public.form_l_registrar_pontos(
-            geom, latitude, longitude, altitude, accuracy, upngpslimit, parentuid, 
-            key)
-SELECT geom, latitude, longitude, altitude, accuracy, upngpslimit, parentuid, 
-       key
+            geom, latitude, longitude, altitude, accuracy, upngpslimit, parentuid, key, assocsid)
+SELECT geom, latitude, longitude, altitude, accuracy, upngpslimit, parentuid, key, assocsid
   FROM public.update_form_l_registrar_pontos
   WHERE key NOT IN (Select key from form_l_registrar_pontos ORDER BY key ASC );
 
 DROP TABLE public.update_form_l_registrar_pontos;
-
+*/
 ----------------------------------------------
 
 CREATE TABLE public.update_form_l_testemunhas
@@ -385,8 +390,8 @@ GRANT ALL ON TABLE public.party TO postgres;
 ----
 
 INSERT INTO public.party
-SELECT party_id, parcel_id, app, nom, genero, estado_civil, prof, prof_o, nacion, naturalidade, nascyn, nasc, aida, documento, id, localidade, emi, val, vital,foto, idfoto, assin, contacto, key FROM 
-(SELECT form_l_novas_pessoas.oid as party_id,form_l_novas_pessoas.parcel_id, form_l_novas_pessoas.app, form_l_novas_pessoas.nom, table_genero_pessoa.genero, table_estado_civil.estado_civil, form_l_novas_pessoas.prof, form_l_novas_pessoas.prof_o, form_l_novas_pessoas.nacion, form_l_novas_pessoas.naturalidade, form_l_novas_pessoas.nascyn, form_l_novas_pessoas.nasc, form_l_novas_pessoas.aida, table_doc_identificacao.documento, form_l_novas_pessoas.id, form_l_novas_pessoas.localidade, form_l_novas_pessoas.emi, form_l_novas_pessoas.val, form_l_novas_pessoas.vital, form_l_novas_pessoas.foto, form_l_novas_pessoas.idfoto, form_l_novas_pessoas.assin, form_l_novas_pessoas.contacto, form_l_novas_pessoas.oid::text||form_l_novas_pessoas.parcel_id::text as key FROM  public.table_genero_pessoa AS table_genero_pessoa RIGHT OUTER JOIN public.table_doc_identificacao AS table_doc_identificacao RIGHT OUTER JOIN public.table_estado_civil AS table_estado_civil RIGHT OUTER JOIN public.form_l_novas_pessoas AS form_l_novas_pessoas ON table_estado_civil.code = form_l_novas_pessoas.civil ON table_doc_identificacao.code = form_l_novas_pessoas.doc ON table_genero_pessoa.code = form_l_novas_pessoas.gen) AS a
+SELECT party_id, parcel_id, app, nom, genero, estado_civil, prof, prof_o, nacion, naturalidade, nascyn, nasc, aida, documento, doc_id, localidade, emi, val, vital,foto, idfoto, assin, contacto, key FROM 
+(SELECT form_l_novas_pessoas.oid as party_id,form_l_novas_pessoas.parcel_id, form_l_novas_pessoas.app, form_l_novas_pessoas.nom, table_genero_pessoa.genero, table_estado_civil.estado_civil, form_l_novas_pessoas.prof, form_l_novas_pessoas.prof_o, form_l_novas_pessoas.nacion, form_l_novas_pessoas.naturalidade, form_l_novas_pessoas.nascyn, form_l_novas_pessoas.nasc, form_l_novas_pessoas.aida, table_doc_identificacao.documento, form_l_novas_pessoas.doc_id, form_l_novas_pessoas.localidade, form_l_novas_pessoas.emi, form_l_novas_pessoas.val, form_l_novas_pessoas.vital, form_l_novas_pessoas.foto, form_l_novas_pessoas.idfoto, form_l_novas_pessoas.assin, form_l_novas_pessoas.contacto, form_l_novas_pessoas.oid::text||form_l_novas_pessoas.parcel_id::text as key FROM  public.table_genero_pessoa AS table_genero_pessoa RIGHT OUTER JOIN public.table_doc_identificacao AS table_doc_identificacao RIGHT OUTER JOIN public.table_estado_civil AS table_estado_civil RIGHT OUTER JOIN public.form_l_novas_pessoas AS form_l_novas_pessoas ON table_estado_civil.code = form_l_novas_pessoas.civil ON table_doc_identificacao.code = form_l_novas_pessoas.doc ON table_genero_pessoa.code = form_l_novas_pessoas.gen) AS a
 WHERE a.key NOT IN (SELECT key FROM party);
 
 INSERT INTO public.party
