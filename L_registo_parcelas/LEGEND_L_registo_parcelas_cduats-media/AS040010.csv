@@ -67,8 +67,8 @@ party5107,Jose Prato bi 040604762099C
 party5108,Calisto Monhanha c_eleit 7154820
 party5109,Artimisa Luís c_eleit 8214307
 party5110,Julio Alfredo Namaroma c_eleit 7920837
-party5111,Albert Nihanladai bi 040011921V
-party5112,Governador A. Antonio c_eleit 02D686040126
+party5111,Alberto Nihanladai bi 040011921V
+party5112,Vilena A. Antonio c_eleit 02D686040126
 party5113,Cristina Racinho Viroque ced 328852
 party5114,Cecilia Augusto Crussane c_eleit 11451037
 party5116,Alves Mangacao bi 040086914F
@@ -132,11 +132,11 @@ party6901, Gracinda Mussokiua c_eleit 12990959
 party7129, Macinda Alberto António ced 150695
 party7148, Teresa Artur c_eleit 9919644
 party7149, Eva José Toalo ced 2221910
-party7150, Jose Taulo Muirelocona decl 200.016
-party7151, Jose taulo Muirilecona decl 462
-party7152, Dionisia Fernanda Eugenio decl 422451
+party7150, Jose Taulo Muirelocona decl 462
+party7151, Jose Taulo Muirilecona decl 462
+party7152, Dionisia Fernanda Eugenio ced 422451
 party7153, Margarida cotinho Coneliwane c_eleit 473
-party7154, Dionisia fernando Eugenio ced 463
+party7154, Dionisia fernando Eugenio ced 422451
 party7155, Catarina Sabonete c_eleit 79290934
 party7156, Clementina Mutonocahi c_eleit 9919664
 party7185, Amélia Francisco c_eleit 9746529
@@ -167,7 +167,7 @@ party7297, Vilona Jaime Camisa c_eleit 1238
 party7298, Leolina Alexandre c_eleit 1235
 party7299, Matilde Afonso Muerelocona c_eleit 1236
 party7300, Maria Alfredo c_eleit 1237
-party7301, Cecilia Muha Muha c_eleit 1275
+party7301, Cecilia Mahia Muha c_eleit 1275
 party7302, Rosa Pompeiua c_eleit 1277
 party7303, Verionica Macario Suale c_eleit 1323
 party7304, Adelaide Colosse Muhupo c_eleit 1324
@@ -200,9 +200,9 @@ party7360, Joana Fernando Maluco c_eleit 12990892
 party7361, Joana Inpasse Mucopo c_eleit 10115776
 party7362, Floriana Francisco c_eleit 7154823
 party7366, Rafael Xavier Mesa bi 1504
-party7367,Igreja Catolica de  Namanda centroManuel tualo Muirelocona c_eleit 1505
+party7367,Igreja Catolica de  Namanda centroManuel Tualo Muirelocona c_eleit 1505
 party7368,Igreja Catolica de  Namanda centroAbilio Milissao c_eleit 1475
-party7369, Manuel tualo Muirelocona c_eleit 1476
+party7369, Manuel Tualo Muirelocona c_eleit 1476
 party7370, Angelina Ernesto c_eleit 1548
 party7371, Ernesto Mario Manteiga talao 1556
 party7372, Antonio Sabonete Uampiquela c_eleit 1560
@@ -233,11 +233,11 @@ party7481, Tereza Albino c_eleit 1634
 party7482, Lena Tualo Tualo c_eleit 1679
 party7483, Catarina Nriehuro Nriehuro c_eleit 1635
 party7484, Joao  Muhissuela Muhissuela c_eleit 1680
-party7485, Paulino Meque Milua Milua c_eleit 1722
+party7485, Paulino Meque Milua c_eleit 1722
 party7486, Joana Fernando Fernando c_eleit 1695
 party7487, Paulino Meque c_eleit 1696
 party7488, Joana Fernando c_eleit 1723
-party7489, Paulina Meque Milua c_eleit 1697
+party7489, Paulino Meque Milua c_eleit 1697
 party7490, Angelina Ernesto c_eleit 1724
 party7491, Teresa Alberto Nakei c_eleit 1725
 party7492, Zecas Joao Napala bi 1762
@@ -258,7 +258,7 @@ party7698, João Navarcela c_eleit 11451109
 party7699, Carlitos Alfaiate  Alfaiate c_eleit 12999965
 party7700, Jose Muatenlero bi 1873
 party7701, Victoria Luis c_eleit 1874
-party7702, Laura Quihiere Mpaia ced 1875
+party7702, Laura Quihiere Mpaia ced 947415
 party7703, Jacinta Basilio Namanlomuaco c_eleit 2031
 party7704, Luisa Joaquim c_eleit 1925
 party7705, Julieta Sozinho c_eleit 1926
@@ -277,15 +277,15 @@ party7758, Claudina Bernardo c_eleit 1902
 party7835, João Navarcela c_eleit 11451109
 party7836, Jacinta Basílio Namanlomuaco c_eleit 11451129
 party7837, Luísa Joaquim Joaquim c_eleit 2032
-party7838, Santos Carlosq c_eleit 2011
+party7838, Santos Carlos c_eleit 2011
 party7853, Lucia Nemessem decl 33917
 party7854, Carlota Marcelino c_eleit 11451193
 party7855, Estefania Virgílio Alfredo ced 847660
 party7856, Lúcia Nemsem Muhavivo decl 33917
-party7857, Caudina cacaia Cacaia c_eleit 407
+party7857, Caudina Cacaia c_eleit 407
 party7858, Luisa Intapata c_eleit 11451316
 party7859, Estefania Alfredo Alfredo ced 847660
-party7860, Caudina Cacaia Cacaia c_eleit 407
+party7860, Caudina Cacaia c_eleit 407
 party7861, Maria Nihacanela c_eleit 11981075
 party7862, Juliana Nihacanela c_eleit 11981115
 party7867, Madalena Mutepa Moneia c_nasc 138
@@ -341,3 +341,33 @@ party8169, Sônia Ernesto Muahia c_eleit 11451203
 party8170, Maria Nahacanela c_eleit 11981075
 party8171, Sonia Muahia c_eleit 11451203
 party8174, Gracinda Antonio Tumbua c_eleit 0406A7853400770406
+party8259, Cecília Mahia Muha c_eleit 406
+party8261,Centro de Saúde de NamandaJoão Soares Lugela c_eleit 708
+party8262,Centro de Saúde de NamandaMilton José Antão bi 03010141191M
+party8263, Eugênia Nihacanela c_eleit 11451164
+party8264, Elita Madica c_eleit 11451280
+party8267, Ermelinda Lopes c_eleit 11451498
+party8268, Rosita Alberto c_eleit 11451231
+party8269, Veronica Cesar c_eleit 11451473
+party8270, Angelina Eduardo c_eleit 11451108
+party8271, Rosalina Uirssone c_eleit 7793962
+party8272, Florinda Manla c_eleit 11981063
+party8281, Gloria pedro Dos Santos ced 826552
+party8294, Casimiro Rosario Mucubela c_eleit 11981062
+party8297, Julieta Nacoma Impeia c_eleit 12990608
+party8298, Luatina Tualo Mavega c_eleit 11451199
+party8299, Julieta Nacona Impeia c_eleit 12990608
+party8300, Luatina  Tualo Mavega c_eleit 11451199
+party8371, Jonito sicanso passa Passa c_eleit 11192309
+party8372, Jonito Sicanso Passa Passa c_eleit 11192309
+party8373, Antonieta Jose Canroromela c_eleit 11451149
+party8374, Laurinda Bernardo c_eleit 12990797
+party8511, Domingas Orlando Cavinhacavo c_eleit 11451054
+party8512, Rosa Tocolo c_eleit 7920606
+party8513, Valdimira Antonio Alfredo bi 040106915134S
+party8554, Elisa Lucas c_eleit 9746829
+party8555, Ramisa Daniel c_eleit 11451053
+party8556, Madelena Naruaniuaca c_eleit 2110749
+party8575,Futuras estalacoes do posto administrativo ile sedeJose Prato bi 04060476209C
+party8576, Rosa  Domingos Sissela bi 020208575C
+party8890, Margarida Cotinho Coneliwan c_eleit 13075812

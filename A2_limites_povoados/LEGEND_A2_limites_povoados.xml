@@ -4,7 +4,7 @@
     <h:title>LEGEND A2 Limites dos povoados</h:title>
     <model>
       <instance>
-        <LEGEND_A2_limites_povoados id="LEGEND_A2_V1" version="201707021">
+        <LEGEND_A2_limites_povoados id="LEGEND_A2_V1" version="201807173">
           <start/>
           <my_form_name/>
           <intronote/>

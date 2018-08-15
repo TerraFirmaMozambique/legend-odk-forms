@@ -4,7 +4,7 @@
     <h:title>LEGEND D Encontros de DRP</h:title>
     <model>
       <instance>
-        <LEGEND_D_encontros_DRP id="LEGEND_D_V1" version="201706291">
+        <LEGEND_D_encontros_DRP id="LEGEND_D_V1" version="201807171">
           <start/>
           <my_form_name/>
           <intronote/>

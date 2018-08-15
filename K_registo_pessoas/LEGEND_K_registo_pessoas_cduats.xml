@@ -4,7 +4,7 @@
     <h:title>LEGEND K Registrar Pessoas CDUATs</h:title>
     <model>
       <instance>
-        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V2" version="201712191">
+        <LEGEND_K_registo_pessoas_cduats id="LEGEND_K_V2" version="201807171">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -104,8 +104,16 @@ Por favor deslizar para a frente para continuar.</label>
     <select1 appearance="minimal" ref="/LEGEND_K_registo_pessoas_cduats/tec_name">
       <label>Nome do(a) técnico(a):</label>
       <item>
-        <label>Abrão Saraiva Namuire</label>
-        <value>Abrão_Namuire</value>
+        <label>Abrao Saraiva Namuiri</label>
+        <value>abrao_saraiva_namuiri</value>
+      </item>
+      <item>
+        <label>Adriano Muanahela Banco</label>
+        <value>adriano_muanahela_banco</value>
+      </item>
+      <item>
+        <label>Agi Ribeiro Vontade</label>
+        <value>agi_ribeiro_vontade</value>
       </item>
       <item>
         <label>André Cobre</label>
@@ -116,8 +124,72 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Arlindo_Macuva</value>
       </item>
       <item>
+        <label>Artur Afonso Viegas</label>
+        <value>artur_afonso_viegas</value>
+      </item>
+      <item>
+        <label>Aurelio Luis Navacela</label>
+        <value>aurelio_luis_navacela</value>
+      </item>
+      <item>
+        <label>Beto Francisco</label>
+        <value>beto_francisco</value>
+      </item>
+      <item>
+        <label>Betuel Ernesto Castro</label>
+        <value>betuel_ernesto_castro</value>
+      </item>
+      <item>
+        <label>Bonifacio Basilio Verde</label>
+        <value>bonifacio_basilio_verde</value>
+      </item>
+      <item>
+        <label>Celestina Armando Invinhera</label>
+        <value>celestina_armando_invinhera</value>
+      </item>
+      <item>
         <label>Celestino Machaia</label>
         <value>Celestino_Machaia</value>
+      </item>
+      <item>
+        <label>Celso Rosario Joao</label>
+        <value>celso_rosario_joao</value>
+      </item>
+      <item>
+        <label>Costa Estevao Antonio</label>
+        <value>costa_estevao_antonio</value>
+      </item>
+      <item>
+        <label>Dalmacia Miguel Cateco</label>
+        <value>dalmacia_miguel_cateco</value>
+      </item>
+      <item>
+        <label>Damacio Feliciano Mocotocona</label>
+        <value>damacio_feliciano_mocotocona</value>
+      </item>
+      <item>
+        <label>Danilo Freita Pedro</label>
+        <value>danilo_freita_pedro</value>
+      </item>
+      <item>
+        <label>Denone Issufo Impinha</label>
+        <value>denone_issufo_impinha</value>
+      </item>
+      <item>
+        <label>Dionisio Silvestre Muganiua</label>
+        <value>dionisio_silvestre_muganiua</value>
+      </item>
+      <item>
+        <label>Elidio Agostinho</label>
+        <value>elidio_agostinho</value>
+      </item>
+      <item>
+        <label>Engenheiro Nicotoua</label>
+        <value>engenheiro_nicotoua</value>
+      </item>
+      <item>
+        <label>Ergidio Passingueze Betao</label>
+        <value>ergidio_passingueze_betao</value>
       </item>
       <item>
         <label>Eugenio Sabonete</label>
@@ -128,24 +200,128 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Eulalia_Candua</value>
       </item>
       <item>
+        <label>Flavia Concilio Ruben</label>
+        <value>flavia_concilio_ruben</value>
+      </item>
+      <item>
+        <label>Francisco Nalelana</label>
+        <value>francisco_nalelana</value>
+      </item>
+      <item>
+        <label>Gelasio Eduardo Muganiua</label>
+        <value>gelasio_eduardo_muganiua</value>
+      </item>
+      <item>
+        <label>Geraldo Ernesto Seguea</label>
+        <value>geraldo_ernesto_seguea</value>
+      </item>
+      <item>
+        <label>Honorio Pedro Lucas</label>
+        <value>honorio_pedro_lucas</value>
+      </item>
+      <item>
+        <label>Hortencilio Rosario Lourenco</label>
+        <value>hortencilio_rosario_lourenco</value>
+      </item>
+      <item>
+        <label>Isac Arlindo Francisco</label>
+        <value>isac_arlindo_francisco</value>
+      </item>
+      <item>
+        <label>Jacinto Antonio Machamba</label>
+        <value>jacinto_antonio_machamba</value>
+      </item>
+      <item>
+        <label>Joana Jose Santos</label>
+        <value>joana_jose_santos</value>
+      </item>
+      <item>
+        <label>Jose Julio Elias</label>
+        <value>jose_julio_elias</value>
+      </item>
+      <item>
+        <label>Jose Manuel Murucomotxa</label>
+        <value>jose_manuel_murucomotxa</value>
+      </item>
+      <item>
+        <label>Juma Baptista Paulo</label>
+        <value>juma_baptista_paulo</value>
+      </item>
+      <item>
         <label>Leonardo Chico Geraldo</label>
         <value>Leonardo_Geraldo</value>
       </item>
       <item>
         <label>Leonardo Pedro Henriques</label>
-        <value>Leonardo_Henriques</value>
+        <value>leonardo_pedro_henriques</value>
       </item>
       <item>
         <label>Liliete Arlindo</label>
         <value>Liliete_Arlindo</value>
       </item>
       <item>
-        <label>Luis Jacinto Botomane</label>
-        <value>Luis_Botomane</value>
+        <label>Luis Botomane</label>
+        <value>luis_botomane</value>
+      </item>
+      <item>
+        <label>Luis Virgilio Joao</label>
+        <value>luis_virgilio_joao</value>
+      </item>
+      <item>
+        <label>Lurdes Engenheiro</label>
+        <value>lurdes_engenheiro</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>magaia_armando</value>
+      </item>
+      <item>
+        <label>Marques Armando</label>
+        <value>marques_armando</value>
+      </item>
+      <item>
+        <label>Messias Eduardo Gemusse</label>
+        <value>messias_eduardo_gemusse</value>
+      </item>
+      <item>
+        <label>Moises Rafael Valentim</label>
+        <value>moises_rafael_valentim</value>
+      </item>
+      <item>
+        <label>Neldo Joao</label>
+        <value>neldo_joao</value>
+      </item>
+      <item>
+        <label>Nelito Alberto Manuel</label>
+        <value>nelito_alberto_manuel</value>
+      </item>
+      <item>
+        <label>Nelucha Alberto Tomuiema</label>
+        <value>nelucha_alberto_tomuiema</value>
+      </item>
+      <item>
+        <label>Olinda Rui Muquelesse</label>
+        <value>olinda_rui_muquelesse</value>
+      </item>
+      <item>
+        <label>Onessimo Agostinho Nepele</label>
+        <value>onessimo_agostinho_nepele</value>
+      </item>
+      <item>
+        <label>Raimundo Claudio</label>
+        <value>raimundo_claudio</value>
       </item>
       <item>
         <label>Rito Roaneque</label>
         <value>Rito_Roaneque</value>
+      </item>
+      <item>
+        <label>Rocadio Bernardino Mutemba</label>
+        <value>rocadio_bernardino_mutemba</value>
+      </item>
+      <item>
+        <label>Rosa Jose Madeira</label>
+        <value>rosa_jose_madeira</value>
       </item>
       <item>
         <label>Sadraque Francisco</label>
@@ -156,6 +332,26 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Sama_Vicente</value>
       </item>
       <item>
+        <label>Santos Florencio</label>
+        <value>santos_florencio</value>
+      </item>
+      <item>
+        <label>Santos Quitiquilele Veua</label>
+        <value>santos_quitiquilele_veua</value>
+      </item>
+      <item>
+        <label>Sitelio Castelo Muguite</label>
+        <value>sitelio_castelo_muguite</value>
+      </item>
+      <item>
+        <label>Sonia Rogerio Mucua</label>
+        <value>sonia_rogerio_mucua</value>
+      </item>
+      <item>
+        <label>Timotio Rafael Sopa</label>
+        <value>timotio_rafael_sopa</value>
+      </item>
+      <item>
         <label>Vasco Mateus</label>
         <value>Vasco_Mateus</value>
       </item>
@@ -164,8 +360,12 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Veronica_Humbane</value>
       </item>
       <item>
-        <label>Outro</label>
-        <value>Outro</value>
+        <label>Virgílio Macosso Matomate</label>
+        <value>virgilio_macosso_matomate</value>
+      </item>
+      <item>
+        <label>Outro nome</label>
+        <value>outro</value>
       </item>
     </select1>
     <input appearance="no-calendar" ref="/LEGEND_K_registo_pessoas_cduats/registo_data">

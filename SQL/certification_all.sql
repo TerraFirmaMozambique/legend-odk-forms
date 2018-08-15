@@ -225,7 +225,7 @@ WHERE
   form_l_registrar_parcela.assocs_id = table_associacao.name AND
   (form_l_registrar_parcela.party_type = 'sing' OR 
   form_l_registrar_parcela.party_type = 'cotitular') AND 
-  normalise_form_m_occ.desicion = 'conf'
+  normalise_form_m_occ.desicion = 'certify'
 ORDER BY
   table_associacao.name ASC, 
   digitisations.upn ASC) AS a;

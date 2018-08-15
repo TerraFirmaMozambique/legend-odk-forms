@@ -4,7 +4,7 @@
     <h:title>LEGEND F Organizacao Social</h:title>
     <model>
       <instance>
-        <LEGEND_F_org_social id="LEGEND_F_V1" version="201706291">
+        <LEGEND_F_org_social id="LEGEND_F_V1" version="201807171">
           <start/>
           <my_form_name/>
           <intronote/>

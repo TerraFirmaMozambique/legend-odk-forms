@@ -4,7 +4,7 @@
     <h:title>LEGEND C2 Registrar assinantes da Associacao V2</h:title>
     <model>
       <instance>
-        <LEGEND_C2_assinantes_assoc id="LEGEND_C2_V2" version="201706291">
+        <LEGEND_C2_assinantes_assoc id="LEGEND_C2_V2" version="201807171">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -54,7 +54,7 @@
       <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_nom" required="true()" type="string"/>
       <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_gen" required="true()" type="select1"/>
       <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g1/ass_ida" required="true()" type="select1"/>
-      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_doc" type="select1"/>
+      <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_doc" required="true()" type="select1"/>
       <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_id" type="string"/>
       <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/cara_foto" type="binary"/>
       <bind nodeset="/LEGEND_C2_assinantes_assoc/Membros/ass_assin" required="true()" type="binary"/>
@@ -274,6 +274,10 @@ Por favor deslizar para a frente para continuar.</label>
             <item>
               <label>NUIT</label>
               <value>nuit</value>
+            </item>
+            <item>
+              <label>outro</label>
+              <value>other</value>
             </item>
           </select1>
           <input ref="/LEGEND_C2_assinantes_assoc/Membros/C2g2/ass_id">

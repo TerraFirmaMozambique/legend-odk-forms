@@ -4,7 +4,7 @@
     <h:title>LEGEND C1 Registrar uma Associacao V3</h:title>
     <model>
       <instance>
-        <LEGEND_C1_registo_assoc id="LEGEND_C1_V3" version="201707021">
+        <LEGEND_C1_registo_assoc id="LEGEND_C1_V3" version="201807171">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -30,6 +30,7 @@
           </meta>
         </LEGEND_C1_registo_assoc>
       </instance>
+      <instance id="pov_name" src="jr://file-csv/pov_name.csv"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/LEGEND_C1_registo_assoc/start" type="dateTime"/>
       <bind calculate="&quot;Registo de Associação e identificação dos povoados que fazem parte dela&quot;" nodeset="/LEGEND_C1_registo_assoc/my_form_name" type="string"/>
       <bind nodeset="/LEGEND_C1_registo_assoc/intronote" readonly="true()" type="string"/>
