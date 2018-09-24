@@ -43,9 +43,9 @@ party41,Rosalina Mariose Alberto c_eleit 6992035
 party42,Selevina Castelo Pessuro c_eleit 7727696
 party43,Teresa João Muira c_eleit 772764
 party44,Zita Gonçalves Tomás c_eleit 6992047
-party45,Fátima  Janeiro Malaua decl 
-party46,Amélia Alberto Antoninho decl 
-party47,Bonfica Mariosse Jicola decl 
+party45,
+party46,
+party47,
 party48,Magaire Ernesto c_eleit 3446783
 party49,Anselmo Mucoa Anamucanheia ced 747622
 party50,Baptista Ernesto c_eleit 4828958
@@ -73,19 +73,19 @@ party71,Celestina Mateus Majara c_eleit 6992007
 party72,Aicinta Julho Muaneia c_eleit 10109895
 party73,Ermelinda Carlitos António c_eleit 6992200
 party74,Fátima Muanlela Mussa bi 040105390743 N
-party75,Victoria Joãosinho Azecedo bi 
+party75,
 party76,Marta Raimundo Malua c_eleit 7727612
 party77,Olinda Conforame Mateus c_eleit 6545037
 party78,Agostinho Lourenço Niupelo ced 959496
 party79,Jaime João Gerente c_eleit 6545191
-party80,Artur Ramos Adriano decl 
+party80,
 party81,Benedita Mariano Intuluane c_eleit 1276694
 party82,Ertone Morais João bi 041505421853F
 party83,Carlito Bernardo Mutipo c_eleit 9755473
 party84,Claudina Sampanha Maquarro c_eleit 9693098
 party85,Elisa Mucoviua c_eleit 9755403
 party86,Linda  Hocama c_eleit 6992022
-party87,Xavier Francisco Gimo decl 
+party87,
 party88,Bento  João Nihaleliha bi 040105469940 N
 party89,Bernardo  Wirssone Mvelo c_eleit 7727599
 party90,Sozinho Tomba talao 46136517
@@ -104,7 +104,7 @@ party102,Celestina Nivelo Nancotocua c_eleit 9755460
 party103,Genita Semana c_eleit 2135392
 party105,Jorge Serote Muixamatxa decl 339036
 party106,Maurício Mochachaca Kiare c_eleit 1212009
-party107,Pedro Áfonso Muncaquiua decl 
+party107,
 party108,Madalena Januário Nyokiwa c_eleit 6545043
 party109,Baptista Nicamuamua Munhenhere c_eleit 6992021
 party110,Amaral Mário Macuelia c_cond 10123280
@@ -145,7 +145,7 @@ party144,Alexandre Mandara Nacotxocua ced 185068
 party145,Herculano Wirissone Mutaua ced 415596
 party146,Isac Niwala Coloa c_eleit 10109839
 party147,Hortencilio Mirione talao 42813105
-party1644,Joanita Gastelo decl 
+party1644,
 party1646,Belita Luciano c_eleit 0405A6651875420592
 party1647,Marta Rosário c_eleit 8958955
 party1648,Alberto Luis Muapole ced 44924
@@ -233,7 +233,7 @@ party1730,Benjamim Fernando Tarrela c_eleit 7793605
 party1731,Bernardo  Henriques bi 041502360541B
 party1732,Taidone Escrivao c_eleit 8931833
 party1733,Rosalina Ernesto c_eleit 8931767
-party1734,Paulo Lucas Mucue decl 
+party1734,
 party1735,Fonseca  Jaquissone c_eleit 6647966
 party1736,Elisa  Zariesse c_eleit 5488681
 party1737,Juaia Jairosse Uarama c_eleit 0414A706348689
@@ -326,7 +326,7 @@ party1829,Laurinda  Mokirepa c_eleit 6647591
 party1830,Estrina Maquina Mucasse c_eleit 6643371
 party1831,Francisco Cardinho Macura c_eleit 6545241
 party1832,Rui Txapaheia c_eleit 2032103044
-party1833,Rondiho Jemusse Nicuto decl 
+party1833,
 party1834,Jaulinho Jaquissone Nanvuca c_eleit 77273
 party1835,Daniel Xicora Malalo c_eleit 9755356
 party1836,Alberto Curimissa Carmotxo bi 041500999647B
@@ -422,7 +422,7 @@ party1928,Santos Muanacassa Colommua bi 040044050S
 party1929,Zito Matias Maquele c_eleit 9693145
 party1930,António Quinateia Vacareia c_eleit 9391558
 party1931,Arnisio  Quitione c_eleit 8931993
-party1932,Mário Janela Nabadho decl 
+party1932,
 party1933,João Santos Rabossa c_nasc 6538134
 party1934,Agostinho  Paulino c_eleit 1221900
 party1935,Lucinda Mauindo Coloua c_eleit 9755362
@@ -473,7 +473,7 @@ party1980,Francisco  Bonefácio c_eleit 9853084
 party1981,Cecília Xavier c_eleit 7730349
 party1982,Julieta Bernardo Pataquinho c_eleit 6538135
 party1983,Leonardo Matias Maquel c_eleit 6545229
-party1984,Júnior Nunes Mucudo decl 
+party1984,
 party1985,Joana  Namacona c_eleit 02D0320321
 party1986,Luís Alberto Niassala c_eleit 9842054
 party1987,Palmira Frederico Manguali c_eleit 8931679
@@ -518,16 +518,16 @@ party2025,Chadreque Miquissone Canhomo bi 041506240933P
 party2026,Felizardo Julio Julio c_eleit 7730500
 party2027,Afonso Manuel Minijara c_eleit 9755382
 party2029,Ricardo Muyeva c_eleit 0414A546321491989
-party2169,Benendita Maneca c_eleit 
+party2169,
 party2170,Tonito Saimone Erua c_eleit 6545201
 party2173,Juvêncio  António Muria c_eleit 7727638
 party2180,Vigário Castelo Peso talao 48544295
-party2185,Orlando Leonardo Santos c_cond 
+party2185,
 party2189,Orlinda Estevão Manso c_eleit 10109968
 party2194,Gracinda Mucoviua Castomo c_eleit 9693162
 party2195,Arlinda Mário Tomo c_eleit 10109964
 party2200,Carlota Murupi c_eleit 6545166
-party2203,Sargente Txicora Mirion c_eleit 
+party2203,
 party2217,Joãozinho César Edica c_eleit 11258621
 party2218,Estevão Baptista Armando c_eleit 9982856
 party2219,Afonso Martinho Inlia bi 040100197334Q
@@ -550,7 +550,7 @@ party2238,Américo Alexandre Jaksone c_eleit 7727529
 party2240,Carolina Paulo Paria c_eleit 8931625
 party2241,Carlota Discanso c_eleit 8931604
 party2242,Ernesto Mucoco Nioga bi 040501442482A
-party2243,João Rodrigues Fulai decl 
+party2243,
 party2244,Namarroi Filipe Khorio c_eleit 9755325
 party2245,Celestino Solomone Muracala bi 041506327446D
 party2246,Mairosse Muanacassa c_eleit 6647912
