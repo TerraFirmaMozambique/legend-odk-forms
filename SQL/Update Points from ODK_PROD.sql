@@ -1,4 +1,4 @@
-/* Update points from odk_prod selection based on latest timestamp */
+﻿/* Update points from odk_prod selection based on latest timestamp */
 
 SELECT UpdateGeometrySRID('form_l_registrar_pontos','geom',0);
 
@@ -23,9 +23,8 @@ FROM
 WHERE 
   "LEGEND_L_V2_PONTOS"."_PARENT_AURI" = "LEGEND_L_V2_CORE"."_URI" AND
    concat('Point (',"AUTO_GPS_LIMIT_LNG",' ',"AUTO_GPS_LIMIT_LAT",')') != 'Point ( )'AND
-((SELECT MAX("_LAST_UPDATE_DATE")
-FROM odk_prod."LEGEND_L_V2_PONTOS") > (SELECT MAX(update)
-FROM public.form_l_registrar_pontos));
+"LEGEND_L_V2_PONTOS"."_LAST_UPDATE_DATE"::timestamp without time zone > (SELECT MAX(update)
+FROM public.form_l_registrar_pontos);
    
 UPDATE form_l_registrar_pontos SET geom = ST_SetSRID(ST_MakePoint(longitude,latitude),4326);
 

@@ -1,4 +1,8 @@
-﻿
+/*
+This SQLCODE updates form_k_pessoas with new people received from the field by ODK form K pessoas
+It also adds the Nova Pessoas from form L register parcels
+
+*/
 
 CREATE TABLE public.update_form_k_pessoas
 (
@@ -71,7 +75,20 @@ WHERE a.ctid <> (SELECT min(b.ctid)
 DELETE from public.update_form_k_pessoas
 WHERE EXISTS (SELECT 1 FROM public.form_k_pessoas 
 WHERE key_test = public.update_form_k_pessoas.key_test);
+--------------------------------------------------------
+/*
+Create TABLE public.update_role AS (SELECT  key_test as key, string_agg(DISTINCT role, ' ')as info FROM public.form_l_novas_pessoas
+ 
+GROUP BY key_test);
+ 
+update form_k_pessoas
+SET pessoa_role = info
+FROM update_role
+where form_k_pessoas.key_test = form_k_pessoas.key;
 
+DROP TABLE public.update_role;
+*/
+----------------------------------------------------------
 UPDATE public.update_form_k_pessoas SET pessoa_prof = pessoa_prof_outra WHERE pessoa_prof = 'outro';
 
 UPDATE update_form_k_pessoas
@@ -80,6 +97,8 @@ UPDATE update_form_k_pessoas
 SET pessoa_id_photo = '<img src="'||pessoa_id_photo||'" style="width:1024px;height:1024px;" />';
 UPDATE update_form_k_pessoas
 SET pessoa_assin = '<img src="'||pessoa_assin||'" style="width:1024px;height:1024px;" />';
+
+--------------------------------------------------------------
 
 INSERT INTO public.form_k_pessoas(
             sub_date, start, form_name, intronote, tec_name, 
@@ -104,6 +123,7 @@ UPDATE public.form_k_pessoas SET ent_name = '' WHERE ent_name IS NULL;
 UPDATE public.form_k_pessoas SET id_party = 'party'||id;
 
 ------------------------------------------------------------------
+/*
 
 CREATE TABLE public.update_form_k_novas_pessoas_l AS
 SELECT 
@@ -189,6 +209,7 @@ FROM public.update_form_k_novas_pessoas_l;
 
  
 UPDATE public.form_k_pessoas SET id_party = 'party'||id;
+*/
 
  
  
@@ -243,7 +264,7 @@ COPY (SELECT id_party AS party_id_key, COALESCE(ent_name||pessoa_nom||' '||pesso
 COPY (SELECT id_party AS party_id_key, COALESCE(ent_name||pessoa_nom||' '||pessoa_app||' '||pessoa_doc||' '|| pessoa_id) AS party_name FROM public.form_k_pessoas WHERE form_k_pessoas.assoc_id = 'AS040024' ORDER BY id ASC) TO '/var/lib/share/projects/legend/ODK Forms/legend-odk-forms/L_registo_parcelas/LEGEND_L_registo_parcelas_cduats-media//AS040024.csv' DELIMITER ',' NULL AS '' CSV HEADER ENCODING 'latin1';
 COPY (SELECT id_party AS party_id_key, COALESCE(ent_name||pessoa_nom||' '||pessoa_app||' '||pessoa_doc||' '|| pessoa_id) AS party_name FROM public.form_k_pessoas WHERE form_k_pessoas.assoc_id = 'AS040025' ORDER BY id ASC) TO '/var/lib/share/projects/legend/ODK Forms/legend-odk-forms/L_registo_parcelas/LEGEND_L_registo_parcelas_cduats-media//AS040025.csv' DELIMITER ',' NULL AS '' CSV HEADER ENCODING 'latin1';
 
-
+/*
 INSERT into public.form_l_titulares 
 SELECT 
   'add'::text AS add,
@@ -262,3 +283,55 @@ ORDER BY
 
 DROP TABLE public.update_form_k_pessoas;
 DROP TABLE public.update_form_k_novas_pessoas_l;
+
+DROP TABLE public.party;
+CREATE TABLE public.party
+(
+  id character varying,
+  parcel_id integer,
+  app character varying,
+  nome character varying,
+  gen character varying,
+  civil character varying,
+  prof character varying,
+  prof_other character varying,
+  nacion character varying,
+  naturalidade character varying,
+  nascyn character varying,
+  nasc date,
+  ida character varying,
+  doc character varying,
+  doc_id character varying,
+  doc_local character varying,
+  doc_emi date,
+  doc_val date,
+  doc_vital character varying,
+  foto character varying,
+  doc_foto character varying,
+  assin character varying,
+  contacto character varying,
+  key character varying NOT NULL
+  
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.party
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.party TO public;
+GRANT ALL ON TABLE public.party TO postgres;
+
+ 
+INSERT INTO public.party
+SELECT id_party, upn, pessoa_app, pessoa_nom, genero, estado_civil, pessoa_prof, prof_other, pessoa_nacion, pessoa_natural, nasc_y_n, pessoa_nasc, pessoa_ida, documento, pessoa_id, doc_local, doc_emi, doc_val, doc_vital, pessoa_foto, pessoa_id_photo, pessoa_assin, contacto, key FROM
+(SELECT form_k_pessoas.id_party::text, digitisations.upn, form_k_pessoas.pessoa_app, form_k_pessoas.pessoa_nom, table_genero_pessoa.genero, table_estado_civil.estado_civil, form_k_pessoas.pessoa_prof, form_k_pessoas.pessoa_prof as prof_other, form_k_pessoas.pessoa_nacion, form_k_pessoas.pessoa_natural, form_k_pessoas.nasc_y_n, form_k_pessoas.pessoa_nasc, form_k_pessoas.pessoa_ida, table_doc_identificacao.documento, form_k_pessoas.pessoa_id, form_k_pessoas.doc_local, form_k_pessoas.doc_emi, form_k_pessoas.doc_val, form_k_pessoas.doc_vital, form_k_pessoas.pessoa_foto, form_k_pessoas.pessoa_id_photo, form_k_pessoas.pessoa_assin, form_k_pessoas.contacto::text,  form_k_pessoas.id_party||digitisations.upn AS key FROM  public.table_doc_identificacao AS table_doc_identificacao RIGHT OUTER JOIN public.table_genero_pessoa AS table_genero_pessoa RIGHT OUTER JOIN public.form_k_pessoas AS form_k_pessoas RIGHT OUTER JOIN public.form_l_titulares AS form_l_titulares ON form_k_pessoas.id_party = form_l_titulares.found_party ON table_genero_pessoa.code = form_k_pessoas.pessoa_gen ON table_doc_identificacao.code = form_k_pessoas.pessoa_doc, public.form_l_registrar_parcela AS form_l_registrar_parcela LEFT OUTER JOIN public.digitisations AS digitisations ON form_l_registrar_parcela.upn_id = digitisations.upn , public.table_estado_civil AS table_estado_civil WHERE form_l_registrar_parcela.key = form_l_titulares.parent_key AND table_estado_civil.code = form_k_pessoas.pessoa_civil) AS a
+WHERE a.key NOT IN (SELECT key FROM party) AND a.upn IS NOT NULL
+ORDER BY upn;
+
+DELETE FROM public.party a
+WHERE a.ctid <> (SELECT min(b.ctid)
+                 FROM   public.party b
+                 WHERE  a.key = b.key);
+
+alter table party add primary key (key);
+*/

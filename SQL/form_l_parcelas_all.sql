@@ -298,7 +298,7 @@ SELECT ng4_testem_nome, ng4_testem_type, testem_assin,parent_key, key
 FROM public.update_form_l_testemunhas;
 
 DROP TABLE public.update_form_l_testemunhas;
-
+--------------------------------------------------------
 
 CREATE TABLE public.update_form_l_testemunhas_v2
 (
