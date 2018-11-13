@@ -4,7 +4,7 @@
     <h:title>LEGEND L 2 Registrar Parcelas CDUATs</h:title>
     <model>
       <instance>
-        <LEGEND_L_2_registo_parcelas_cduats id="LEGEND_L_2_V1" version="201809211">
+        <LEGEND_L_2_registo_parcelas_cduats id="LEGEND_L_2_V1" version="201811131">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -223,13 +223,13 @@
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/Lg7/testem_doc_val" type="date"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/Lg7/testem_doc_vital" relevant=" /LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/Lg7/testem_doc  = 'bi'" type="select1"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/testem_foto" required="true()" type="binary"/>
-      <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/testem_id_foto" type="binary"/>
+      <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/testem_id_foto" required="true()" type="binary"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/testem_assin" required="true()" type="binary"/>
       <bind constraint="regex(.,'[0-9]{9}')" jr:constraintMsg="O numero não está no formato correcto. Faça a favor de conferir" nodeset="/LEGEND_L_2_registo_parcelas_cduats/Novas_pessoas1/testem_contacto" type="string"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/auto_gps" required="true()" type="geopoint"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/limites_yn" required="true()" type="select1"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Pontos" relevant=" /LEGEND_L_2_registo_parcelas_cduats/limites_yn = 'sim'"/>
-      <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Pontos/auto_gps_limit" type="geopoint"/>
+      <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/Pontos/auto_gps_limit" required="true()" type="geopoint"/>
       <bind calculate="concat( /LEGEND_L_2_registo_parcelas_cduats/parcel_id ,'point')" nodeset="/LEGEND_L_2_registo_parcelas_cduats/Pontos/upn_gps_limit" type="string"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/endnote" readonly="true()" type="string"/>
       <bind nodeset="/LEGEND_L_2_registo_parcelas_cduats/recibo_image" required="true()" type="binary"/>
@@ -1606,6 +1606,7 @@ Por favor deslizar para a frente para continuar.</label>
     </group>
     <input appearance="maps" ref="/LEGEND_L_2_registo_parcelas_cduats/auto_gps">
       <label>É obrigatorio gravar um ponto dentro da parcela, no centro.</label>
+      <hint>GPS coordinates can only be collected when outside.</hint>
     </input>
     <select1 ref="/LEGEND_L_2_registo_parcelas_cduats/limites_yn">
       <label>Será que é necessário gravar pontos de limites da parcela (porque não estão claros no mapa)?</label>

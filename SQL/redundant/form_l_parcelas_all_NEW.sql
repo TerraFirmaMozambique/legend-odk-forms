@@ -96,8 +96,7 @@ update form_l_registrar_parcela set geom=st_SetSrid(st_MakePoint(longitude, lati
 
 --------------------------------000----------------------------------------------------
 
-INSERT INTO public.form_l_titulares(
-            searchtext, found_party, parent_key, key_test)
+INSERT INTO public.form_l_titulares(searchtext, found_party, parent_key, key_test)
   
 
 SELECT DISTINCT
@@ -108,8 +107,7 @@ SELECT DISTINCT
 FROM 
   odk_prod."LEGEND_L_V2_TITULARES"
 
-WHERE concat("LEGEND_L_V2_TITULARES"."SEARCHTEXT"||"LEGEND_L_V2_TITULARES"."FOUND_PARTY"||"LEGEND_L_V2_TITULARES"."_PARENT_AURI") not in (SELECT key_test FROM form_l_titulares) AND
-"LEGEND_L_V2_TITULARES"."FOUND_PARTY" != '1';
+WHERE concat("LEGEND_L_V2_TITULARES"."SEARCHTEXT"||"LEGEND_L_V2_TITULARES"."FOUND_PARTY"||"LEGEND_L_V2_TITULARES"."_PARENT_AURI") NOT IN (SELECT key_test FROM public.form_l_titulares) AND "LEGEND_L_V2_TITULARES"."FOUND_PARTY" != '1'
 
 
 --------------------------------000--------------------------------------------------
