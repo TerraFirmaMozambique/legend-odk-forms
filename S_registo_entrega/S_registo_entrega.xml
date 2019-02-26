@@ -12,7 +12,7 @@
         </translation>
       </itext>
       <instance>
-        <S_registo_entrega id="Legend_S_V1" version="201807171">
+        <S_registo_entrega id="Legend_S_V1" version="201901291">
           <start/>
           <my_form_name/>
           <intronote/>
@@ -47,10 +47,6 @@
           </meta>
         </S_registo_entrega>
       </instance>
-      <instance id="resultado" src="jr://file-csv/resultado.csv"/>
-      <instance id="app" src="jr://file-csv/app.csv"/>
-      <instance id="nome" src="jr://file-csv/nome.csv"/>
-      <instance id="nupn" src="jr://file-csv/nupn.csv"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/S_registo_entrega/start" type="dateTime"/>
       <bind calculate="&quot;Registo de Entrega de Declarações&quot;" nodeset="/S_registo_entrega/my_form_name" type="string"/>
       <bind nodeset="/S_registo_entrega/intronote" readonly="true()" type="string"/>
@@ -432,9 +428,9 @@ Por favor deslizar para a frente para continuar.</label>
       <label>Por favor, re-digite o número do recibo como confirmação:</label>
     </input>
     <input ref="/S_registo_entrega/preloadfail">
-      <label>&lt;br/&gt; &lt;span style="color:red"&gt;Esta parcela não existe. Por favor volte e introduza o numero dum outro recibo&lt;/span&gt; &lt;br/&gt; 
+      <label>&lt;br/&gt; &lt;span style=&quot;color:red&quot;&gt;Esta parcela não existe. Por favor volte e introduza o numero dum outro recibo&lt;/span&gt; &lt;br/&gt; 
 
-&lt;br/&gt; &lt;span style="color:red"&gt;NÃO AVANCE E NÃO GRAVE ESTE FORMULÁRIO&lt;/span&gt; &lt;br/&gt;</label>
+&lt;br/&gt; &lt;span style=&quot;color:red&quot;&gt;NÃO AVANCE E NÃO GRAVE ESTE FORMULÁRIO&lt;/span&gt; &lt;br/&gt;</label>
     </input>
     <input ref="/S_registo_entrega/preloadnote">
       <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /S_registo_entrega/resultado "/>&lt;/span&gt; &lt;br/&gt;</label>
@@ -444,18 +440,18 @@ Por favor deslizar para a frente para continuar.</label>
       <select1 ref="/S_registo_entrega/Gg1/id_titular_confirm">
         <label>Faça a favor de confirmar que a ID apresentada está em nome de um dos titulares nomeados na Declaração.</label>
         <item>
-          <label>&lt;span style="color:green"&gt;Sim&lt;/span&gt;</label>
+          <label>&lt;span style=&quot;color:green&quot;&gt;Sim&lt;/span&gt;</label>
           <value>sim</value>
         </item>
         <item>
-          <label>&lt;span style="color:red"&gt;Não&lt;/span&gt;</label>
+          <label>&lt;span style=&quot;color:red&quot;&gt;Não&lt;/span&gt;</label>
           <value>nao</value>
         </item>
       </select1>
       <input ref="/S_registo_entrega/Gg1/noidnote">
         <label>A Declaração só pode ser entregue na apresentação de ID de pelo menos um dos titulares nomeados na Declaração.
 
-&lt;br/&gt;&lt;span style="color:red"&gt;Faça a favor de fechar o formulario sem gravar mudanças.&lt;/span&gt; &lt;br/&gt; 
+&lt;br/&gt;&lt;span style=&quot;color:red&quot;&gt;Faça a favor de fechar o formulario sem gravar mudanças.&lt;/span&gt; &lt;br/&gt; 
 
 O tecnico deve explicar que é obrigatorio a apresentação de ID de pelo menos um dos titulares nomeados na Declaração.</label>
       </input>
@@ -469,13 +465,13 @@ O tecnico deve explicar que é obrigatorio a apresentação de ID de pelo menos 
         <label>Tire uma fotografia do documento de identificação apresentado</label>
       </upload>
       <upload mediatype="image/*" ref="/S_registo_entrega/Gg1/id_foto_verso">
-        <label>Tire uma fotografia do &lt;span style="color:red"&gt;verso&lt;/span&gt; do documento de identificação apresentado</label>
+        <label>Tire uma fotografia do &lt;span style=&quot;color:red&quot;&gt;verso&lt;/span&gt; do documento de identificação apresentado</label>
       </upload>
       <upload appearance="signature" mediatype="image/*" ref="/S_registo_entrega/Gg1/pessoa_assin">
         <label>Assinatura da pessoa que recebeu a Declaração</label>
       </upload>
       <upload mediatype="image/*" ref="/S_registo_entrega/Gg1/recibo_image">
-        <label>Tire uma fotografia do recibo devidamente &lt;span style="color:red"&gt;cancelado&lt;/span&gt;</label>
+        <label>Tire uma fotografia do recibo devidamente &lt;span style=&quot;color:red&quot;&gt;cancelado&lt;/span&gt;</label>
       </upload>
     </group>
   </h:body>
