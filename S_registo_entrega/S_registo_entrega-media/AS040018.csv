@@ -1,0 +1,828 @@
+nupn,upn_key,app,nome,doc,doc_id,contacto,resutado
+040601059-000001,6351,Renis,Amélia Renis,Cartão de Eleitor,10064470,0,Declaracao emitida
+040601059-000002,6352,Júlio,Cecília Júlio,Cartão de Eleitor,9542452,,Declaracao emitida
+040601059-000003,6353,Renis,Amélia Renis,Cartão de Eleitor,10064470,0,Declaracao emitida
+040601059-000004,6354,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000005,6355,Crussane,Anquista Crussane,Cartão de Eleitor,8197276,,Declaracao emitida
+040601059-000006,6356,Rinta,Cohalaro Rinta,Cartão de Eleitor,8197335,0,Declaracao emitida
+040601059-000007,6357,Alfredo,Angelina Alfredo,Cartão de Eleitor,9542188,0,Declaracao emitida
+040601059-000008,6358,Gabriel,Gemusse,Cartão de Eleitor,6279972,0,Declaracao emitida
+040601059-000009,6359,Gabriel,Gemusse,Cartão de Eleitor,6279972,0,Declaracao emitida
+040601059-000010,6361,Aronha,Maria Uahicalano,Bilhete de Identidade,040602106751C,,Declaracao emitida
+040601059-000011,6362,Alfaiate,Paulina,Cartão de Eleitor,0406A615316313 0642,0,Declaracao emitida
+040601059-000012,6363,Musulmade,Terezinha Musulmade,Cartão de Eleitor,8197178,0,Declaracao emitida
+040601059-000013,6364,Alfaiate,Paulina,Cartão de Eleitor,060A615316313 0642,0,Declaracao emitida
+040601059-000014,6365,Jorge,Detinha Jorge,Cartão de Eleitor,11981453,,Declaracao emitida
+040601059-000015,6366,Natraca,Ricardo Muacohane,Cartão de Eleitor,6279529,0,Declaracao emitida
+040601059-000016,6367,Namayere,Fátima  Lugela,Bilhete de Identidade,040605760715p,0,Declaracao emitida
+040601059-000017,6368,Ernesto,Lidia,Cédula Pessoal,1687 1994,0,Declaracao emitida
+040601059-000018,6369,Gabriel,António,Bilhete de Identidade,040071156G,,Declaracao emitida
+040601059-000019,6370,Jorge,Detinha Jorge,Cartão de Eleitor,11981453,,Declaracao emitida
+040601059-000020,6371,Jorge,Detinha Jorge,Cartão de Eleitor,11981453,,Declaracao emitida
+040601059-000021,6372,Jorge,Detinha Jorge,Cartão de Eleitor,11981453,,Declaracao emitida
+040601059-000022,6373,Mualhinhene,Alberto,Cartão de Eleitor,6279521,,Declaracao emitida
+040601059-000023,6501,Artur,Joaquina Artur,Cartão de Eleitor,09542315,,Declaracao emitida
+040601059-000024,6502,Júlio,Filomena,Cartão de Eleitor,9924849,,Declaracao emitida
+040601059-000025,6503,Jose,Angelina Jose,Cartão de Eleitor,09542079,,Declaracao emitida
+040601059-000026,6504,Murimo,Fina Manecas Murimo,Cartão de Eleitor,09542083,,Declaracao emitida
+040601059-000027,6505,Sanpanha,Atanasia Erua,Cartão de Eleitor,9919791,,Declaracao emitida
+040601059-000028,6506,Albino,Elfita Mario,Cartão de Eleitor,10064408,,Declaracao emitida
+040601059-000029,6507,Afonso,Fatima Afonso,Cartão de Eleitor,09919849,,Declaracao emitida
+040601059-000030,6508,Matiro,Bernardo Matiro,Cartão de Eleitor,09841606,,Declaracao emitida
+040601059-000031,6509,Elapo,Lidia Antonio,Cédula Pessoal,405497,,Declaracao emitida
+040601059-000032,6511,Constantino,Madalena Constantino,Cartão de Eleitor,09919943,,Declaracao emitida
+040601059-000033,6512,Constantino,Madalena Constantino,Cartão de Eleitor,09919943,,Declaracao emitida
+040601059-000034,6513,Cruza,Júlia André,Cédula Pessoal,624760,,Declaracao emitida
+040601059-000035,6514,Constantino,Adelia,Cartão de Eleitor,02D66204-04-399,,Declaracao emitida
+040601059-000036,6515,Respeito,Marcelina Respeito,Cartão de Eleitor,9919934,,Declaracao emitida
+040601059-000037,6516,Calaquenle,Paulino Rosário,Cédula Pessoal,095124,873093391,Declaracao emitida
+040601059-000038,6517,Coroma,Julião Solote,Bilhete de Identidade,040602627607Q,,Declaracao emitida
+040601059-000039,6518,Muanatoro,Carolina,Cédula Pessoal,3146944,,Declaracao emitida
+040601059-000040,6519,Saraiva,Isac Costa,Bilhete de Identidade,041607418819A,,Declaracao emitida
+040601059-000041,6520,Olhahonmala,Jelita Pedro,Cartão de Eleitor,12568747,,Declaracao emitida
+040601059-000042,6521,Quirimualeva,Lucinda,Cartão de Eleitor,08197414,,Declaracao emitida
+040601059-000043,6522,Nauale,Lídia Enginheiro,Cartão de Eleitor,01678166,,Declaracao emitida
+040601059-000044,6523,Nauale,Lídia Enginheiro,Cartão de Eleitor,01678166,,Declaracao emitida
+040601059-000045,6524,Namada,Joaquina Husselo,Cédula Pessoal,1490807,,Declaracao emitida
+040601059-000046,6525,Namada,Joaquina Husselo,Cédula Pessoal,1490807,,Declaracao emitida
+040601059-000047,6526,Musselo,Joaquina,Cartão de Eleitor,0426019041812327,,Declaracao emitida
+040601059-000048,6527,Namada,Joaquina Husselo,Cédula Pessoal,1490807,,Declaracao emitida
+040601059-000049,6528,Musselo,Joaquina,Cartão de Eleitor,0426019041812327,,Declaracao emitida
+040601059-000050,6529,Nauale,Lídia Enginheiro,Cartão de Eleitor,01678166,,Declaracao emitida
+040601059-000051,6530,Nauale,Lídia Enginheiro,Cartão de Eleitor,01678166,,Declaracao emitida
+040601059-000052,6531,Ambrozio,Jonita,Cartão de Eleitor,0406A8253162140644,,Declaracao emitida
+040601059-000786,6532,Quisanyé,Jorgina Pedro,Cédula Pessoal,606517,,Declaracao emitida
+040601059-000053,6533,Imtabo,Carlos Pedro,Bilhete de Identidade,040604218421N,,Declaracao emitida
+040601059-000779,6535,Quisanyé,Jorgina Pedro,Cédula Pessoal,606517,,Declaracao emitida
+040601059-000054,6536,Quisanyé,Jorgina Pedro,Cédula Pessoal,606517,,Declaracao emitida
+040601059-000055,6537,Quisanyé,Jorgina Pedro,Cédula Pessoal,606517,,Declaracao emitida
+040601059-000056,6538,Quissanye,Alfredo Quissanye,Cartão de Eleitor,11981334,874161808,Declaracao emitida
+040601059-000057,6539,Luanta,Antonio Pequenino,Cartão de Eleitor,0406A5998360540616,,Declaracao emitida
+040601059-000058,6540,Luanta,Antonio Pequenino,Cartão de Eleitor,0406A5998360540616,,Declaracao emitida
+040601059-000059,6541,Luanta,Antonio Pequenino,Cartão de Eleitor,0406A599836054,,Declaracao emitida
+040601059-000060,6542,Luanta,Antonio Pequenino,Cartão de Eleitor,0406A599836054,,Declaracao emitida
+040601059-000061,6543,Muculuma,Fernando Respeito,Cartão de Eleitor,10064195,,Declaracao emitida
+040601059-000062,6544,Muculuma,Fernando Respeito,Cartão de Eleitor,10064195,,Declaracao emitida
+040601059-000063,6545,Eviquila,Angeliona,Cartão de Eleitor,7857549,,Declaracao emitida
+040601059-000064,6546,Macuelia,Agostinho Armando,Cédula Pessoal,3288,,Declaracao emitida
+040601059-000065,6547,Muculuma,Fernando Respeito,Cartão de Eleitor,10064195,,Declaracao emitida
+040601059-000066,6548,Rosalina sozinho,Sozinho,Cartão de Eleitor,8197459,,Declaracao emitida
+040601059-000067,6651,Muruma,Domingos Sozinho,Bilhete de Identidade,040100407593P,863411131,Declaracao emitida
+040601059-000782,6652,Silva,Eusébio Pesiane,Talão do BI,43561247,,Declaracao emitida
+040601059-000068,6653,Cerveja,Angelina U. ,Cartão de Eleitor,32546099,,Declaracao emitida
+040601059-000069,6654,Cerveja,Angelina U. ,Cartão de Eleitor,32546099,,Declaracao emitida
+040601059-000070,6655,Teliuane,Cristina Muahala,Cartão de Eleitor,10106272,,Declaracao emitida
+040601059-000071,6656,Mariano,Joaquina Santos,Cartão de Eleitor,4904165,,Declaracao emitida
+040601059-000072,6657,Mariano,Joaquina Santos,Cartão de Eleitor,4904165,,Declaracao emitida
+040601059-000073,6658,Ciqueira,Agostinho,Cartão de Eleitor,04721844,,Declaracao emitida
+040601059-000074,6659,Ciqueira,Agostinho,Cartão de Eleitor,04721844,,Declaracao emitida
+040601059-000075,6660,Uahicalano,Julieta,Cartão de Eleitor,0406A7253164000643,,Declaracao emitida
+040601059-000076,6661,Uahicalano,Julieta,Cartão de Eleitor,0406A7253164000643,,Declaracao emitida
+040601059-000077,6663,Mucova,Justina Mucova,Cartão de Eleitor,08197131,,Declaracao emitida
+040601059-000078,6664,Uahicalano,Julieta,Cartão de Eleitor,0406A7253164000643,,Declaracao emitida
+040601059-000079,6665,Albino,Encieta Albino,Cartão de Eleitor,9984583,0,Declaracao emitida
+040601059-000080,6666,Xavier,Laura Jorge,Cédula Pessoal,703140,0,Declaracao emitida
+040601059-000081,6667,Xavier,Telma Jorge,Cédula Pessoal,817851,0,Declaracao emitida
+040601059-000082,6901,António,Albertina,Cartão de Eleitor,0406A6453164920642,,Declaracao emitida
+040601059-000083,6902,Induzero,Albertina,Cartão de Eleitor,0406A6953163590643,,Declaracao emitida
+040601059-000084,6903,Muanatanga,Virgínia Muanatanga,Cartão de Eleitor,9924660,,Declaracao emitida
+040601059-000085,6904,Muanatanga,Cristina Muanatanga,Cartão de Eleitor,9984683,,Declaracao emitida
+,6905,,Igreja,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000086,6906,Murimaconlela,Rosita Murimaconlela,Cartão de Eleitor,08197014,,Declaracao emitida
+040601059-000087,6907,Antonio,Teresa Antonio,Cartão de Eleitor,09542141,,Declaracao emitida
+040601059-000088,6908,Fernando,Julieta,Cartão de Eleitor,0406A7153164260642,,Declaracao emitida
+040601059-000089,6909,Solote,Estefania Xavier,Cartão de Eleitor,09924959,,Declaracao emitida
+040601059-000090,6910,Namahela,Maria,Cartão de Eleitor,0406A4053161020644,,Declaracao emitida
+040601059-000091,6911,Rinta,Angelina Paulo,Cartão de Eleitor,09542261,,Declaracao emitida
+040601059-000092,6912,Moneia,Hortencia Moneia,Cartão de Eleitor,09919770,,Declaracao emitida
+040601059-000093,6913,Francisco,Catarina António,Cartão de Eleitor,9542092,,Declaracao emitida
+040601059-000094,6914,Francisco,Catarina António,Cartão de Eleitor,9542092,,Declaracao emitida
+040601059-000095,6915,Anive,Julieta,Cartão de Eleitor,0406A7853163360643,,Declaracao emitida
+040601059-000096,6916,António,Ciforosa,Cédula Pessoal,234060,,Declaracao emitida
+040601059-000097,6917,Manteiga,Joana Uirssone,Cédula Pessoal,372780,,Declaracao emitida
+040601059-000098,6918,António,Albertina,Cartão de Eleitor,0406A6453164920642,,Declaracao emitida
+040601059-000099,6919,Calião,Angelina,Cartão de Eleitor,0406A6053165110643,,Declaracao emitida
+040601059-000100,6920,Mulanvua,Filipe Cezar,Cartão de Eleitor,10064256,,Declaracao emitida
+040601059-000101,6921,Mocuassa,Alberto Mocuassa,Cartão de Eleitor,12568588,,Declaracao emitida
+040601059-000102,6922,Arinaquina,Gabriel Arinaquina,Cartão de Eleitor,09542442,,Declaracao emitida
+040601059-000103,6923,Mitoua,Faustina Mitoua,Cartão de Eleitor,10064271,,Declaracao emitida
+040601059-000104,6924,Manuel,Gonsalves Alberto,Cartão de Eleitor,0406A6853163020643,,Declaracao emitida
+040601059-000105,6925,Ilario,Diolinda Ilaria,Cartão de Eleitor,09924796,,Declaracao emitida
+040601059-000106,6926,Nocaleliua,Maria Nocaleliua,Cartão de Eleitor,12568931,,Declaracao emitida
+040601059-000107,6927,Ernesto,Daulisa,Cartão de Eleitor,07870360,,Declaracao emitida
+040601059-000108,6928,Nohatxamana,Ercilia Pedro,Cartão de Eleitor,0406A8553163930643,,Declaracao emitida
+040601059-000109,6929,Maquele,Cecília Francisco,Cédula Pessoal,307643,,Declaracao emitida
+040601059-000110,6930,Santos,Teresa,Cartão de Eleitor,0406A6153163490642,,Declaracao emitida
+040601059-000111,6931,Maquele,Cecília Francisco,Cédula Pessoal,307643,,Declaracao emitida
+040601059-000112,6932,Francisco,Fátima,Cartão de Eleitor,0406A7553169800636,,Declaracao emitida
+040601059-000113,6933,Manuel,Clementina Manuel,Cartão de Eleitor,09542120,,Declaracao emitida
+040601059-000114,6934,Muahalateliuane,Cristina,Cartão de Eleitor,10106272,,Declaracao emitida
+040601059-000115,6935,Nipago,Marta Viera,Declaração,340,,Declaracao emitida
+040601059-000116,6936,Cavela,Maria,Cartão de Eleitor,8148497,,Declaracao emitida
+040601059-000117,6937,Nipago,Marta Viera,Declaração,340,,Declaracao emitida
+040601059-000118,6938,Albino,Angelina Albino,Cartão de Eleitor,9542037,,Declaracao emitida
+040601059-000119,6939,Nipago,Marta Viera,Declaração,340,,Declaracao emitida
+040601059-000120,6940,Muinho,Angelica Piston,Cartão de Eleitor,09984681,,Declaracao emitida
+040601059-000121,6941,Nocaleliua,Maria Nocaleliua,Cartão de Eleitor,12568931,,Declaracao emitida
+040601059-000122,6942,Nocaleliua,Maria Nocaleliua,Cartão de Eleitor,12568931,,Declaracao emitida
+040601059-000123,6943,Mitoa,Augusto,Cartão de Eleitor,0406A415316135 2362,,Declaracao emitida
+040601059-000124,6944,Mitoa,Augusto,Cartão de Eleitor,0406A415316135 2362,,Declaracao emitida
+040601059-000125,6945,Mitoa,Augusto,Cartão de Eleitor,0406A415316135 2362,,Declaracao emitida
+040601059-000126,6946,Armando,Lurtina Armando,Cartão de Eleitor,8197252,,Declaracao emitida
+040601059-000127,6947,Armando,Lurtina Armando,Cartão de Eleitor,8197252,,Declaracao emitida
+040601059-000128,6948,Martinho,Virgínia Martinho,Declaração,,,Declaracao emitida
+040601059-000129,6949,Uacalassa,Manuel Vierauel,Talão do BI,48887361,,Declaracao emitida
+040601059-000130,6950,Jose,Fatima Jose,Cartão de Eleitor,9542367,,Declaracao emitida
+040601059-000131,6951,Naueha,Armando Ambrósio,Bilhete de Identidade,040104956329P,,Declaracao emitida
+040601059-000132,6952,Muaruheni,Antonio Moneia,Talão do BI,43191771,,Declaracao emitida
+040601059-000133,6953,Massuamala,Albino,Cartão de Eleitor,0406A6353164090642,,Declaracao emitida
+040601059-000134,6954,Pinto,Agostinho João,Bilhete de Identidade,040602667091F,,Declaracao emitida
+040601059-000135,6955,Cuatala,Olinda Nariola,Cédula Pessoal,1546667,,Declaracao emitida
+040601059-000136,6956,Sacuante,Cristina Sotoreiua,Bilhete de Identidade,040604539778N,,Declaracao emitida
+040601059-000137,6957,Jacinto,Cristina,Cartão de Eleitor,0406A6453161330644,,Declaracao emitida
+040601059-000138,6958,Viagem,Rita Viagem,Cartão de Eleitor,10106329,,Declaracao emitida
+040601059-000139,6959,Viagem,Catarina Viagem,Cartão de Eleitor,10064070,,Declaracao emitida
+040601059-000140,6960,Jacinto,Catarina Jacinto,Cartão de Eleitor,09542030,,Declaracao emitida
+040601059-000141,6961,António,Filomena António,Cartão de Eleitor,10064265,,Declaracao emitida
+040601059-000142,6962,Patricio,Bete Patricio,Cartão de Eleitor,11981390,,Declaracao emitida
+040601059-000143,6963,Mutocotoco,Paulina Maquida,Cédula Pessoal,3262-1990,,Declaracao emitida
+,6964,Masugo,Manuel Munaloiua,Bilhete de Identidade,040602713074B,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000144,6965,Masugo,Manuel Munaloiua,Bilhete de Identidade,040602713074B,,Declaracao emitida
+040601059-000145,6966,Meitero,Florinda Nimone,Cartão de Eleitor,0406A6553168302362,,Declaracao emitida
+040601059-000146,6967,Muienoruco,Uahicalana,Bilhete de Identidade,1593176,,Declaracao emitida
+040601059-000147,6968,Celestino,Lidia,Cédula Pessoal,1148976,,Declaracao emitida
+040601059-000148,6969,Maduamala,Maria,Cartão de Eleitor,0406A6253166190642,,Declaracao emitida
+040601059-000149,6970,Munaloiua,Manita Munaloiua,Cartão de Eleitor,8197437,,Declaracao emitida
+040601059-000150,6971,Maquita,Lisa Maquita,Cartão de Eleitor,10064485,,Declaracao emitida
+,6972,Maduamala,Maria,Cartão de Eleitor,0406A6253166190642,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+,6973,,Escola,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000151,6974,Massuamala,António Massuamala,Cartão de Eleitor,09542355,,Declaracao emitida
+040601059-000152,6975,Crimualeva,Mifa,Certidão de Nascimento,1351,,Declaracao emitida
+040601059-000153,6976,Hamela,Catarina Hamela,Cartão de Eleitor,09984572,,Declaracao emitida
+040601059-000154,6978,Hamela,Catarina Hamela,Cartão de Eleitor,09984572,,Declaracao emitida
+040601059-000155,6979,Muisselofe,Rita Muisselofe,Cartão de Eleitor,09542312,,Declaracao emitida
+040601059-000156,6980,Nihaquela,Armando Nihaquela,Cartão de Eleitor,11192341,,Declaracao emitida
+040601059-000157,6981,Luís,Nonilda Antonio,Cartão de Eleitor,08197475,,Declaracao emitida
+040601059-000158,6982,Nticua,Juvencio Paulino Alfangega,Cédula Pessoal,358091,,Declaracao emitida
+040601059-000780,6983,Feleciano,Lídia Feleciano,Cartão de Eleitor,09924759,,Declaracao emitida
+040601059-000159,6984,Othela,Albino,Cartão de Eleitor,0406A715316359-0642,,Declaracao emitida
+040601059-000160,6985,Augusto,Laura Augusto,Cartão de Eleitor,8197226,,Declaracao emitida
+040601059-000161,6986,Mulocone,Fatima Mucuma,Cédula Pessoal,3777,,Declaracao emitida
+040601059-000162,6987,Mulocone,Fatima Mucuma,Cédula Pessoal,3777,,Declaracao emitida
+040601059-000163,6988,Mucumamulocone,Susuna Mucomamulocone,Cartão de Eleitor,11192280,,Declaracao emitida
+040601059-000164,6989,Otela,Madalena Otela,Cartão de Eleitor,11192381,,Declaracao emitida
+040601059-000165,6990,Alberto,Catarina,Cartão de Eleitor,0406A909836348-o616,,Declaracao emitida
+040601059-000166,6991,Mazuco,Matilde Calaquenle,Cédula Pessoal,1217,,Declaracao emitida
+040601059-000167,6992,Cululo,Rosalina Supelo,Cartão de Eleitor,0406A675316339-0642,,Declaracao emitida
+040601059-000168,6993,Otela,Madalena Otela,Cartão de Eleitor,11192381,,Declaracao emitida
+040601059-000169,6994,Coroliua,Paulina Coroliua,Cartão de Eleitor,09919799,,Declaracao emitida
+040601059-000170,6995,Augusto,Laura Augusto,Cartão de Eleitor,8197226,,Declaracao emitida
+040601059-000171,6996,Ernesto,Rosa,Cartão de Eleitor,0406A6453164790642,,Declaracao emitida
+040601059-000172,6997,Fernando,Lídia Feleciano,Cartão de Eleitor,10071-0049,,Declaracao emitida
+040601059-000173,6998,Ernesto,Rosa,Cartão de Eleitor,0406A6453164790642,,Declaracao emitida
+040601059-000174,6999,Othela,Albino,Cartão de Eleitor,0406A715316359 0642,,Declaracao emitida
+040601059-000781,7000,Milante,Raul Alberto,Bilhete de Identidade,040107161971A,,Declaracao emitida
+040601059-000175,7105,Nimotolo,Muinquisseliua,Cartão de Eleitor,10064494,0,Declaracao emitida
+040601059-000176,7106,Muassauiranno,Maria Muassauiranno,Cartão de Eleitor,10064226,,Declaracao emitida
+040601059-000177,7107,Antonio,Mariana Antonio,Cartão de Eleitor,8197096,0,Declaracao emitida
+040601059-000178,7108,Sozinho,Lucia Sozinho,Cartão de Eleitor,10106344,0,Declaracao emitida
+040601059-000179,7109,Manuel,Emelia Manuel,Cartão de Eleitor,9542087,0,Declaracao emitida
+040601059-000180,7110,Marinho,Telma Marinho,Cartão de Eleitor,8197118,0,Declaracao emitida
+040601059-000181,7111,Marinho,Telma Marinho,Cartão de Eleitor,8197118,0,Declaracao emitida
+040601059-000182,7112,Mesa,Nita Alberto Mesa,Cartão de Eleitor,9542342,0,Declaracao emitida
+040601059-000183,7113,Natraca,Ricardo Muacohane,Cartão de Eleitor,6279529,0,Declaracao emitida
+040601059-000184,7114,Natraca,Ricardo Muacohane,Cartão de Eleitor,6279529,0,Declaracao emitida
+040601059-000185,7115,Mass...,Celestina Massequece,Cartão de Eleitor,8197091,,Declaracao emitida
+040601059-000186,7116,Mass...,Celestina Massequece,Cartão de Eleitor,8197091,,Declaracao emitida
+040601059-000187,7117,Mussulei,Raimundo zHerminio,Cédula Pessoal,947525,0,Declaracao emitida
+040601059-000188,7118,Maitem,Cecília Maitem,Cartão de Eleitor,8197068,0,Declaracao emitida
+040601059-000189,7119,Muhona,Claudia Muhona,Bilhete de Identidade,040600496721B,,Declaracao emitida
+,7120,Muhona,Claudia Muhona,Bilhete de Identidade,040600496721B,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000190,7551,Muaveule,Bonifacio Neves,Bilhete de Identidade,060106209541C,,Declaracao emitida
+040601059-000191,7552,Nipago,Marta Viera,Declaração,340,,Declaracao emitida
+040601059-000192,7553,Muahiquim,Angelina Muahiquim,Cartão de Eleitor,06623972,,Declaracao emitida
+040601059-000193,7554,António,Alberto António,Cartão de Eleitor,12568628,,Declaracao emitida
+040601059-000194,7555,Carlitos,Castiana,Cartão de Eleitor,0406A8253170500642,,Declaracao emitida
+040601059-000195,7556,Nantrocueia,Perpetua,Cartão de Eleitor,10197709,,Declaracao emitida
+040601059-000196,7557,Molanvua,Florinda Bacilio,Cédula Pessoal,840794,,Declaracao emitida
+040601059-000197,7558,Molanvua,Isaura Basílio,Cédula Pessoal,840762,,Declaracao emitida
+040601059-000197,7558,Namanda,Maria Uatxorera,Cartão de Eleitor,04721532,,Declaracao emitida
+040601059-000198,7559,Ilario,Diolinda Ilaria,Cartão de Eleitor,09924796,,Declaracao emitida
+040601059-000199,7560,Cumeliua,Catarina Muatxitxo,Cartão de Eleitor,04721982,,Declaracao emitida
+040601059-000200,7561,Lontave,António Alontave,Cartão de Eleitor,11192022,,Declaracao emitida
+040601059-000201,7562,Mahela,Jacinta Murgelino,Cartão de Eleitor,04721916,,Declaracao emitida
+040601059-000202,7563,Natraca,Ricardo Muacohane,Cartão de Eleitor,06279529,,Declaracao emitida
+040601059-000203,7564,Matiquene,Helelena Matiquene,Cartão de Eleitor,12568860,,Declaracao emitida
+040601059-000204,7565,Fernando,Feliciano,Bilhete de Identidade,1710413,,Declaracao emitida
+040601059-000205,7566,Otelaone,Isabel Otelaone,Cartão de Eleitor,08197182,,Declaracao emitida
+040601059-000206,7567,Muiquivinherevo,Henriques,Cartão de Eleitor,0406A605316569 0643,,Declaracao emitida
+040601059-000207,7568,Luís,Rito Celestino,Bilhete de Identidade,040102345998B,,Declaracao emitida
+040601059-000208,7569,Gonçalves,Julieta Gonçalves,Cartão de Eleitor,08197495,,Declaracao emitida
+040601059-000209,7570,Vereha,Justina António,Cédula Pessoal,234055,,Declaracao emitida
+040601059-000210,7571,Nathalome,Gonçalves Nathalome,Cartão de Eleitor,7783064,,Declaracao emitida
+040601059-000211,7572,Varre,Fátima Jorge Varre,Cartão de Eleitor,09919724,,Declaracao emitida
+040601059-000212,7573,Jemuse,Cristina Jemuse,Cartão de Eleitor,09924513,,Declaracao emitida
+040601059-000213,7574,Epuiriua,Justina Alves,Cartão de Eleitor,10064168,,Declaracao emitida
+040601059-000214,7575,Jemuse,Cristina Jemuse,Cartão de Eleitor,09924513,,Declaracao emitida
+040601059-000215,7576,Muiquitampe,Monica Muiquitampe,Cartão de Eleitor,12568583,0,Declaracao emitida
+040601059-000216,7577,Wahicalano,Florencio Wahicalano,Cartão de Eleitor,9924519,0,Declaracao emitida
+040601059-000217,7578,Wahicalano,Florencio Wahicalano,Cartão de Eleitor,9924519,0,Declaracao emitida
+040601059-000218,7601,Nicue,Mário,Bilhete de Identidade,010104174635I,,Declaracao emitida
+040601059-000218,7601,Saide,Maria Saide,Cartão de Eleitor,9919713,,Declaracao emitida
+040601059-000219,7602,Saide,Maria Saide,Cartão de Eleitor,9919713,,Declaracao emitida
+040601059-000220,7603,Sozinho,Jacinta Sozinho,Cartão de Eleitor,08197367,,Declaracao emitida
+040601059-000221,7604,Januário,Rita Januário,Cartão de Eleitor,08197350,,Declaracao emitida
+040601059-000222,7605,Sozinho,Rosalina Sozinho,Cartão de Eleitor,08197459,,Declaracao emitida
+040601059-000223,7606,Saide,Muacafio Saide,Cartão de Eleitor,9542222,,Declaracao emitida
+040601059-000224,7607,Sozinho,Jacinta Sozinho,Cartão de Eleitor,08197367,,Declaracao emitida
+040601059-000225,7608,Virauene,Madalena,Cartão de Eleitor,04785295,,Declaracao emitida
+040601059-000226,7609,Virauene,Madalena,Cartão de Eleitor,04785295,,Declaracao emitida
+040601059-000227,7610,Virauene,Madalena,Cartão de Eleitor,040785295,,Declaracao emitida
+040601059-000228,7611,Virauene,Madalena,Cartão de Eleitor,040785292,,Declaracao emitida
+040601059-000229,7612,Virauene,Madalena,Cartão de Eleitor,040785292,,Declaracao emitida
+040601059-000230,7613,Alfaiate,Paulina,Cartão de Eleitor,0406A6153163130642,,Declaracao emitida
+040601059-000231,7614,Alberto,Daninha,Cartão de Eleitor,12682264,,Declaracao emitida
+040601059-000232,7615,Nacuacuara,Cristina Ualiua,Cartão de Eleitor,0406A9453940090677,,Declaracao emitida
+040601059-000233,7616,Nacuacuara,Cristina Ualiua,Cartão de Eleitor,0406A945494009,,Declaracao emitida
+040601059-000234,7617,Nacuacuara,Cristina Ualiua,Cartão de Eleitor,0406A9453940090677,,Declaracao emitida
+040601059-000235,7618,Munaua,Fernando Luís,Cartão de Eleitor,0406A6848420300010,,Declaracao emitida
+040601059-000236,7619,Valantaia,Fátima Valantaia,Cartão de Eleitor,12568731,,Declaracao emitida
+040601059-000237,7620,Muacohane,Sandra Ricardo,Cédula Pessoal,2209747,0,Declaracao emitida
+040601059-000238,7621,Mutinha,Tito Alberto,Bilhete de Identidade,040102010068A,0,Declaracao emitida
+040601059-000239,7622,Muthumula,Berta Cardoso,Cartão de Eleitor,12740535,0,Declaracao emitida
+040601059-000240,7623,Agostinho,Alberto Olima,Cartão de Eleitor,9542022,0,Declaracao emitida
+040601059-000241,7624,Olima,Esmeralda Alberto,Cartão de Eleitor,11192432,0,Declaracao emitida
+040601059-000242,7625,Muthumula,Berta Cardoso,Cartão de Eleitor,12740535,0,Declaracao emitida
+040601059-000243,7626,Agostinho,Alberto Olima,Cartão de Eleitor,9542022,0,Declaracao emitida
+040601059-000244,7627,Muthumula,Berta Cardoso,Cartão de Eleitor,12740535,0,Declaracao emitida
+040601059-000245,7628,Murruma,Catarina Sozinho,Cartão de Eleitor,10064201,0,Declaracao emitida
+040601059-000246,7629,Murruma,Catarina Sozinho,Cartão de Eleitor,10064201,0,Declaracao emitida
+040601059-000247,7630,Sozinho,Helena Sozinho,Cartão de Eleitor,10106275,0,Declaracao emitida
+040601059-000248,7701,Madugo,João Mualicano,Cartão de Eleitor,1006423,,Declaracao emitida
+040601059-000249,7702,Cardoso,Delfina Cardoso,Cartão de Eleitor,09924636,,Declaracao emitida
+040601059-000250,7703,Muanatanga,Virgínia,Cartão de Eleitor,0406A5353163080642,,Declaracao emitida
+040601059-000251,7704,Coroma,Xavier Solote,Cartão de Eleitor,10106398,,Declaracao emitida
+040601059-000252,7705,Mutocotoco,Trofina Maquita,Cédula Pessoal,1148986,,Declaracao emitida
+040601059-000253,7706,Muzaze,Paulo Mussa,Cédula Pessoal,1148979,,Declaracao emitida
+040601059-000254,7707,Adão,Julieta,Cartão de Eleitor,0406A715316049-0644,,Declaracao emitida
+040601059-000255,7708,Clemente,Rosa Clemente,Cartão de Eleitor,9919956,,Declaracao emitida
+040601059-000256,7709,Adão,Julieta,Cartão de Eleitor,0406A715316049-0644,,Declaracao emitida
+040601059-000257,7710,Ecunha,Dionísio Rico,Bilhete de Identidade,040602627714P,866568673,Declaracao emitida
+040601059-000258,7711,Celestino,Carlota Celestino,Cartão de Eleitor,12568618,,Declaracao emitida
+040601059-000259,7712,Murrum,Rosalina Celestino,Cartão de Eleitor,12568589,,Declaracao emitida
+040601059-000260,7713,Hamela...,Rondinha Francisco,Cartão de Eleitor,12568703,865365441,Declaracao emitida
+,7714,Murrum,Rosalina Celestino,Cartão de Eleitor,12568589,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000783,7715,Minisso,Ramos Minisso,Cartão de Eleitor,11981555,,Declaracao emitida
+040601059-000261,7851,Daniel,Gracinda Daniel,Cartão de Eleitor,10106463,,Declaracao emitida
+040601059-000262,7852,Massuamala,Emelia Massuamala,Cartão de Eleitor,09919761,,Declaracao emitida
+040601059-000263,7853,Xavier,Jorge Xavier,Cartão de Eleitor,0402217041808582,,Declaracao emitida
+040601059-000264,7854,Nicue,Mário,Bilhete de Identidade,010104174635I,,Declaracao emitida
+040601059-000265,7855,Nicue,Mário,Bilhete de Identidade,010104174635I,,Declaracao emitida
+040601059-000266,7856,Nicué,Faustino Mário,Bilhete de Identidade,040106387567J,0,Declaracao emitida
+040601059-000267,7857,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000268,7858,Nimotolo,Muinquisseliua,Cartão de Eleitor,10064494,0,Declaracao emitida
+040601059-000269,7859,Nimotolo,Muinquisseliua,Cartão de Eleitor,10064494,0,Declaracao emitida
+040601059-000270,7860,Velecua,Cristina Silva,Cartão de Eleitor,0406A635316611 0636,0,Declaracao emitida
+040601059-000271,7861,Velecua,Cristina Silva,Cartão de Eleitor,0406A635316616 0636,0,Declaracao emitida
+040601059-000272,7862,Francisco,Gervásio Bonifácio,Cédula Pessoal,1718642,0,Declaracao emitida
+040601059-000273,7863,Velecua,Cristina  Silva,Cartão de Eleitor,0406A635316616 0636,0,Declaracao emitida
+040601059-000274,7864,Rinta,Cohalaro Rinta,Cartão de Eleitor,8197335,0,Declaracao emitida
+040601059-000275,7865,Musulmade,Terezinha Musulmade,Cartão de Eleitor,8197178,0,Declaracao emitida
+040601059-000276,7866,Francisco,Gervásio Bonifácio,Cédula Pessoal,1718642,0,Declaracao emitida
+040601059-000277,7867,Alves,Rosita António,Cédula Pessoal,1531166,0,Declaracao emitida
+040601059-000278,7868,Velecua,Cristina Silva,Cartão de Eleitor,0406A635316616 0636,0,Declaracao emitida
+040601059-000279,7869,Namussano,Diolinda,Cartão de Eleitor,04D452990711,,Declaracao emitida
+040601059-000280,7870,Alves,Rosita  António,Cédula Pessoal,1531166,0,Declaracao emitida
+040601059-000281,7871,Francisco,Gervásio Bonifácio,Cédula Pessoal,1718642,0,Declaracao emitida
+040601059-000282,7872,Velecua,Cristina Silva,Cartão de Eleitor,0406A635316616 0636,0,Declaracao emitida
+040601059-000283,7951,Ernesto,Felomina,Cartão de Eleitor,07857777,,Declaracao emitida
+040601059-000284,7952,Ernesto,Alberto,Cartão de Eleitor,0402023041816176,,Declaracao emitida
+040601059-000285,7953,Ernesto,Ifania,Cartão de Eleitor,06107396,,Declaracao emitida
+040601059-000285,7953,Mitoa,Arnauira Mitoa,Cartão de Eleitor,09919948,,Declaracao emitida
+040601059-000286,7954,Mitoa,Arnauira Mitoa,Cartão de Eleitor,09919948,,Declaracao emitida
+040601059-000287,7955,Ernesto,Ifania,Cartão de Eleitor,06107396,,Declaracao emitida
+040601059-000288,7956,Ernesto,Ifania,Cartão de Eleitor,06107396,,Declaracao emitida
+040601059-000289,7957,Mauela,Munauela Mauela,Cartão de Eleitor,09542334,,Declaracao emitida
+040601059-000290,7958,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000291,7959,Massequesse,Adelia Sozinho,Cartão de Eleitor,0406A6553162820643,,Declaracao emitida
+040601059-000292,7960,António,Cristina António,Cartão de Eleitor,9924690,,Declaracao emitida
+040601059-000293,7961,António,Cristina António,Cartão de Eleitor,9924690,,Declaracao emitida
+040601059-000294,7962,Mulamvha,Paulina,Cartão de Eleitor,12740888,,Declaracao emitida
+040601059-000295,7963,António,Cristina António,Cartão de Eleitor,9924690,,Declaracao emitida
+040601059-000296,7964,Manla,Rosa,Cartão de Eleitor,0406A6953163690643,,Declaracao emitida
+040601059-000297,7965,Alfaiate,Emilia Alfaiate,Cartão de Eleitor,9542196,,Declaracao emitida
+040601059-000298,7966,Alberto,Daninha,Cartão de Eleitor,12682264,,Declaracao emitida
+040601059-000299,7967,Manla,Rosa,Cartão de Eleitor,0406A6953163690643,,Declaracao emitida
+040601059-000300,7968,Alfaiate,Emilia Alfaiate,Cartão de Eleitor,9542196,,Declaracao emitida
+040601059-000784,7970,Dos Santos,Aires Alberto,Cartão de Eleitor,0200125031809089,,Declaracao emitida
+040601059-000301,7971,Alfaiate,Laurinda Alfaiate,Cartão de Eleitor,8197109,,Declaracao emitida
+040601059-000302,7973,Alfaiate,Paulina,Cartão de Eleitor,0406A6153163130642,,Declaracao emitida
+040601059-000303,7974,Sulava,Lourenço Muterela,Cartão de Eleitor,2950288,,Declaracao emitida
+040601059-000304,7975,Francisco,Lisa Francisco,Cartão de Eleitor,10064473,,Declaracao emitida
+040601059-000305,7976,Júlio,Veronica Júlio,Cartão de Eleitor,10064065,,Declaracao emitida
+040601059-000306,7977,Matxesso,Dorica Eduardo,Cédula Pessoal,663916,,Declaracao emitida
+040601059-000307,7978,Pontela,Lúcio,Bilhete de Identidade,1880334,,Declaracao emitida
+040601059-000308,7979,Júlio,Filomena,Cartão de Eleitor,9924849,,Declaracao emitida
+040601059-000309,7980,Ciwewe,Oliveira Capinda,Cédula Pessoal,369629,,Declaracao emitida
+040601059-000310,7981,Luís,Teresa António,Cédula Pessoal,624722,,Declaracao emitida
+040601059-000310,7981,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000311,7982,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000312,7983,Nimotolo,Hortencia Joaquim    ,Cédula Pessoal,807485,,Declaracao emitida
+040601059-000313,7984,Pontela,Lúcio,Bilhete de Identidade,1880334,,Declaracao emitida
+040601059-000314,7985,Mulanvua,Maria Mulanvua,Cartão de Eleitor,9542026,,Declaracao emitida
+040601059-000315,7986,Corompua,Felizardo ,Bilhete de Identidade,040606986417B,,Declaracao emitida
+040601059-000316,7987,Mulanvua,Maria Mulanvua,Cartão de Eleitor,9542026,,Declaracao emitida
+040601059-000317,7988,Corompua,Felizardo ,Bilhete de Identidade,040606986417B,,Declaracao emitida
+040601059-000318,7989,Fernando,Eduardo Feliciano,Talão do BI,43558056,,Declaracao emitida
+040601059-000319,7990,Gonçalves,Margarida Gonçalves,Cartão de Eleitor,9542485,,Declaracao emitida
+040601059-000320,7991,Gonçalves,Margarida Gonçalves,Cartão de Eleitor,9542485,,Declaracao emitida
+040601059-000321,7992,Manuel,Rosa,Cartão de Eleitor,0406A4253162110642,,Declaracao emitida
+040601059-000322,7993,Manuel,Rosa,Cartão de Eleitor,0406A4253162110642,,Declaracao emitida
+040601059-000323,7994,Muatocuene,Domingas Baptista,Cédula Pessoal,040305,,Declaracao emitida
+040601059-000324,7995,Namaripiha,Antonio Namaripiha,Cartão de Eleitor,08197448,,Declaracao emitida
+040601059-000325,7996,Namaripiha,Antonio Namaripiha,Cartão de Eleitor,08197448,,Declaracao emitida
+040601059-000326,7997,Pontela,Lúcio,Bilhete de Identidade,1880334,,Declaracao emitida
+040601059-000327,7998,Elapo,Lídia António,Cartão de Eleitor,9542316,,Declaracao emitida
+040601059-000328,7999,Mucalassa,Emelita Mucalassa,Cartão de Eleitor,05671494,,Declaracao emitida
+040601059-000329,8000,Mocalassa,Rita Mocalassa,Cartão de Eleitor,08197456,,Declaracao emitida
+,10176,,Igreja,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000330,10177,Felizardo,Angelica  Felizardo,Cartão de Eleitor,0400324041814093,,Declaracao emitida
+040601059-000331,10178,António,Cristina António,Cartão de Eleitor,9924690,,Declaracao emitida
+040601059-000332,10179,Massequesse,Adelia Sozinho,Cartão de Eleitor,0406A6553162820643,,Declaracao emitida
+040601059-000333,10180,Luís,Joaquina Antonio,Cartão de Eleitor,10064008,,Declaracao emitida
+040601059-000334,10181,Janela,Leonardo  Aronhaoua,Bilhete de Identidade,040107162291A,,Declaracao emitida
+040601059-000335,10182,Baiene,Benjamim Namussano,Bilhete de Identidade,110157391H,,Declaracao emitida
+040601059-000336,10183,Mauela,Munauela Mauela,Cartão de Eleitor,09542334,,Declaracao emitida
+040601059-000337,10184,Mulamvha,Paulina,Cartão de Eleitor,12740888,,Declaracao emitida
+040601059-000338,10185,Mauela,Lisa Mauela,Cartão de Eleitor,10064413,,Declaracao emitida
+,10186,,Escola,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000339,10187,Baiene,Benjamim  Namussano,Bilhete de Identidade,110157391H,,Declaracao emitida
+040601059-000340,10188,Wetxacuene,Albertina Agostinho,Cédula Pessoal,171104,,Declaracao emitida
+040601059-000341,10189,Joaquim,Rosa Virauene,Cédula Pessoal,567664,,Declaracao emitida
+040601059-000342,10190,Joaquim,Rosa Virauene,Cédula Pessoal,567664,,Declaracao emitida
+040601059-000343,10191,Janela,Quirimuaruna Janela,Cartão de Eleitor,8197132,,Declaracao emitida
+040601059-000344,10192,Janela,Quirimuaruna Janela,Cartão de Eleitor,8197132,,Declaracao emitida
+040601059-000345,10193,Macal...,Francisco Ovirauene,Cartão de Eleitor,12568577,867334119,Declaracao emitida
+040601059-000346,10194,Macal...,Francisco Ovirauene,Cartão de Eleitor,12568577,867334119,Declaracao emitida
+040601059-000347,10195,Mualelanane,Lídia,Cartão de Eleitor,0406A8353165450642,,Declaracao emitida
+040601059-000348,10196,Ossale,Manuel Mualelanane,Cartão de Eleitor,8187138,,Declaracao emitida
+040601059-000349,10197,Ossale,Manuel Mualelanane,Cartão de Eleitor,8187138,,Declaracao emitida
+040601059-000350,10198,Ossale,Manuel Mualelanane,Cartão de Eleitor,8187138,,Declaracao emitida
+040601059-000351,10199,Ossale,Manuel Mualelanane,Cartão de Eleitor,8187138,,Declaracao emitida
+040601059-000352,10200,Alfandiga,Ana Regina ,Cartão de Eleitor,8197247,,Declaracao emitida
+040601059-000353,10340,Paene,Catarina Paene,Cartão de Eleitor,9542031,,Declaracao emitida
+040601059-000354,10341,Saide,Muacafio Saide,Cartão de Eleitor,9542222,,Declaracao emitida
+040601059-000355,10342,Saide,Maria Saide,Cartão de Eleitor,9919713,,Declaracao emitida
+040601059-000356,10343,Sozinho,Cecília Sozinho,Cartão de Eleitor,8197474,,Declaracao emitida
+040601059-000357,10344,Clavi,Januário Wahicalano,Bilhete de Identidade,040605569952A,,Declaracao emitida
+040601059-000358,10345,Mulanha,Elisa Nipato,Cédula Pessoal,863144,,Declaracao emitida
+040601059-000359,10346,Sozinho,Cecília Sozinho,Cartão de Eleitor,8197474,,Declaracao emitida
+040601059-000360,10347,Virauene,Madalena,Cartão de Eleitor,04785295,,Declaracao emitida
+040601059-000361,10348,Virauene,Madalena,Cartão de Eleitor,04785295,,Declaracao emitida
+040601059-000362,10349,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000363,10350,Paene,Catarina Paene,Cartão de Eleitor,9542031,,Declaracao emitida
+040601059-000364,10490,Sonvila,Suzana Silvestre,Cartão de Eleitor,5077074,,Declaracao emitida
+040601059-000365,10491,Silvestre,Paulina,Cédula Pessoal,237,,Declaracao emitida
+040601059-000366,10492,Natxalomue,Cristina Natxalomue,Cartão de Eleitor,08197337,,Declaracao emitida
+040601059-000367,10493,Natxalomue,Cristina Natxalomue,Cartão de Eleitor,08197337,,Declaracao emitida
+040601059-000368,10494,Adolfo,Abel,Cartão de Eleitor,09924832,,Declaracao emitida
+040601059-000369,10495,Mussulma,Angelina Eugenio,Cartão de Eleitor,12568728,,Declaracao emitida
+040601059-000370,10496,Armando,Eugenio Armando,Cartão de Eleitor,12568653,,Declaracao emitida
+040601059-000371,10497,Napissa,Fátima Adolfo,Cartão de Eleitor,09542429,,Declaracao emitida
+040601059-000372,10498,Napissa,Fátima Adolfo,Cartão de Eleitor,09542429,,Declaracao emitida
+040601059-000373,10499,Ernesto,Rosa,Cartão de Eleitor,0406A6453164790642,,Declaracao emitida
+040601059-000374,10500,Maquele,Cecília Francisco,Cédula Pessoal,307643,,Declaracao emitida
+040601059-000374,10500,Meitoro,César Nimone,Bilhete de Identidade,040602666791J,868004170,Declaracao emitida
+040601059-000375,10697,Enginheiro,Marieta Enginheiro Enginheiro,Bilhete de Identidade,040605402206M,,Declaracao emitida
+040601059-000376,10698,Enginheiro,Marieta Enginheiro Enginheiro,Bilhete de Identidade,040605402206M,,Declaracao emitida
+040601059-000377,10699,Armando,Margarida Armando,Cartão de Eleitor,12568623,,Declaracao emitida
+040601059-000378,10700,Isaquel,Antónieta Isaquel,Cartão de Eleitor,09919727,,Declaracao emitida
+040601059-000379,12027,Crimaleva,Fátima Crimaleva,Cartão de Eleitor,09984579,,Declaracao emitida
+040601059-000380,12028,Musselo,Menina,Bilhete de Identidade,040600922833C,,Declaracao emitida
+040601059-000381,12029,Musselo,Menina,Bilhete de Identidade,040600922833C,,Declaracao emitida
+040601059-000382,12030,Vilia,Teresa Rinta,Cédula Pessoal,1096154,,Declaracao emitida
+040601059-000383,12031,Milante,Joana Amilai Milante,Cartão de Eleitor,09984584,,Declaracao emitida
+040601059-000384,12032,Francisco,Justina Francisco,Cartão de Eleitor,09984553,,Declaracao emitida
+040601059-000385,12033,Crussa,Amélia,Cartão de Eleitor,0406A7053172522362,,Declaracao emitida
+040601059-000386,12034,Crussa,Amélia,Cartão de Eleitor,0406A7053172522362,,Declaracao emitida
+040601059-000387,12035,Augusto,Joanita Augusto,Cartão de Eleitor,10064275,,Declaracao emitida
+040601059-000388,12036,Muanonpuanha,Adelia Muanonpuanha,Cartão de Eleitor,10064056,,Declaracao emitida
+040601059-000389,12037,Milante,Alberto Milante,Cartão de Eleitor,9919769,,Declaracao emitida
+040601059-000390,12038,João,Cecilia Júlio,Cartão de Eleitor,08197070,,Declaracao emitida
+040601059-000391,12039,João,Lídia ,Cartão de Eleitor,0406A825316792642,869238146,Declaracao emitida
+040601059-000392,12040,Milante,Alberto Milante,Cartão de Eleitor,9919769,,Declaracao emitida
+040601059-000393,12041,Muanonpuanha,Adelia Muanonpuanha,Cartão de Eleitor,10064056,,Declaracao emitida
+040601059-000394,12042,Massuco,Belita Calaquenle,Cartão de Eleitor,09542161,,Declaracao emitida
+040601059-000395,12043,Muheliua,João Baptista,Bilhete de Identidade,4834955,,Declaracao emitida
+040601059-000396,12044,Américo,Florinda Américo,Cartão de Eleitor,09919757,873093922,Declaracao emitida
+040601059-000397,12045,Mário,João Calaquenle,Bilhete de Identidade,040102187807N,,Declaracao emitida
+040601059-000397,12045,Muheliua,João Baptista,Bilhete de Identidade,4834955,,Declaracao emitida
+040601059-000398,12046,Cipriano,Carolina Cipriano,Cartão de Eleitor,09924549,,Declaracao emitida
+040601059-000399,12047,Muheliua,João Baptista,Bilhete de Identidade,4834955,,Declaracao emitida
+,12049,,Igreja,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000400,12050,Saraiva,Francisco Saraiva,Cartão de Eleitor,09542150,,Declaracao emitida
+040601059-000401,12125,Verde,Elsa Iacaia Cabo,Cédula Pessoal,646008,,Declaracao emitida
+040601059-000402,12126,Albino,Minoria Albino,Cartão de Eleitor,09924711,,Declaracao emitida
+040601059-000403,12127,Domingos,Elias Domingos,Cartão de Eleitor,09924158,,Declaracao emitida
+040601059-000404,12128,Albino,Minoria Albino,Cartão de Eleitor,09924711,,Declaracao emitida
+040601059-000405,12129,Albino,Minoria Albino,Cartão de Eleitor,09924711,,Declaracao emitida
+040601059-000406,12130,Muahinacoha,Carolina Cesar,Cartão de Eleitor,0406A765316537 0643,,Declaracao emitida
+040601059-000407,12131,Tavalheque,Matilde Tavalheque,Cartão de Eleitor,09542107,,Declaracao emitida
+040601059-000408,12132,Bernardo,Luciana,Cédula Pessoal,423437,,Declaracao emitida
+040601059-000409,12133,Bernardo,Luciana,Cédula Pessoal,423437,,Declaracao emitida
+040601059-000410,12134,Muita,Bernardo Waicalano,Bilhete de Identidade,040604762235B,,Declaracao emitida
+040601059-000411,12135,Muita,Bernardo Waicalano,Cartão de Eleitor,040604762235B,,Declaracao emitida
+040601059-000412,12136,Muita,Bernardo Waicalano,Bilhete de Identidade,040604762235B,,Declaracao emitida
+,12137,Tavalheque,Matilde Tavalheque,Cartão de Eleitor,9542107,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+,12138,Tavalheque,Matilde Tavalheque,Cartão de Eleitor,9542107,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000413,12139,Tavalheque,Matilde Tavalheque,Cartão de Eleitor,09542107,,Declaracao emitida
+040601059-000414,12140,Gemusse,António  Gemusse,Cartão de Eleitor,09984509,,Declaracao emitida
+040601059-000415,12141,Massuamala,Emelia Massuamala,Cartão de Eleitor,09919761,,Declaracao emitida
+040601059-000416,12142,Massuamala,Emelia Massuamala,Cartão de Eleitor,09919761,,Declaracao emitida
+040601059-000417,12143,Massuamala,Emelia Massuamala,Cartão de Eleitor,09919761,,Declaracao emitida
+040601059-000418,12144,Inriehuro,Catarina Inriehuro,Cartão de Eleitor,10106112,,Declaracao emitida
+040601059-000419,12145,Nachiverevo,Dionísio Afonso,Cédula Pessoal,2036,,Declaracao emitida
+040601059-000420,12146,Vasco,Encieta Vasco,Cartão de Eleitor,09984520,,Declaracao emitida
+040601059-000421,12147,Vasco,Encieta Vasco,Cartão de Eleitor,09984520,,Declaracao emitida
+040601059-000422,12148,Veloso,Paulina veloso,Cartão de Eleitor,08197186,,Declaracao emitida
+040601059-000423,12149,Nicue,Mário,Bilhete de Identidade,010104174635I,,Declaracao emitida
+040601059-000424,12150,Uahicalano,Julieta,Cartão de Eleitor,0406A7253164000643,,Declaracao emitida
+040601059-000425,12151,Pedro,Hilário Júlio,Cédula Pessoal,1983,,Declaracao emitida
+040601059-000426,12152,Trinta,Carlota,Cartão de Eleitor,06279737,,Declaracao emitida
+040601059-000427,12153,Imtinha,Maria,Cartão de Eleitor,0406A5853163890642,,Declaracao emitida
+040601059-000428,12154,Fiel,Amestrongue,Cartão de Eleitor,06209924,,Declaracao emitida
+040601059-000429,12155,Nriano,Muconnenna Nriano,Cartão de Eleitor,10064395,,Declaracao emitida
+040601059-000430,12156,Nriano,Muconnenna Nriano,Cartão de Eleitor,10064395,,Declaracao emitida
+040601059-000431,12157,Nriano,Muconnenna Nriano,Cartão de Eleitor,10064395,,Declaracao emitida
+040601059-000432,12158,Nriano,Muconnenna Nriano,Cartão de Eleitor,10064395,,Declaracao emitida
+040601059-000433,12159,Mulanha,Isabel Massauene,Cartão de Eleitor,9542289,,Declaracao emitida
+040601059-000434,12160,Mulanha,Isabel Massauene,Cartão de Eleitor,9542289,,Declaracao emitida
+040601059-000435,12161,Mulanha,Isabel Massauene,Cartão de Eleitor,9542289,,Declaracao emitida
+040601059-000436,12162,Alfaiate,Manfredo Adolfo,Bilhete de Identidade,040104786787N,,Declaracao emitida
+040601059-000437,12163,Alfaiate,Manfredo Adolfo,Bilhete de Identidade,040104786787N,,Declaracao emitida
+040601059-000438,12164,Felizardo,Atija Alberto,Cartão de Eleitor,09542216,,Declaracao emitida
+040601059-000439,12165,Mulanha,Isabel Massauene,Cartão de Eleitor,9542289,,Declaracao emitida
+040601059-000440,12166,Felizardo,Atija Alberto,Cartão de Eleitor,09542216,,Declaracao emitida
+040601059-000441,12167,Victor,Rosalina Victor,Cartão de Eleitor,10106405,,Declaracao emitida
+040601059-000442,12168,Alberto,Albino Graciano,Bilhete de Identidade,040604218327C,869932712,Declaracao emitida
+040601059-000443,12169,Matomate,Cristina Pedro,Cédula Pessoal,563002,842566450,Declaracao emitida
+040601059-000444,12170,Madimade,Cecília Pedro,Cédula Pessoal,84140,,Declaracao emitida
+040601059-000445,12171,Puete,Ginfrosa Carlos,Cédula Pessoal,541826,,Declaracao emitida
+040601059-000446,12172,Matomate,Cristina Pedro,Cédula Pessoal,563002,842566450,Declaracao emitida
+040601059-000447,12173,Machambeiro,Evaristo,Cartão de Eleitor,0406A785316609 0642,869200021,Declaracao emitida
+040601059-000447,12173,Emeia,Maria,Cartão de Eleitor,0406A3953161000643,,Declaracao emitida
+040601059-000448,12174,Ecoya,Rita Nauaia,Bilhete de Identidade,040604045943Q,,Declaracao emitida
+040601059-000449,12175,Ecoya,Rita Nauaia,Bilhete de Identidade,040604045943Q,,Declaracao emitida
+040601059-000450,12176,Madimade,Cecília Pedro,Cédula Pessoal,84140,,Declaracao emitida
+040601059-000451,12177,Algumassa,Rosinha,Bilhete de Identidade,1551902,,Declaracao emitida
+040601059-000452,12178,Alberto,Albino Graciano,Bilhete de Identidade,040604218327C,869932712,Declaracao emitida
+040601059-000453,12179,Emeia,Maria,Cartão de Eleitor,0406A3953161000643,,Declaracao emitida
+040601059-000454,12180,Emeia,Maria,Cartão de Eleitor,0406A3953161000643,,Declaracao emitida
+040601059-000455,12181,Ecoya,Rita Nauaia,Bilhete de Identidade,040604045943Q,,Declaracao emitida
+040601059-000456,12182,Alberto,Albino Graciano,Bilhete de Identidade,040604218327C,869932712,Declaracao emitida
+040601059-000457,12183,Alfaiate,Manfredo Adolfo,Bilhete de Identidade,040104786787N,,Declaracao emitida
+040601059-000458,12184,Alfaiate,Manfredo Adolfo,Bilhete de Identidade,040104786787N,,Declaracao emitida
+040601059-000459,12185,Alfaiate,Manfredo Adolfo,Bilhete de Identidade,040104786787N,,Declaracao emitida
+040601059-000460,12186,Mutxaro,Angelina Sampanha,Certidão de Nascimento,183 1994,,Declaracao emitida
+040601059-000461,12187,Santos,Marcelino Dos Santos,Cartão de Eleitor,081197072,,Declaracao emitida
+040601059-000462,12188,Conouane,Lurdes Magesso,Bilhete de Identidade,4778967,,Declaracao emitida
+040601059-000463,12189,Jordanio,Esperança Eduardo,Cédula Pessoal,947415,,Declaracao emitida
+040601059-000464,12190,Albino,Encieta Albino,Cartão de Eleitor,09984585,,Declaracao emitida
+040601059-000465,12191,Albino,Encieta Albino,Cartão de Eleitor,09984585,,Declaracao emitida
+040601059-000466,12192,Muhoco,Rosalina Ricardo,Cartão de Eleitor,14489709,,Declaracao emitida
+040601059-000467,12193,Muhoco,Rosalina Ricardo,Cartão de Eleitor,14489709,,Declaracao emitida
+040601059-000467,12193,Gabriel,Felizardo Ricardo,Bilhete de Identidade,040606548981D,846822420,Declaracao emitida
+040601059-000468,12194,Aronha,Maria Uahicalano,Bilhete de Identidade,040602106751C,,Declaracao emitida
+040601059-000469,12195,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000470,12196,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000471,12197,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000472,12198,Renis,Amélia Renis,Cartão de Eleitor,10064470,0,Declaracao emitida
+040601059-000473,12199,Pedro,Hilário Júlio,Cédula Pessoal,1983,,Declaracao emitida
+040601059-000474,12200,Wetxauene,Rosa Wetxauene,Cartão de Eleitor,10064127,,Declaracao emitida
+040601059-000475,12251,Ernesto,Rosa,Cartão de Eleitor,0406A6453164790642,,Declaracao emitida
+040601059-000476,12252,Napirite,Alberto Impueia,Bilhete de Identidade,040101842397J,,Declaracao emitida
+040601059-000477,12253,Mitoua,Faustina Mitoua,Cartão de Eleitor,10064271,,Declaracao emitida
+040601059-000478,12254,Adriano,Silvestre Adriano,Cartão de Eleitor,10106299,,Declaracao emitida
+040601059-000479,12255,Massuco,Alberto Calaquenle,Bilhete de Identidade,040105383540B,,Declaracao emitida
+040601059-000480,12256,Manuel,Gonsalves Alberto,Cartão de Eleitor,0406A6853163020643,,Declaracao emitida
+040601059-000480,12256,Nathalome,Gonçalves Nathalome,Cartão de Eleitor,7783064,,Declaracao emitida
+040601059-000481,12257,Muinquiviravo,Hortencilia,Cartão de Eleitor,10064007,,Declaracao emitida
+040601059-000482,12258,Napirite,Alberto Impueia,Bilhete de Identidade,040101842397J,,Declaracao emitida
+040601059-000483,12259,Joaquim,Emilia Alberto,Cédula Pessoal,1216,,Declaracao emitida
+040601059-000484,12260,Mitoa,Rosa Mitoa,Cartão de Eleitor,08197154,,Declaracao emitida
+040601059-000485,12261,Alberto,João,Bilhete de Identidade,1880572,,Declaracao emitida
+040601059-000486,12262,Muanariva,Lucinda Muanariva,Cartão de Eleitor,10064349,,Declaracao emitida
+040601059-000487,12263,Maartins,Zaina Martins,Cartão de Eleitor,12568794,,Declaracao emitida
+040601059-000488,12264,Heriques,Teresa Heriques,Cartão de Eleitor,09924698,,Declaracao emitida
+040601059-000489,12265,Sabonete,Estevão Valentim,Bilhete de Identidade,110100832354B,,Declaracao emitida
+040601059-000490,12266,Alfândega,Alberto Alfândega,Cartão de Eleitor,9542281,,Declaracao emitida
+040601059-000491,12267,Domingos,Angelina Eduardo,Cartão de Eleitor,9984712,,Declaracao emitida
+040601059-000492,12268,Alexandre,Helena Alexandre,Cartão de Eleitor,09919699,,Declaracao emitida
+040601059-000493,12269,Ernesto,Rosa,Cartão de Eleitor,0406A6453164790642,,Declaracao emitida
+040601059-000494,12270,António,Fátima Santos,Cartão de Eleitor,7857839,,Declaracao emitida
+040601059-000495,12271,Santos,Marta Santos,Cartão de Eleitor,10064463,,Declaracao emitida
+040601059-000496,12272,Naxtalomue,Cristina Natxalomue,Cartão de Eleitor,08197337,,Declaracao emitida
+040601059-000497,12273,Naxtalomue,Cristina Natxalomue,Cartão de Eleitor,08197337,,Declaracao emitida
+040601059-000498,12274,Minisso,Rosário Minisso,Cartão de Eleitor,09924576,,Declaracao emitida
+040601059-000499,12275,Minisso,Rosário Minisso,Cartão de Eleitor,09924576,,Declaracao emitida
+040601059-000500,12276,Armando,Lídia Armando,Cartão de Eleitor,09924669,,Declaracao emitida
+,12277,António,Laura António,Cartão de Eleitor,11981446,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000501,12301,Olyaconwana,Adelaide,Declaração,4959,,Declaracao emitida
+040601059-000785,12302,Themuala,Joao Themuala,Cartão de Eleitor,12740625,,Declaracao emitida
+040601059-000502,12303,Namussano,Diolinda,Cartão de Eleitor,04D452990711,,Declaracao emitida
+040601059-000503,12304,Muissetxa,Joaquina Velecua,Bilhete de Identidade,040604661837J,,Declaracao emitida
+040601059-000504,12306,Fernando,Feliciano,Bilhete de Identidade,1710413,,Declaracao emitida
+040601059-000505,12307,Muruia,Inriehuro Muruia,Cartão de Eleitor,09542419,,Declaracao emitida
+040601059-000506,12308,Pequenino,Maria Pequenino,Cartão de Eleitor,1198482,,Declaracao emitida
+040601059-000507,12309,Muruia,Inriehuro Muruia,Cartão de Eleitor,09542419,,Declaracao emitida
+040601059-000508,12310,Osale,Joaquim Nimotole Osale,Cartão de Eleitor,10064112,,Declaracao emitida
+040601059-000509,12311,Osale,Joaquim Nimotole Osale,Cartão de Eleitor,10064112,,Declaracao emitida
+040601059-000510,12312,Mutheyomuale,Fátima Francisco,Cartão de Eleitor,0406A8453174890636,,Declaracao emitida
+040601059-000511,12313,Mutheyomuale,Fátima Francisco,Cartão de Eleitor,0406A8453174890636,,Declaracao emitida
+040601059-000512,12314,Mário,João Calaquenle,Bilhete de Identidade,040102187807N,,Declaracao emitida
+040601059-000513,12315,Pequenino,Cecilia Pequenino,Cartão de Eleitor,11981463,,Declaracao emitida
+040601059-000514,12391,Muaiaquinona,Faustina,Cartão de Eleitor,4721701,,Declaracao emitida
+040601059-000515,12392,Muaiaquinona,Faustina,Cartão de Eleitor,4721701,,Declaracao emitida
+040601059-000516,12393,Pequenino,Maria Pequenino,Cartão de Eleitor,1198482,,Declaracao emitida
+040601059-000517,12394,Santos,Estafania Alberto,Cartão de Eleitor,09984690,,Declaracao emitida
+040601059-000518,12396,Fernando,Feliciano,Bilhete de Identidade,1710413,,Declaracao emitida
+040601059-000519,12397,Miguel,Benedita Miguel,Cartão de Eleitor,8197412,,Declaracao emitida
+040601059-000520,12398,Estevão,Tomas,Bilhete de Identidade,040183571H,869908292,Declaracao emitida
+040601059-000521,12399,Namusso,Rosa Namusso,Cartão de Eleitor,10064468,,Declaracao emitida
+040601059-000522,12400,Mulanvua,Madalena Mulanvua,Cartão de Eleitor,8197473,,Declaracao emitida
+040601059-000523,12449,Gabriel,António,Bilhete de Identidade,040071156G,,Declaracao emitida
+040601059-000524,12450,Gabriel,António,Bilhete de Identidade,040071156G,,Declaracao emitida
+040601059-000525,12501,Pedro,Olinda Pedro,Cartão de Eleitor,09924528,,Declaracao emitida
+040601059-000526,12502,Silva,Atanasia,Cartão de Eleitor,0406A605316596 0642,,Declaracao emitida
+040601059-000527,12503,Mupewea,Paulino Mupewea,Cartão de Eleitor,09924588,,Declaracao emitida
+040601059-000528,12504,Coroliua,Paulina Coroliua,Cartão de Eleitor,09919799,,Declaracao emitida
+040601059-000529,12505,Murua,Maria Macore,Bilhete de Identidade,040605402123N,,Declaracao emitida
+040601059-000530,12507,Almeida,Laura Pedro Almeida,Cartão de Eleitor,09542340,,Declaracao emitida
+040601059-000531,12508,Mutxepo,Rita Caleva,Cartão de Eleitor,09542421,,Declaracao emitida
+040601059-000532,12509,Mutxepo,Rita Caleva,Cartão de Eleitor,09542421,,Declaracao emitida
+040601059-000533,12510,Injojo,Ines Injojo,Cartão de Eleitor,11192445,,Declaracao emitida
+040601059-000534,12511,Nihanle,Faustina Otela,Cartão de Eleitor,11192450,,Declaracao emitida
+040601059-000535,12513,António,Elias Artur,Bilhete de Identidade,040105353511Q,,Declaracao emitida
+040601059-000536,12514,Maunariva,Faustina Muanariva,Cartão de Eleitor,09542268,,Declaracao emitida
+040601059-000537,12515,Ilada,Cristina  Constantino,Cartão de Eleitor,043153004180951904315,,Declaracao emitida
+040601059-000538,12516,Eugenio,Laurinda Eugenio,Cartão de Eleitor,12568888,,Declaracao emitida
+040601059-000539,12517,Ilada,Cristina Constantino,Cartão de Eleitor,04315 3004180951904315,,Declaracao emitida
+040601059-000540,12518,Armando,Albertina Armando,Cartão de Eleitor,09919816,,Declaracao emitida
+040601059-000541,12519,Muanariva,Faustina Muanariva,Cartão de Eleitor,09542268,,Declaracao emitida
+040601059-000542,12520,Alfandega,Cristina Alfandega,Cartão de Eleitor,08197436,,Declaracao emitida
+040601059-000543,12521,Constantino,Angelina,Cartão de Eleitor,09852199,,Declaracao emitida
+040601059-000544,12522,Muanariva,Faustina Muanariva,Cartão de Eleitor,09542268,,Declaracao emitida
+040601059-000545,12523,Impeia,António Impeia,Cartão de Eleitor,8197376,,Declaracao emitida
+040601059-000546,12524,Nahuco,Fernando,Bilhete de Identidade,1883319,,Declaracao emitida
+040601059-000547,12525,Otela,Catarina Otela,Cartão de Eleitor,12568796,,Declaracao emitida
+040601059-000548,12526,Murimo,Manecas Murimo,Cartão de Eleitor,09542012,,Declaracao emitida
+040601059-000549,12527,Hamela,Catarina Hamela,Cartão de Eleitor,09984572,,Declaracao emitida
+040601059-000550,12528,Hamela,Catarina Hamela,Cartão de Eleitor,09984572,,Declaracao emitida
+040601059-000551,12529,Hamela,Catarina Hamela,Cartão de Eleitor,09984572,,Declaracao emitida
+040601059-000552,12530,Massu,Gracinda Calaquenle,Cartão de Eleitor,12568733,,Declaracao emitida
+040601059-000553,12531,Mussaraua,Cecilia Mussaraua,Cartão de Eleitor,11192257,,Declaracao emitida
+040601059-000554,12532,Alfiate,Rofina Carlos,Cédula Pessoal,188123,,Declaracao emitida
+040601059-000555,12533,Jaquisson,Rosa Jaquisson,Cartão de Eleitor,12568595,,Declaracao emitida
+040601059-000556,12534,Musselo,Argentina Paulo,Cédula Pessoal,148426,,Declaracao emitida
+040601059-000557,12535,Jaime,Angelina Jaime,Cartão de Eleitor,11192374,,Declaracao emitida
+040601059-000558,12536,Jaime,Angelina Jaime,Cartão de Eleitor,148426,,Declaracao emitida
+,12537,Munassiquia,Maria Munassiquia,Cartão de Eleitor,11192491,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000559,12538,Nhucue,Lisa Nhucue,Cartão de Eleitor,09919790,,Declaracao emitida
+040601059-000560,12539,Pareie,Camaquenlero Pareie,Cartão de Eleitor,10106199,,Declaracao emitida
+040601059-000561,12540,Muanariva,Faustina Muanariva,Cartão de Eleitor,09542268,,Declaracao emitida
+040601059-000562,12541,Fernando,Belita Fernando,Cartão de Eleitor,09919914,,Declaracao emitida
+040601059-000563,12542,Munhaua,Maria Paulo,Cartão de Eleitor,05498945,,Declaracao emitida
+040601059-000564,12543,Muatocuene,Maria,Cartão de Eleitor,0406A495316039644,,Declaracao emitida
+040601059-000565,12544,Muatocuene,Maria,Cartão de Eleitor,0406A495316039644,,Declaracao emitida
+040601059-000566,12545,Matocuene,Lúcia Muatocuene,Cartão de Eleitor,08971663,,Declaracao emitida
+040601059-000567,12546,Paulo,Cardina José,Cédula Pessoal,116465,,Declaracao emitida
+040601059-000568,12547,Viloso,Rafael Viloso,Cartão de Eleitor,10064064,,Declaracao emitida
+040601059-000569,12548,Muatocuene,Maria,Cartão de Eleitor,0406A495316039644,,Declaracao emitida
+040601059-000570,12549,Artur,Joaquina Artur,Cartão de Eleitor,09542315,,Declaracao emitida
+040601059-000571,12550,Janeila,Albertina Arunhuhana,Cédula Pessoal,947415,,Declaracao emitida
+040601059-000572,12551,Munahala,Munaquipissa,Bilhete de Identidade,1882820,,Declaracao emitida
+040601059-000572,12551,Wetxauene,Rosa Wetxauene,Cartão de Eleitor,10064127,,Declaracao emitida
+040601059-000573,12552,Casimiro,Julieta Casimiro,Cartão de Eleitor,08197163,,Declaracao emitida
+,12553,,Escola,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000574,12554,Namussano,Diolinda,Cartão de Eleitor,04D452990711,,Declaracao emitida
+040601059-000575,12555,Mass...,Celestina Massequece,Cartão de Eleitor,8197091,,Declaracao emitida
+040601059-000576,12556,Armando,Fátima,Cartão de Eleitor,0406A7253170260636,,Declaracao emitida
+040601059-000577,12557,Sozinho,Ana Sozinho,Cartão de Eleitor,08197095,,Declaracao emitida
+040601059-000578,12558,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000579,12560,Maquero,Claudina Maquero,Cartão de Eleitor,08197334,,Declaracao emitida
+040601059-000580,12561,Conouane,Lurdes Magesso,Bilhete de Identidade,4778967,,Declaracao emitida
+040601059-000580,12561,Ecoya,Rita Nauaia,Bilhete de Identidade,040604045943Q,,Declaracao emitida
+040601059-000581,12562,Massuamala,Joana Albino,Cartão de Eleitor,042631405180843204263,870063133,Declaracao emitida
+040601059-000582,12563,Musueliua,Jordão Fernando,Cartão de Eleitor,01280981,876315985,Declaracao emitida
+040601059-000583,12564,Uaite,Laurinda Uaite,Cartão de Eleitor,10064144,,Declaracao emitida
+040601059-000584,12565,Manasse,Bernardino,Talão do BI,43561645,,Declaracao emitida
+040601059-000585,12566,Aronha,Maria Uahicalano,Bilhete de Identidade,040602106751C,,Declaracao emitida
+040601059-000586,12567,Namequesse,Fátima Francisco,Cédula Pessoal,865621,,Declaracao emitida
+040601059-000587,12568,Namequesse,Lurdes Francisco,Cédula Pessoal,865619,,Declaracao emitida
+040601059-000588,12569,Namequesse,Victória Francisco,Cédula Pessoal,865623,,Declaracao emitida
+040601059-000588,12569,Aronha,Maria Uahicalano,Bilhete de Identidade,040602106751C,,Declaracao emitida
+040601059-000589,12570,Sicoi,Lurdes Salvador Sicoi,Cartão de Eleitor,09542389,,Declaracao emitida
+040601059-000589,12570,Armando,Lurtina Armando,Cartão de Eleitor,8197252,,Declaracao emitida
+040601059-000590,12571,Pedro,Hilário Júlio,Cédula Pessoal,1983,,Declaracao emitida
+040601059-000591,12574,Purussane,Cecília Purussane,Cartão de Eleitor,09984599,,Declaracao emitida
+040601059-000592,12575,Sabonete,Elias Lázaro,Cédula Pessoal,359191,,Declaracao emitida
+040601059-000593,12576,Sabonete,Elias Lázaro,Cédula Pessoal,359191,,Declaracao emitida
+040601059-000594,12577,Mucotuoa,Agostinho Mucotuoa,Cartão de Eleitor,14920836,,Declaracao emitida
+040601059-000595,12578,Crussane,Anquista Crussane,Cartão de Eleitor,8197276,,Declaracao emitida
+040601059-000596,12579,João,Belita António João,Cartão de Eleitor,09542179,,Declaracao emitida
+040601059-000597,12580,Júlio,Cecília Júlio,Cartão de Eleitor,9542452,,Declaracao emitida
+040601059-000598,12581,Wahicalano,Florêncio,Cartão de Eleitor,09924519,,Declaracao emitida
+040601059-000599,12582,Wahicalano,Florêncio,Cartão de Eleitor,09924519,,Declaracao emitida
+040601059-000600,12584,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000601,12585,António,Malita António,Cartão de Eleitor,8197328,,Declaracao emitida
+040601059-000602,12586,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000603,12587,Rosário,Matilde Rosário,Cartão de Eleitor,10064388,,Declaracao emitida
+040601059-000604,12588,Pedro,Hilário Júlio,Cédula Pessoal,1983,,Declaracao emitida
+040601059-000605,12589,Uaite,Laurinda Uaite,Cartão de Eleitor,10064144,,Declaracao emitida
+040601059-000606,12590,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000607,12591,Imtinha,Maria,Cartão de Eleitor,0406A5853163890642,,Declaracao emitida
+040601059-000607,12591,Uaite,Laurinda Uaite,Cartão de Eleitor,10064144,,Declaracao emitida
+040601059-000608,12592,Impalumue,Angelina Trinta,Cartão de Eleitor,0406A5953162830642,,Declaracao emitida
+040601059-000609,12593,Impalumue,Angelina Trinta,Cartão de Eleitor,0406A5953162830642,,Declaracao emitida
+040601059-000610,12595,Namequesse,Lurdes Francisco,Cédula Pessoal,865619,,Declaracao emitida
+040601059-000611,12596,António,Malita António,Cartão de Eleitor,8197328,,Declaracao emitida
+040601059-000612,12597,António,Malita António,Cartão de Eleitor,8197328,,Declaracao emitida
+040601059-000612,12597,Puerua,Canruheia Gabriel,Cartão de Eleitor,9542205,,Declaracao emitida
+040601059-000613,12598,Pedro,Hilário Júlio,Cédula Pessoal,1983,,Declaracao emitida
+040601059-000614,12599,Matimate,Alina Cuaussa,Cédula Pessoal,2289 1987,,Declaracao emitida
+040601059-000615,12600,Pedro,Hilário Júlio,Cédula Pessoal,1983,,Declaracao emitida
+040601059-000616,12601,Isaquel,Antónieta Isaquel,Cartão de Eleitor,09919727,,Declaracao emitida
+040601059-000617,12602,Astico,Rosita Paulo,Cédula Pessoal,624773,,Declaracao emitida
+040601059-000618,12603,Astico,Rosita Paulo,Cédula Pessoal,624773,,Declaracao emitida
+040601059-000619,12604,Enginero,Anastacia Enginero,Cartão de Eleitor,12568684,,Declaracao emitida
+040601059-000620,12605,Rupeliha,Lisa Musselo,Bilhete de Identidade,040600922933C,,Declaracao emitida
+040601059-000621,12606,Rupeliha,Lisa Musselo,Bilhete de Identidade,040600922933C,,Declaracao emitida
+040601059-000622,12607,Intxapo,Clementina Pedro,Cartão de Eleitor,08197351,,Declaracao emitida
+040601059-000623,12608,Moresse,Flora Dinis,Cédula Pessoal,343809,,Declaracao emitida
+040601059-000624,12609,Intxapo,Clementina Pedro,Cartão de Eleitor,08197351,,Declaracao emitida
+040601059-000625,12610,Enginero,Anastacia  Enginero,Cartão de Eleitor,12568684,,Declaracao emitida
+040601059-000626,12611,Enginero,Anastacia  Enginero,Cartão de Eleitor,12568684,,Declaracao emitida
+040601059-000627,12612,Uacaia,Angela Uacaia,Cartão de Eleitor,09924709,,Declaracao emitida
+040601059-000628,12613,Uacaia,Angela Uacaia,Cartão de Eleitor,09924709,,Declaracao emitida
+040601059-000629,12614,Uacaia,Angela Uacaia,Cartão de Eleitor,09924709,,Declaracao emitida
+040601059-000630,12615,Albino,Minoria Albino,Cartão de Eleitor,09924711,,Declaracao emitida
+040601059-000631,12617,Intapo,Muaconealne Intapo,Cartão de Eleitor,09924503,,Declaracao emitida
+040601059-000632,12619,Santos,Diolinda Júlio,Cédula Pessoal,215922,,Declaracao emitida
+040601059-000633,12620,Mário,Margarida Mário,Cartão de Eleitor,08197417,,Declaracao emitida
+040601059-000634,12622,António,Olivia Manuel,Cartão de Eleitor,09924775,,Declaracao emitida
+040601059-000635,12623,Mario,Margarida Mario,Cartão de Eleitor,08197417,,Declaracao emitida
+040601059-000636,12624,Francisco,Helena Francisco,Cartão de Eleitor,11192274,,Declaracao emitida
+040601059-000637,12625,Francisco,Helena Francisco,Cartão de Eleitor,11192274,,Declaracao emitida
+040601059-000638,12626,Francisco,Helena Francisco,Cartão de Eleitor,11192274,,Declaracao emitida
+040601059-000639,12627,Francisco,Helena Francisco,Cartão de Eleitor,11192274,,Declaracao emitida
+040601059-000640,12628,Luanta,António Pequenino,Cartão de Eleitor,0406A5998360540616,,Declaracao emitida
+040601059-000641,12629,Mocuassa,Cecília Mocuassa,Cartão de Eleitor,09919780,,Declaracao emitida
+040601059-000642,12630,Beste,Lúcia Beste,Cartão de Eleitor,10106031,,Declaracao emitida
+040601059-000643,12631,José,Joana José,Cartão de Eleitor,11192467,,Declaracao emitida
+040601059-000644,12632,José,Joana José,Cartão de Eleitor,11192467,,Declaracao emitida
+040601059-000645,12633,José,Joana José,Cartão de Eleitor,11192467,,Declaracao emitida
+040601059-000646,12634,José,Joana José,Cartão de Eleitor,11192467,,Declaracao emitida
+040601059-000647,12635,Mussulumate,Armando Naquatiana,Bilhete de Identidade,040107162288C,,Declaracao emitida
+040601059-000648,12636,José,Joana José,Cartão de Eleitor,11192467,,Declaracao emitida
+040601059-000649,12637,Pedro,Fernando Manuel,Cartão de Eleitor,0426317051810454,,Declaracao emitida
+040601059-000650,12638,Corrio,Murinane Corrio,Cartão de Eleitor,09919785,,Declaracao emitida
+040601059-000651,12639,Mualicamo,Maria Mualicamo,Cartão de Eleitor,11192332,,Declaracao emitida
+040601059-000652,12640,Mualicamo,Maria Mualicamo,Cartão de Eleitor,11192332,,Declaracao emitida
+040601059-000653,12641,Afonso,Arlinda Silvestre,Cédula Pessoal,982314,,Declaracao emitida
+040601059-000654,12642,Mualicamo,Maria Mualicamo,Cartão de Eleitor,11192332,,Declaracao emitida
+040601059-000655,12643,Afonso,Arlinda Silvestre,Cédula Pessoal,982314,,Declaracao emitida
+040601059-000656,12644,Mualicamo,Maria Mualicamo,Cartão de Eleitor,11192332,,Declaracao emitida
+040601059-000657,12645,Coroma,Julião Solote,Bilhete de Identidade,040602627607Q,,Declaracao emitida
+040601059-000658,12646,Coroma,Julião Solote,Bilhete de Identidade,040602627607Q,,Declaracao emitida
+040601059-000659,12647,Afonso,Arlinda Silvestre,Cartão de Eleitor,982314,,Declaracao emitida
+040601059-000660,12648,José,Joana José,Cartão de Eleitor,11192467,,Declaracao emitida
+040601059-000661,12649,Domingos,Elias Domingos,Cartão de Eleitor,09924518,,Declaracao emitida
+040601059-000662,12650,Verde,Hortência Iacaia Cabo,Bilhete de Identidade,040105239975M,,Declaracao emitida
+040601059-000663,12651,Moçambique,Catarina Moçambique,Cartão de Eleitor,12568921,,Declaracao emitida
+040601059-000664,12652,Rede,José Aniva,Bilhete de Identidade,040100645411M,,Declaracao emitida
+040601059-000665,12653,Alfandica,Augusto,Cartão de Eleitor,0406A6253161030644,,Declaracao emitida
+040601059-000666,12654,Alfandiga,Ana Regina ,Cartão de Eleitor,8197247,,Declaracao emitida
+040601059-000667,12655,Sozinho,Rosalina Sozinho,Cartão de Eleitor,08197459,,Declaracao emitida
+040601059-000668,12656,Alfandiga,Ana Regina ,Cartão de Eleitor,8197247,,Declaracao emitida
+040601059-000669,12657,Joao,Velaria Joao,Cartão de Eleitor,11192500,,Declaracao emitida
+040601059-000670,12658,Francisco,Fátima Francisco,Cartão de Eleitor,12568996,,Declaracao emitida
+040601059-000671,12659,Francisco,Fátima Francisco,Cartão de Eleitor,12568996,,Declaracao emitida
+040601059-000672,12660,Joao,Velaria Joao,Cartão de Eleitor,11192500,,Declaracao emitida
+040601059-000673,12661,Francisco,Fátima Francisco,Cartão de Eleitor,12568996,,Declaracao emitida
+040601059-000674,12662,Muahianho,Graça Muahianho,Cartão de Eleitor,7783136,,Declaracao emitida
+040601059-000675,12663,Nata,Amélia Raúl,Cédula Pessoal,588792,,Declaracao emitida
+040601059-000676,12664,Francisco,Fátima Francisco,Cartão de Eleitor,12568996,,Declaracao emitida
+040601059-000677,12665,Muahianho,Graça Muahianho,Cartão de Eleitor,7783136,,Declaracao emitida
+040601059-000678,12666,Muahianho,Graça Muahianho,Cartão de Eleitor,7783136,,Declaracao emitida
+040601059-000679,12667,Nata,Amélia Raúl,Cédula Pessoal,588792,,Declaracao emitida
+040601059-000680,12668,Nata,Amélia Raúl,Cédula Pessoal,588792,,Declaracao emitida
+040601059-000681,12669,Nananela,Margarida Nananela,Cartão de Eleitor,11192298,,Declaracao emitida
+040601059-000682,12670,Nananela,Margarida Nananela,Cartão de Eleitor,11192298,,Declaracao emitida
+040601059-000683,12671,Nananela,Margarida Nananela,Cartão de Eleitor,11192298,,Declaracao emitida
+040601059-000684,12672,Santos,Paulina,Cartão de Eleitor,0406A7053171090636,,Declaracao emitida
+040601059-000685,12673,Santos,Paulina,Cartão de Eleitor,0406A7053171090636,,Declaracao emitida
+040601059-000686,12674,Santos,Paulina,Cartão de Eleitor,0406A7053171090636,,Declaracao emitida
+040601059-000687,12675,Jamo,Mário António,Cédula Pessoal,263916,,Declaracao emitida
+040601059-000688,12676,Corea,Matilde António,Cartão de Eleitor,12740952,,Declaracao emitida
+040601059-000689,12677,Corea,Matilde António,Cartão de Eleitor,12740952,,Declaracao emitida
+040601059-000690,12678,Corea,Matilde António,Cartão de Eleitor,12740952,,Declaracao emitida
+040601059-000691,12679,Augusto,Deolinda Augusto,Cartão de Eleitor,099224745,,Declaracao emitida
+040601059-000692,12680,Uatiela,Isabel Abreu,Cédula Pessoal,607691,,Declaracao emitida
+,12683,Munaveriua,Amélia Manuel,Cédula Pessoal,72255,,A informacao que existe actualmente e que esta parcela ainda esta em disputa. O requerente deve entrar em contacto com os representantes da associacao
+040601059-000693,12684,Munaveriua,Amélia Manuel,Cédula Pessoal,72255,,Declaracao emitida
+040601059-000694,12685,Mocalassa,Rita Mocalassa,Cartão de Eleitor,08197456,,Declaracao emitida
+040601059-000695,12686,Mucumula,Maizinha Macalassa,Cartão de Eleitor,05671499,,Declaracao emitida
+040601059-000696,12687,Mucalassa,Emelita Mucalassa,Cartão de Eleitor,05671494,,Declaracao emitida
+040601059-000697,12688,Mucalassa,Emelita Mucalassa,Cartão de Eleitor,05671494,,Declaracao emitida
+040601059-000698,12689,Mucumula,Maizinha Macalassa,Cartão de Eleitor,05671499,,Declaracao emitida
+040601059-000699,12690,Macalassa,Gilda,Cédula Pessoal,2798,,Declaracao emitida
+040601059-000700,12691,Nacuacuara,Cristina Ualiua,Cartão de Eleitor,0406A9453940090677,,Declaracao emitida
+040601059-000701,12692,Janela,Albertina Arunhuhana,Cédula Pessoal,947415,,Declaracao emitida
+040601059-000702,12693,Alfredo,Angelina Alfredo,Cartão de Eleitor,09542295,,Declaracao emitida
+040601059-000703,12694,Alfredo,Angelina Alfredo,Cartão de Eleitor,09542295,,Declaracao emitida
+040601059-000704,12695,Alfredo,Angelina Alfredo,Cartão de Eleitor,09542295,,Declaracao emitida
+040601059-000705,12696,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000706,12697,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000707,12698,Sozinho,Jacinta Sozinho,Cartão de Eleitor,08197367,,Declaracao emitida
+040601059-000708,12699,Francisco,Comadeira,Cartão de Eleitor,0406A3353160760643,,Declaracao emitida
+040601059-000709,12700,Sozinho,Cecília Sozinho,Cartão de Eleitor,8197474,,Declaracao emitida
+,12711,,Associação,,,,"Trata-se de pedido em nome da Associacao, e nao tem elegibilidade para emissao de Declaracao. O pedido sera canalizado as autoridades para emissao de titulo"
+040601059-000710,12712,Munariva,Jonita Munariva,Cartão de Eleitor,14920906,,Declaracao emitida
+040601059-000711,12713,Mauela,Alberto Mauela,Cartão de Eleitor,12568855,,Declaracao emitida
+040601059-000712,12714,Mathesso,Lúcia Mathesso,Cartão de Eleitor,06623873,,Declaracao emitida
+040601059-000713,12715,Sugue,Cecília Sugue,Cartão de Eleitor,10106295,,Declaracao emitida
+040601059-000714,12716,Muatuna,Lucia Martinho,Cédula Pessoal,591501,,Declaracao emitida
+040601059-000715,12717,Munariva,Jonita Munariva,Cartão de Eleitor,14920906,,Declaracao emitida
+040601059-000716,12718,Mauela,Alberto Mauela,Cartão de Eleitor,12568855,,Declaracao emitida
+040601059-000717,12719,Mathesso,Lúcia Mathesso,Cartão de Eleitor,06623873,,Declaracao emitida
+040601059-000718,12720,Matiquene,Helelena Matiquene,Cartão de Eleitor,12568860,,Declaracao emitida
+040601059-000719,12721,Luís,Lurena Olveira,Cartão de Eleitor,07017889,,Declaracao emitida
+040601059-000720,12722,Francisco,Joana,Cartão de Eleitor,06623872,,Declaracao emitida
+040601059-000721,12724,Francisco,João Alexandre,Bilhete de Identidade,040107313500S,,Declaracao emitida
+040601059-000722,12725,Sugue,Cecilia Sugue,Cartão de Eleitor,10106295,,Declaracao emitida
+040601059-000723,12726,Nazubo,Germana Martinho,Cartão de Eleitor,04721530,,Declaracao emitida
+040601059-000724,12727,António,Janete Constantino,Cédula Pessoal,922064,,Declaracao emitida
+040601059-000725,12728,Sugue,Cecília Sugue,Cartão de Eleitor,10106295,,Declaracao emitida
+040601059-000726,12729,Eugénio,Armania Eugénio,Cartão de Eleitor,12568872,,Declaracao emitida
+040601059-000727,12730,Marques,Oliveira Luís,Bilhete de Identidade,040102298225P,,Declaracao emitida
+040601059-000728,12731,Mitoa,Malena Augusto,Cartão de Eleitor,04785268,,Declaracao emitida
+040601059-000729,12751,António,Terezinha António,Cartão de Eleitor,07783274,,Declaracao emitida
+040601059-000730,12752,Muahianho,Graça Muahianho,Cartão de Eleitor,7783136,,Declaracao emitida
+040601059-000731,12753,Olvera,Otília Olvera,Cartão de Eleitor,12568813,,Declaracao emitida
+040601059-000732,12754,Matacuro,Aviador Nenlequelaca,Bilhete de Identidade,40101117111P,,Declaracao emitida
+040601059-000733,12755,Uacalassa,Manuel Vierauel,Talão do BI,48887361,,Declaracao emitida
+040601059-000734,12756,Virauene,Albertina Manuel,Cédula Pessoal,310803,,Declaracao emitida
+040601059-000735,12757,Alberto,Jemusse Alberto,Cartão de Eleitor,05671131,,Declaracao emitida
+040601059-000736,12758,Valotae,Maria,Cartão de Eleitor,0406A6353165980636,,Declaracao emitida
+040601059-000736,12758,Maiau,Jaime  Alberto,Cédula Pessoal,712404,,Declaracao emitida
+040601059-000737,12759,Valantaia,Fátima Valantaia,Cartão de Eleitor,12568731,,Declaracao emitida
+040601059-000738,12760,Nahitenye,Rosalina Nahitenye,Cartão de Eleitor,12568725,,Declaracao emitida
+040601059-000739,12761,Gabriel,Vicente Jemusse,Cartão de Eleitor,12568732,,Declaracao emitida
+040601059-000740,12762,Alberto,Olga Alberto,Cartão de Eleitor,11192461,,Declaracao emitida
+040601059-000741,12763,Mulanvua,Maria Mulanvua,Cartão de Eleitor,9542026,,Declaracao emitida
+040601059-000741,12763,Namanda,Maria Uatxorera,Cartão de Eleitor,04721532,,Declaracao emitida
+040601059-000742,12764,Nolamua,Florinda Basílio,Cédula Pessoal,840794,,Declaracao emitida
+040601059-000742,12764,Namanda,Maria Uatxorera,Cartão de Eleitor,04721532,,Declaracao emitida
+040601059-000743,12765,Namanda,Maria Uatxorera,Cartão de Eleitor,04721532,,Declaracao emitida
+040601059-000743,12765,Molamvua,Isaura Basilio,Cédula Pessoal,840762,,Declaracao emitida
+040601059-000744,12766,Maidunha,Domingos Pedro,Talão do BI,70187596,,Declaracao emitida
+040601059-000745,12767,Pedro,Liston Domingos,Cédula Pessoal,799028,,Declaracao emitida
+040601059-000745,12767,Maidunha,Domingos Pedro,Talão do BI,70187596,,Declaracao emitida
+040601059-000746,12768,Viagem,Naurinda Viagem,Cartão de Eleitor,12568612,,Declaracao emitida
+040601059-000747,12769,Mendes,Noémia da Aida Mendes,Cartão de Eleitor,12568621,,Declaracao emitida
+040601059-000748,12770,Mussumate,Cristina,Cartão de Eleitor,0406A5053162490642,,Declaracao emitida
+040601059-000749,12771,Piason,Minória Agostinho,Cartão de Eleitor,01682778,,Declaracao emitida
+040601059-000750,12772,Alberto,Flora Alberto,Cartão de Eleitor,12568805,,Declaracao emitida
+040601059-000751,12773,Calisto,Xadreque Eugénio,Cédula Pessoal,2328535,,Declaracao emitida
+040601059-000751,12773,Alberto,Flora Alberto,Cartão de Eleitor,12568805,,Declaracao emitida
+040601059-000752,12774,Alves,Belita Alves,Cartão de Eleitor,9919994,,Declaracao emitida
+040601059-000753,12775,Alfândiga,Glória Pedro,Cédula Pessoal,865612,,Declaracao emitida
+040601059-000754,12776,Rapissone,Fidel Alberto,Bilhete de Identidade,040604721516M,,Declaracao emitida
+040601059-000755,12777,Muasiua,Florinda Camilo,Bilhete de Identidade,100101027070I,,Declaracao emitida
+040601059-000756,12778,Mucalassa,Emelita Mucalassa,Cartão de Eleitor,05671494,,Declaracao emitida
+040601059-000757,12779,Mucalassa,Emelita Mucalassa,Cartão de Eleitor,05671494,,Declaracao emitida
+040601059-000758,12780,Limiha,Jaime Caetano,Bilhete de Identidade,040606694545N,,Declaracao emitida
+040601059-000759,12781,Limiha,Jaime Caetano,Bilhete de Identidade,040606694545N,,Declaracao emitida
+040601059-000760,12782,Veloso,Manuel Namota,Bilhete de Identidade,040602666831B,,Declaracao emitida
+040601059-000761,12783,Limiha,Jaime Caetano,Bilhete de Identidade,040606694545N,,Declaracao emitida
+040601059-000762,12784,Veloso,Manuel Namota,Bilhete de Identidade,040602666831B,,Declaracao emitida
+040601059-000763,12785,Joaquim,Rosa Virauene,Cédula Pessoal,567664,,Declaracao emitida
+040601059-000764,12786,Uacalassa,Manuel Vierauel,Talão do BI,48887361,,Declaracao emitida
+040601059-000765,12787,Uacalassa,Manuel Vierauel,Talão do BI,48887361,,Declaracao emitida
+040601059-000766,12788,Gabriel,Felix António,Cédula Pessoal,240053,,Declaracao emitida
+040601059-000767,12789,Alfaiate,Amélia Alfaiate,Cartão de Eleitor,8197190,,Declaracao emitida
+040601059-000768,12790,Joaquim,Rosa Virauene,Cédula Pessoal,567664,,Declaracao emitida
+040601059-000768,12790,Alfândega,Anastácia Marcelino,Cédula Pessoal,624718,,Declaracao emitida
+040601059-000769,12791,Candiado,Anita Martinho,Cartão de Eleitor,11981408,,Declaracao emitida
+040601059-000770,12792,Afonso,Laura Afonso,Cartão de Eleitor,08197442,,Declaracao emitida
+040601059-000771,12793,Vicente,Esmenia Vicente,Cartão de Eleitor,11981267,,Declaracao emitida
+040601059-000772,12794,Candiado,Anita Martinho,Cartão de Eleitor,11981408,,Declaracao emitida
+040601059-000772,12794,António,Sara Orlando,Cédula Pessoal,329983,,Declaracao emitida
+040601059-000773,12795,Maitem,Cecilia Maitem,Cartão de Eleitor,08197068,,Declaracao emitida
+040601059-000774,12796,Carlos,Mariza Carlitos,Cédula Pessoal,040387,,Declaracao emitida
+040601059-000774,12796,Maitem,Cecilia Maitem,Cartão de Eleitor,08197068,,Declaracao emitida
+040601059-000775,12797,Nicolocodo,Felizardo Júlio,Bilhete de Identidade,100805878825M,,Declaracao emitida
+040601059-000776,12798,Nauirimu,Antonio Alfiate,Bilhete de Identidade,040070569S,,Declaracao emitida
+040601059-000777,12799,Cerveja,Angelina U. ,Cartão de Eleitor,32546099,,Declaracao emitida
+040601059-000778,12800,Basílio,Jaime,Bilhete de Identidade,030016819W,,Declaracao emitida
+,12506,Saguate,Fátima,Cartão de Eleitor,0406A4953160050644,,"Parcela digitalizada, mas não passou pelo processo de OCC. O requerente deve entrar em contacto com os representantes da associacao"
