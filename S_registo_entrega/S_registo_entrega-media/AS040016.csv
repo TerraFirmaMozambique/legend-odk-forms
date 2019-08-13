@@ -100,8 +100,8 @@ nupn,upn_key,app,nome,doc,doc_id,contacto,resultado
 040601042-000097,6564,Muinihatxa,Isabel Francisco,Cartão de Eleitor,12990952,,Declaracao emitida
 040601042-000098,6565,Muinihatxa,Isabel Francisco,Cartão de Eleitor,12990952,,Declaracao emitida
 040601042-000099,6566,Tacuawe,Francisco ,Cartão de Eleitor,3437 0483,,Declaracao emitida
-040601042-000100,6567,Aliama,Dino Afonso,Cartão de Eleitor,2.70418E+15,,Declaracao emitida
-040601042-000101,6568,Aliama,Dino Afonso,Cartão de Eleitor,2.70418E+15,,Declaracao emitida
+040601042-000100,6567,Aliama,Dino Afonso,Cartão de Eleitor,2.70E+15,,Declaracao emitida
+040601042-000101,6568,Aliama,Dino Afonso,Cartão de Eleitor,2.70E+15,,Declaracao emitida
 040601042-000102,6569,João,Olinda,Cartão de Eleitor,10115985,,Declaracao emitida
 040601042-000103,6570,João,Olinda,Cartão de Eleitor,10115985,,Declaracao emitida
 040601042-000103,6570,Arlindo,Alex Riccardo,Cédula Pessoal,2079801,,Declaracao emitida
@@ -141,6 +141,7 @@ nupn,upn_key,app,nome,doc,doc_id,contacto,resultado
 040601042-000135,7124,Francisco,Gilda,Cartão de Eleitor,12990614,,Declaracao emitida
 040601042-000136,7125,Mafica,João Armando,Cartão de Eleitor,12990737,,Declaracao emitida
 040601042-000137,7126,Malavi,Jose Nhonuano,Bilhete de Identidade,040602106726J,,Declaracao emitida
+,7127,Mutroco,Rosa Francisco,Bilhete de Identidade,040601291667M,,"A parcela ainda nao foi digitalizada por falta da informacao, e ainda nao foi emitida a Declaracao. O requerente deve entrar em contacto com os representantes da associacao"
 040601042-000138,7128,Romão,Angélica,Cartão de Eleitor,7792296,,Declaracao emitida
 040601042-000139,7129,Muampa,Martinho Anselmo,Cartão de Eleitor,5077405,,Declaracao emitida
 040601042-000140,7130,Muasapo,Joaquina Alberto,Cartão de Eleitor,9746879,,Declaracao emitida
@@ -519,7 +520,7 @@ nupn,upn_key,app,nome,doc,doc_id,contacto,resultado
 040601042-000505,11148,Sobra,Munahalana,Cartão de Eleitor,0406A4253401710675,,Declaracao emitida
 040601042-000506,11149,Mulapa,Américo Manuessa,Bilhete de Identidade,040606694714J,864937437,Declaracao emitida
 040601042-000507,11150,Ciamante,Alfredo Victorino,Bilhete de Identidade,040100128164I,,Declaracao emitida
-040601042-000508,11151,Chipesse,Oreste Fernando,Cartão de Eleitor,4.00713E+14,,Declaracao emitida
+040601042-000508,11151,Chipesse,Oreste Fernando,Cartão de Eleitor,4.01E+14,,Declaracao emitida
 040601042-000509,11152,Confiança,Amélia ,Cartão de Eleitor,11981060,,Declaracao emitida
 040601042-000510,11153,Maricoa,Adelaide Atonio,Cartão de Eleitor,13078800,,Declaracao emitida
 040601042-000511,11154,Monenvo,Gracinta ,Cartão de Eleitor,9746888,,Declaracao emitida
@@ -686,6 +687,7 @@ nupn,upn_key,app,nome,doc,doc_id,contacto,resultado
 040601042-000670,11518,Mulimiha,Rosa Dos Santos,Cartão de Eleitor,0406A785341252,,Declaracao emitida
 040601042-000671,11519,Manuel,Victoria Francisco,Cédula Pessoal,472382,,Declaracao emitida
 040601042-000672,11520,Manuel,Marta Francisco,Cartão de Eleitor,0406A8998362171836,,Declaracao emitida
+,11521,Juliasse,Marieta,Cartão de Eleitor,02D54804220,,"Parcela digitalizada, mas não passou pelo processo de OCC. O requerente deve entrar em contacto com os representantes da associacao"
 040601042-000673,11522,Fonseca,Agostinho João,Bilhete de Identidade,030102867088N,,Declaracao emitida
 040601042-000674,11523,Cozinha,Fátima,Cartão de Eleitor,0406A4653401690675,,Declaracao emitida
 040601042-000675,11524,Pissueque,Olinda,Cartão de Eleitor,9746570,,Declaracao emitida
